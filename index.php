@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <title>Chalalas.com</title>
   <link rel="shortcut icon" href="letraCfondonegro.png">
-  <link rel="stylesheet" href="style3.css" />
-  <link rel="stylesheet" href="style4.css" />
+  <link rel="stylesheet" href="style3.css" /><!--lOGIN-->
+  <link rel="stylesheet" href="style4.css" /><!--MENU-->
 </head>
 
-<body><!--INTRODUCE DATOS-->
+<body>
   <header>
     <img src="chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
     <nav>
@@ -23,7 +23,7 @@
   </header>
   <h3>Usuario de prueba:Guadalupe Contraseña:123456</h3>
   <h3>Usuarios con "ñ" no funciona..(Pendiente)<br>login2 PENDIENTE</h3>
-  <H2>Iniciar Sesión</H2>
+  <h2>Iniciar Sesión</h2>
 
   <form action="comprueba_login3.php" method="post">
   <?php
