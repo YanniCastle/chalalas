@@ -1,27 +1,26 @@
-/*MENU*/
 body {
-  background-color: #0f4f74;
+  background-color: #96a7b8;
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
+  padding: 0px;
 }
-
+h1 {
+  color: #dd2407;
+}
 h2 {
-  color: #293e85;
+  color: #290601;
 }
-
 form {
-  width: 240px;
-  background-color: #68ce6d;
-  padding: 20px;
+  width: 200px;
+  background-color:rgb(58, 122, 46);
+  padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 1.1);
-
+  font-size: large;
 }
-
 label {
   display: block;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 input[type="text"],
@@ -33,9 +32,8 @@ input[type="password"] {
   box-sizing: border-box;
   margin-bottom: 10px;
 }
-
 input[type="submit"] {
-  background-color: #af704c;
+  background-color: #7e4727;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -43,18 +41,15 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-nav {
-  background-color: #333;
-}
-
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  
 }
-
 nav ul li {
   display: inline-block;
+  position: relative;
 }
 
 nav ul li a {
@@ -64,6 +59,39 @@ nav ul li a {
   color: #fff;
 }
 
+nav ul li:hover>ul {
+  display: block;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  background-color: #555;
+}
+
+nav ul ul li {
+  display: block;
+}
+
+nav ul ul li a {
+  padding: 10px 20px;
+}
+
+
+
+
+
+
+nav {
+  background-color:rgb(58, 122, 46);
+}
+nav ul li a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #fff;
+}
 nav ul li a:hover {
+  display: block;
   background-color: #555;
 }

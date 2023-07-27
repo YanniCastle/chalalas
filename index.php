@@ -4,28 +4,27 @@
 <head>
   <meta charset="utf-8">
   <title>Chalalas.com</title>
-  <link rel="shortcut icon" href="letraCfondonegro.png">
-  <link rel="stylesheet" href="style3.css" /><!--lOGIN-->
-  <link rel="stylesheet" href="style4.css" /><!--MENU-->
+  <link rel="shortcut icon" href="/imagenes/letraCfondonegro.png">
+  <link rel="stylesheet" href="style.css"/>
+  
 </head>
 
 <body>
   <header>
-    <img src="chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
+    <img src="/imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
     <nav>
       <ul>
         <li><a href="#">Inicio</a></li>
         <li><a href="#">Acerca de</a></li>
-        <li><a href="Formulario_Insertar_Usuarios3.php">Registrate</a></li>
+        <li><a href="registrate.php">Registrate</a></li>
         <li><a href="#">Contacto</a></li>
       </ul>
     </nav>
   </header>
-  <h3>Usuario de prueba:Guadalupe Contraseña:123456</h3>
-  <h3>Usuarios con "ñ" no funciona..(Pendiente)<br>login2 PENDIENTE</h3>
-  <h2>Iniciar Sesión</h2>
+  <h1>prueba: maria1   contraseña: 123456</h1>
+  <h2>Usuarios con "ñ" no funciona..(Pendiente)</h2>
 
-  <form action="comprueba_login3.php" method="post">
+  <form action="comprobar_usuario.php" method="post">
   <?php
     if (isset($_POST['login'])) {
       $nombre = $_POST['login'];
