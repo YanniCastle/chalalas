@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Bienvenido</title>
+  <title>Videos</title>
   <link rel="stylesheet" href="style.css"/>
   <link rel="shortcut icon" href="/imagenes/letraCfondonegro.png">
 </head>
@@ -22,17 +22,17 @@
         </li>
 
         <li><a href="#">CRUD</a></li>
-        <li><a href="comentarios.php">Comentarios</a></li>
+        <li><a href="#">Comentarios</a></li>
         <li><a href="fotos.php">Fotos</a></li>
         <li><a href="videos.php">videos</a></li>
 
         <li><a href="#">Contactos</a>
           <ul>
             <li><a href="#">Whats App</a></li>
-            <li><a href="new 1.php">Email</a></li>
+            <li><a href="#">Email</a></li>
           </ul>
         </li>
-        <li><a href="muro.php">Muro</a></li>
+        <li><a href="#">Muro</a></li>
         <li><a href="cierre.php">cerrar sesión</a></li>
       </ul>
     </nav>
@@ -43,11 +43,14 @@
     header("location:index.php");
   }
   ?>
-  <h1>Bienvenid@</h1>
+  <h1>Videos</h1>
   <?php
   echo "<h2>¡Hola, " . $_SESSION["usuario"] . "!<br></h2>";
   ?>
-  
+  <video src="Smooth.mp4" controls width="420" height="240"></video>
+  <video src="Smooth.mp4" controls width="420" height="240"></video>
+  <video src="Smooth.mp4" controls width="420" height="240"></video>
+  <video src="Smooth.mp4" controls width="420" height="240"></video>
 </body>
 
 </html>
