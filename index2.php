@@ -24,7 +24,7 @@
   <h1>prueba: maria1   contraseña: 123456</h1>
   <h2>Usuarios con "ñ" no funciona..(Pendiente)</h2>
 
-  <form action="comprobar_usuario.php" method="post">
+  <form action="comprobar_usuario2.php" method="post">
   <?php
     if (isset($_POST['login'])) {
       $nombre = $_POST['login'];
@@ -51,8 +51,8 @@
     }
     ?>
 
-    <label for="username">Usuario:</label>
-    <input type="text" id="username" name="login" required placeholder="Ingresa usuario">
+    <label for="username">Usuario o Email:</label>
+    <input type="text" id="username" name="login" required placeholder="Ingresa usuario o email">
 
     <label for="password">Contraseña:</label>
     <input type="password" id="password" name="password" required>
