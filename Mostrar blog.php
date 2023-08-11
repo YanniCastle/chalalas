@@ -10,7 +10,7 @@
 
 <body>
 <header>
-    <img src="/imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
+    <img src="chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
     <nav>
       <ul>
         <li>
@@ -58,12 +58,13 @@
 
   if ($resultado = mysqli_query($miconexion, $miconsulta)) {
     while ($registro = mysqli_fetch_assoc($resultado)) {
-      echo "<h3>" . $registro['Titulo'] . "</h3>";
+      echo "<h3>" . $registro['articulo'] . "</h3>";
       echo "<h4>" . $registro['Fecha'] . "</h4>";
-      echo "<div style='width:400px'>" . $registro['Comentario'] . "</div><br/>";
+      echo "<div style='width:400px'>" . $registro['descripcion'] . "</div><br/>";
       /*Lo relacionado a imagen /*video 92  13:33*/
       if ($registro['Imagen'] != "") {
         echo "<img src='imagenes/" . $registro['Imagen'] . "' width='300px'/>";
+        echo "<h4>" . $registro['precio'] . "</h4>";
       }
       echo "<hr/>";/*Linea divisoria para capturas*/
     }

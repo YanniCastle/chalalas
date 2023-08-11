@@ -1,3 +1,7 @@
+<?php
+include 'config/config.php';
+?>
+
 <!doctype html>
 <html>
 
@@ -47,7 +51,36 @@
   <?php
   echo "<h2>¡Hola, " . $_SESSION["usuario"] . "!<br></h2>";
   ?>
+
+
+
+<form action="" method="get">
+  <input type="text" name="busqueda" required placeholder="Agrega tu busqueda"><br>
+  <input type="submit" name="enviar" value="Buscar"> 
+</form>
+
+<br><br><br>
   
+<?php
+
+if(isset($_GET['enviar'])){
+  $busqueda = $_GET['busqueda'];
+
+  $consulta = $con->query("SELECT * FROM contenido WHERE articulo LIKE '%$busqueda%'");
+
+  while($row = $consulta->fetch_array()){
+    echo $row['articulo']. '<br>';
+    echo $row['precio']. '<br>';
+    echo "<h4>" . $row['Fecha'] . "</h4>";
+      echo "<div style='width:400px'>" . $row['descripcion'] . "</div><br/>";
+      if ($row['Imagen'] != "") {
+        echo "<img src='imagenes/" . $row['Imagen'] . "' width='300px'/>";
+      }
+      echo "<hr/>";
+  }
+}
+?>
+<br><br>
 </body>
 
 </html>
