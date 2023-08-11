@@ -4,14 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>Chalalas.com</title>
-  <link rel="shortcut icon" href="/imagenes/letraCfondonegro.png">
+  <link rel="shortcut icon" href="letraCfondonegro.png">
   <link rel="stylesheet" href="style.css"/>
   
 </head>
 
 <body>
-  <header>
-    <img src="/imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
+  <header><!--REVISAR PORQUE SOLO ABRE EN DIRECTO SIN CARPETA imagenes-->
+    <img src="chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
     <nav>
       <ul>
         <li><a href="#">Inicio</a></li>

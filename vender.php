@@ -10,7 +10,7 @@
 
 <body>
   <header>
-    <img src="/imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
+    <img src="chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
     <nav>
       <ul>
         <li>

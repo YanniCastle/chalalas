@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
 <!--FORMULARIO PARA COMENTARIOS GUARDANDO EN BASE DE DATOS:chalalas -->
-
 <head>
   <meta charset="utf-8">
   <title>comentarios</title>
@@ -10,7 +9,34 @@
 </head>
 
 <body>
-  <img class="marca" src="/imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
+<header>
+    <img src="chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Productos</a>
+          <ul>
+            <li><a href="comprar.php">Comprar</a></li>
+            <li><a href="vender.php">Vender</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">CRUD</a></li>
+        <li><a href="comentarios.php">Comentarios</a></li>
+        <li><a href="fotos.php">Fotos</a></li>
+        <li><a href="videos.php">videos</a></li>
+
+        <li><a href="#">Contactos</a>
+          <ul>
+            <li><a href="#">Whats App</a></li>
+            <li><a href="new 1.php">Email</a></li>
+          </ul>
+        </li>
+        <li><a href="muro.php">Muro</a></li>
+        <li><a href="cierre.php">cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
   <h1>Blog de comentarios</h1>
   <?php
   session_start();
@@ -49,6 +75,7 @@
       </tr>
     </table>
   </form>
-</body>
 
+
+</body>
 </html>

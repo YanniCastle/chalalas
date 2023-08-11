@@ -9,7 +9,34 @@
 </head>
 
 <body>
-  <img class="marca" src="/imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
+<header>
+    <img src="/imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Productos</a>
+          <ul>
+            <li><a href="comprar.php">Comprar</a></li>
+            <li><a href="vender.php">Vender</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">CRUD</a></li>
+        <li><a href="comentarios.php">Comentarios</a></li>
+        <li><a href="fotos.php">Fotos</a></li>
+        <li><a href="videos.php">videos</a></li>
+
+        <li><a href="#">Contactos</a>
+          <ul>
+            <li><a href="#">Whats App</a></li>
+            <li><a href="new 1.php">Email</a></li>
+          </ul>
+        </li>
+        <li><a href="muro.php">Muro</a></li>
+        <li><a href="cierre.php">cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
   <h1>Blog</h1>
   <?php
   session_start();
@@ -20,7 +47,7 @@
 
   <hr>
   <?php
-  $miconexion = mysqli_connect("localhost", "root", "", "pruebas");
+  $miconexion = mysqli_connect("localhost", "root", "", "chalalas");
   /*Comprobar conexion*/
   if (!$miconexion) {                /*mysqli_error()*/
     echo "La conexión ha fallado: " . mysqli_connect_error();/*¿falta algo?*/

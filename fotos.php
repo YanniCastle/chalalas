@@ -10,7 +10,7 @@
 
 <body>
   <header>
-    <img src="/imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
+    <img src="chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
     <nav>
       <ul>
         <li>
@@ -23,7 +23,6 @@
 
         <li><a href="#">CRUD</a></li>
         <li><a href="#">Comentarios</a></li>
-        <li><a href="fotos.php">Fotos</a></li>
         <li><a href="videos.php">videos</a></li>
 
         <li><a href="#">Contactos</a>
@@ -48,11 +47,11 @@
   echo "<h2>¡Hola, " . $_SESSION["usuario"] . "!<br></h2>";
   ?>
 
+<img src="chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
 <img src="/imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
-<img src="/imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
-<img src="/imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
-<img src="/imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
-<img src="/imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
+<img src="/imagenes_marca/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
+<img src="" width="212" height="75" alt="Sitio de comercio electronico">
+<img src="" width="212" height="75" alt="Sitio de comercio electronico">
 
 
 
