@@ -69,7 +69,7 @@
   </form>
 
   <marquee bgcolor="#AAEEEE" behavior="alternate" direction="right">
-<b><font color="#FFFFCC" size="4"><img src="imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">  </font></b>
+<b><font color="#green" size="22"><img src="imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">En Linea</font></b>
 </marquee>
 </body>
 
