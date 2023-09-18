@@ -50,7 +50,7 @@
       $pass_cifrado = password_hash($contrasenia, PASSWORD_DEFAULT, array("cost" => 12));
                                                                 //array default 10,
       try {
-        $base = new PDO('mysql:host=localhost; dbname=pruebas', 'root', '');
+        $base = new PDO('mysql:host=localhost; dbname=chalalas', 'root', '');
 
         $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $base->exec("SET CHARACTER SET UTF8");
