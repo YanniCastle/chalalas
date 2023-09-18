@@ -1,3 +1,4 @@
+<!--No debe subirse-->
 <?php 
 $conn = new mysqli("localhost","root","","chalalas");//agrege de recuperar
 //Usaremos libreria PDO

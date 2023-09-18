@@ -1,5 +1,5 @@
 .env
 prueba/
 .vscode
-/conexion
-/config
+conexion
+config

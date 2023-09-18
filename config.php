@@ -1,3 +1,4 @@
+<!--No debe subirse-->
 <?php
 
 $Chost = "localhost";
