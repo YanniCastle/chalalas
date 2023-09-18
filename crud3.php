@@ -44,7 +44,6 @@
       <li><a href="Formulario.php">Comentarios</a></li>
       <li><a href="fotos.php">Fotos</a></li>
       <li><a href="videos.php">videos</a></li>
-      <li><a href="crud2.php">CRUD2</a></li>
 
       <li><a href="#">Contactos</a>
         <ul>

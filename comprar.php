@@ -7,6 +7,7 @@ include 'config.php';
 <head>
   <meta charset="utf-8">
   <title>Comprar</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="stylefoto2.css" /><!--menu-->
   <link rel="shortcut icon" href="letraCfondonegro.png">
 </head>

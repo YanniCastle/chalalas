@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <title>Blog Pildoras</title>
   <link rel="shortcut icon" href="letraCfondonegro.png">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style8.css" />
+  
 </head>
 
 <body>

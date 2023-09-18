@@ -16,7 +16,7 @@
     $login = htmlentities(addslashes($_POST["login"]));
     $password = htmlentities(addslashes($_POST["password"]));
     $contador = 0;//PARA SABER SI EL login esta o no esta en bd
-    $base = new PDO("mysql:host=localhost; dbname=pruebas", "root", "");
+    $base = new PDO("mysql:host=localhost; dbname=chalalas", "root", "");
     $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $sql = "SELECT * FROM USUARIOS_PASS2 WHERE USUARIOS= :login";//ENTREGA CONSULTA DE REGISTROS EN LOGIN

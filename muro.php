@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>muro</title>
+  <link rel="stylesheet" href="style3.css" />
   <link rel="stylesheet" href="stylefoto2.css" />
   <link rel="shortcut icon" href="letraCfondonegro.png">
 </head>

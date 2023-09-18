@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Vender</title>
+  <link rel="stylesheet" href="style8.css" />
   <link rel="stylesheet" href="stylefoto2.css" />
   <link rel="shortcut icon" href="letraCfondonegro.png">
 </head>
