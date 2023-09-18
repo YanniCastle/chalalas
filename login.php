@@ -26,6 +26,7 @@
  <!-- <h3>Usuario de prueba:Guadalupe  Contraseña:123456</h3>-->
   <!--<h3>Usuarios con "ñ" no funciona..(Pendiente)<br>login2 PENDIENTE</h3>-->
   <H2>Iniciar Sesión</H2>
+  <H2>Sitio en Construcción...</H2>
 
   <form action="comprueba_login3.php" method="post">
   <?php
