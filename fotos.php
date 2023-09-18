@@ -4,14 +4,68 @@
 <head>
   <meta charset="utf-8">
   <title>Fotos</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="shortcut icon" href="/imagenes/letraCfondonegro.png">
+  <link rel="shortcut icon" href="letraCfondonegro.png">
+  <link rel="stylesheet" href="stylefoto2.css" /><!--menu-->
 </head>
 
 <body>
-  <header>
-    <img src="chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
-    <nav>
+  <br><br>
+  <h1>Fotos</h1>
+<article id="position">
+   <nav>
+    <ul>
+      <li>
+        <a href="usuarios_registrados1.php"><img src="imagenes/chalalas4.png"></a>
+      </li>
+      <li>
+        <a href="#">Productos</a>
+        <ul>
+          <li><a href="comprar.php">Comprar</a></li>
+          <li><a href="vender.php">Vender</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">Servicios</a>
+        <ul>
+          <li><a href="buscar.php">buscar</a></li>
+          <li><a href="ofrecer.php">ofrecer</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Categorias</a>
+        <ul>
+          <li><a href="#">categoria 1</a></li>
+          <li><a href="#">categoria 2</a></li>
+          <li><a href="#">categoria 3</a></li>
+          <li><a href="#">categoria 4</a></li>
+        </ul>
+      </li>
+
+      <li><a href="Formulario.php">Comentarios</a></li>
+      <li><a href="fotos.php">Fotos</a></li>
+      <li><a href="videos.php">videos</a></li>
+
+      <li><a href="#">Contactos</a>
+        <ul>
+          <li><a href="#">Whats App</a></li>
+          <li><a href="email.php">Email</a></li>
+        </ul>
+      </li>
+      <li><a href="muro.php">Muro</a></li>
+      <li><a href="cierre.php">cerrar sesion</a></li>
+    </ul>
+  </nav>
+   </article>
+  <?php
+  session_start();
+  if (!isset($_SESSION["usuario"])) {
+    header("Location:login.php");
+  }
+  ?>
+
+<article id="position">
+   <nav>
       <ul>
         <li>
           <a href="#">Productos</a>
@@ -21,41 +75,47 @@
           </ul>
         </li>
 
-        <li><a href="#">CRUD</a></li>
-        <li><a href="#">Comentarios</a></li>
+        <li><a href="crud.php">CRUD</a></li>
+        <li><a href="Formulario.php">Comentarios</a></li>
+        <li><a href="fotos.php">Fotos</a></li>
         <li><a href="videos.php">videos</a></li>
 
         <li><a href="#">Contactos</a>
           <ul>
             <li><a href="#">Whats App</a></li>
-            <li><a href="#">Email</a></li>
+            <li><a href="email.php">Email</a></li>
           </ul>
         </li>
-        <li><a href="#">Muro</a></li>
+        <li><a href="muro.php">Muro</a></li>
         <li><a href="cierre.php">cerrar sesión</a></li>
       </ul>
     </nav>
-  </header>
+   </article>
+
+  <hr>
   <?php
-  session_start();
-  if (!isset($_SESSION["usuario"])) {
-    header("location:index.php");
+  $miconexion = mysqli_connect("localhost", "root", "", "pruebas");
+  /*Comprobar conexion*/
+  if (!$miconexion) {                /*mysqli_error()*/
+    echo "La conexión ha fallado: " . mysqli_connect_error();/*¿falta algo?*/
+    exit();
+  }
+  /*Instruccion de rescatar informacion de tabla contenido */
+  $miconsulta = "SELECT * FROM contenido ORDER BY FECHA DESC";
+
+  if ($resultado = mysqli_query($miconexion, $miconsulta)) {
+    while ($registro = mysqli_fetch_assoc($resultado)) {
+      echo "<h3>" . $registro['Titulo'] . "</h3>";
+      echo "<h4>" . $registro['Fecha'] . "</h4>";
+      echo "<div style='width:400px'>" . $registro['Comentario'] . "</div><br/>";
+      if ($registro['Imagen'] != "") {
+        echo "<img src='imagenes/" . $registro['Imagen'] . "' width='180px'/>";
+      }
+      echo  " <h3>Precio : $" . $registro['precio'] . " pesos MX</h3>";
+      echo "<hr/>";/*Linea divisoria para capturas*/
+    }
   }
   ?>
-  <h1>Fotos</h1>
-  <?php
-  echo "<h2>¡Hola, " . $_SESSION["usuario"] . "!<br></h2>";
-  ?>
-
-<img src="chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
-<img src="/imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
-<img src="/imagenes_marca/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
-<img src="" width="212" height="75" alt="Sitio de comercio electronico">
-<img src="" width="212" height="75" alt="Sitio de comercio electronico">
-
-
-
-
 
 </body>
 

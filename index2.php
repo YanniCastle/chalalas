@@ -3,67 +3,91 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Chalalas.com</title>
-  <link rel="shortcut icon" href="/imagenes/letraCfondonegro.png">
-  <link rel="stylesheet" href="style.css"/>
-  
+  <title>CRUD usuarios_pass2</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="letraCfondonegro.png">
 </head>
 
 <body>
-  <header>
-    <img src="/imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
-    <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Acerca de</a></li>
-        <li><a href="registrate.php">Registrate</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <h1>prueba: maria1   contraseña: 123456</h1>
-  <h2>Usuarios con "ñ" no funciona..(Pendiente)</h2>
-
-  <form action="comprobar_usuario2.php" method="post">
+<h2>Debe funcionar con tabla:usuarios_pass2<br>Insertar funciona</h2>
+  <img class="marca" src="chalalas2.png" aling="middle" alt="Sitio de comercio electronico">
   <?php
-    if (isset($_POST['login'])) {
-      $nombre = $_POST['login'];
-      $password = $_POST['password'];
+  session_start();
+  if (!isset($_SESSION["usuario"])) {
+    header("Location:login.php");
+  }
+  ?>
+  <?php
+  include("conexion.php");
+  //$conexion=$base->query("SELECT * FROM DATOS_USUARIOS");//
+  //$registros=$conexion->fetchAll(PDO::FETCH_OBJ);//
+  $registros = $base->query("SELECT * FROM USUARIOS_PASS2")->fetchAll(PDO::FETCH_OBJ);
 
-      $campos = array();
+  if (isset($_POST["cr"])) {
+    $nombre = $_POST["Nom"];
+    $usuarios = $_POST["Usu"];
+    $email = $_POST["Email"];
+    $telefono = $_POST["Tel"];
+    $password = $_POST["Pass"];
 
-      if ($nombre == "") {
-        array_push($campos, "El nombre no puede estar vacio");
-      }
-      if ($password == "" || strlen($password) < 6) {
-        array_push($campos, "La contraseña no puede estar vacia, ni menor de 6 caracteres");
-      }
-      if (count($campos) > 0) {
-        echo "<div class='error'>";
-        for ($i = 0; $i < count($campos); $i++) {
-          echo "<li>" . $campos[$i] . "</i>";
-        }
-      } else {
-        echo "<div class='correcto'>
-      Datos correctos";
-      }
-      echo "</div>";
-    }
-    ?>
+    $sql = "INSERT INTO USUARIOS_PASS2 (NOMBRE, USUARIOS, MAIL, TELEFONO, PASSWORD) VALUES(:nom, :usu, :email, :tel, :pass)";
 
-    <label for="username">Usuario o Email:</label>
-    <input type="text" id="username" name="login" required placeholder="Ingresa usuario o email">
+    $resultado = $base->prepare($sql);
+    $resultado->execute(array(":nom" => $nombre, ":usu" => $usuarios, ":email" => $email, ":tel" => $telefono, ":pass" => $password));
+    header("Location:index2.php");
+  }
+  ?>
 
-    <label for="password">Contraseña:</label>
-    <input type="password" id="password" name="password" required>
+  <h1>Usuarios de Chalalas<span class="subtitulo">usuarios_pass2</span></h1>
+  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <table width="50%" border="0" align="center">
+      <tr>
+        <td class="primera_fila">Id</td>
+        <td class="primera_fila">Nombre</td>
+        <td class="primera_fila">Usuarios</td>
+        <td class="primera_fila">Email</td>
+        <td class="primera_fila">Telefono</td>
+        <td class="primera_fila">Password</td>
+        <td class="sin">&nbsp;</td>
+        <td class="sin">&nbsp;</td>
+        <td class="sin">&nbsp;</td>
+        <td class="sin">&nbsp;</td>
+      </tr>
 
-    <input type="submit" value="Iniciar Sesión">
-    <tr>
-      <td>
-        <a href="recuperacion.php">¿Olvidaste tu contraseña?</a>
-      </td>
-    </tr>
+
+      <?php   //bucle//
+      foreach ($registros as $persona) : ?>
+        <tr>
+          <td><?php echo $persona->Id ?></td>
+          <td><?php echo $persona->Nombre ?></td>
+          <td><?php echo $persona->Usuarios ?></td>
+          <td><?php echo $persona->Email ?></td>
+          <td><?php echo $persona->Telefono ?></td>
+          <td><?php echo $persona->Password ?></td>
+
+          <td class="bot"><a href="borrar2.php?Id=<?php echo $persona->Id ?>"><input type='button' name='del' id='del' value='Borrar'></a></td>
+
+
+          <td class='bot'><a href="editar2.php?Id=<?php echo $persona->Id ?> & nom=<?php echo $persona->Nombre ?> & usu=<?php echo $persona->Usuarios ?> & email=<?php echo $persona->Email ?> & tel=<?php echo $persona->Telefono ?> & pass=<?php echo $persona->Password ?>">
+
+              <input type='button' name='up' id='up' value='Actualizar'></a></td>
+        </tr>
+
+
+      <?php endforeach; ?>
+
+      <tr>
+        <td></td>
+        <td><input type='text' name='Nom' size='10' class='centrado'></td>
+        <td><input type='text' name='Usu' size='10' class='centrado'></td>
+        <td><input type='text' name='Email' size='10' class='centrado'></td>
+        <td><input type='text' name='Tel' size='10' class='centrado'></td>
+        <td><input type='text' name='Pass' size='10' class='centrado'></td>
+        <td class='bot'><input type='submit' name='cr' id='cr' value='Insertar'></td>
+      </tr>
+    </table>
   </form>
+  <p>&nbsp;</p>
 </body>
 
 </html>

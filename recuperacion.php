@@ -1,44 +1,39 @@
-<!doctype html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <title>recuperacion</title>
-  <link rel="shortcut icon" href="/imagenes/letraCfondonegro.png">
-  <link rel="stylesheet" href="style.css"/>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Recuperacion</title>
 </head>
-
 <body>
-  
-  <header>
-    <img src="chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
-    <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Acerca de</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <h2>¿Olvidaste tu contraseña?, tenemos dos opciones</h2>
+    <script>
+    var x = document.getElementById("frmlogin");
+    var y = document.getElementById("frmregistrar");
+    var z = document.getElementById("btnvai");
+	var textcolor1=document.getElementById("vaibtnlogin");
+	var textcolor2=document.getElementById("vaibtnregistrar");
+	textcolor1.style.color="white";
+	textcolor2.style.color="black";
 
-  <form action="#.php" method="post">
-  <?php
-    
-    ?>
-    <label for="username">(Recupera) escribe Email:</label>
-    <input type="text" id="email" name="email" required>
-    <input type="submit" value="Recuperar">
-  </form>
-
-  <form action="#.php" method="post">
-  <?php
-    
-    ?>
-    <label for="username">(Cambiar) escribe tu Email:</label>
-    <input type="text" id="email" name="email" required>
-    <input type="submit" value="Cambiar">
-  </form>
+function cancelarform() {
+  document.getElementById("formrecuperar").style.display = "none";
+}
+    </script>
+<div class="caja_popup" id="formrecuperar">
+  <form action="recuperar.php" class="contenedor_popup" method="POST">
+        <table>
+		<tr><th colspan="2">Recuperar contraseña</th></tr>
+            <tr> 
+                <td><b>&#128231; Correo</b></td>
+                <td><input type="email" name="txtcorreo" required class="cajaentradatexto"></td>
+            </tr>
+            <tr> 	
+               <td colspan="2">
+				   <button type="button" onclick="cancelarform()" class="txtrecuperar">Cancelar</button>
+				   <input class="txtrecuperar" type="submit" name="btnrecuperar" value="Enviar" onClick="javascript: return confirm('¿Deseas enviar tu contraseña a tu correo?');">
+			</td>
+            </tr>
+        </table>
+    </form>
+	</div>
 </body>
-
 </html>

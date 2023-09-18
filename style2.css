@@ -1,0 +1,12 @@
+#position {
+  position: fixed;
+  left: 20px;
+}
+
+nav {
+  background-color: #555;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}

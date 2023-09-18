@@ -8,7 +8,7 @@
 
 <body>
   <?php     /*Diferente forma de conexion a base de datos */
-  $miconexion = mysqli_connect("localhost", "root", "", "chalalas");
+  $miconexion = mysqli_connect("localhost", "root", "", "pruebas");
   /*Comprobar conexion*/
   if (!$miconexion) {                /*mysqli_error()*/
     echo "La conexión ha fallado: " . mysqli_connect_error();/*¿falta algo?*/
@@ -40,14 +40,15 @@
       echo "El archivo no se ha copiado en el directorio de imágenes";
     }
   }
-  $elprecio = $_POST['campo_precio'];
+
   $eltitulo = $_POST['campo_titulo'];
   $lafecha = date("Y-m-d H:i:s");
   $elcomentario = $_POST['area_comentarios'];
   $laimagen = $_FILES['imagen']['name'];
+  $elprecio = $_POST['campo_precio'];
 
   /*Video 90  20:19, continua video 91*/
-  $miconsulta = "INSERT INTO contenido (articulo, Fecha, descripcion, Imagen, precio) VALUES 
+  $miconsulta = "INSERT INTO contenido (Titulo, Fecha, Comentario, Imagen, precio) VALUES 
 /*Sustituir inf de Formulario('Titulo', 'Fecha', 'Comentario', 'Imagen')*/ 
 ('" . $eltitulo . "' , '" . $lafecha . "' , '" . $elcomentario . "' , '" . $laimagen . "' , '" . $elprecio . "')";
   //Super cuidado en comillas sencillas y dobles y puntos para concatenar//

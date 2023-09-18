@@ -4,49 +4,70 @@
 <head>
   <meta charset="utf-8">
   <title>Vender</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="shortcut icon" href="/imagenes/letraCfondonegro.png">
+  <link rel="stylesheet" href="stylefoto2.css" />
+  <link rel="shortcut icon" href="letraCfondonegro.png">
 </head>
 
 <body>
   <header>
-    <img src="chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
-    <nav>
-      <ul>
-        <li>
-          <a href="#">Productos</a>
-          <ul>
-            <li><a href="#">Comprar</a></li>
-            <li><a href="#">Vender</a></li>
-          </ul>
-        </li>
+  <article id="position">
+   <nav>
+    <ul>
+      <li>
+        <a href="usuarios_registrados1.php"><img src="imagenes/chalalas4.png"></a>
+      </li>
+      <li>
+        <a href="#">Productos</a>
+        <ul>
+          <li><a href="comprar.php">Comprar</a></li>
+          <li><a href="vender.php">Vender</a></li>
+        </ul>
+      </li>
 
-        <li><a href="#">CRUD</a></li>
-        <li><a href="#">Comentarios</a></li>
-        <li><a href="#">Fotos</a></li>
-        <li><a href="#">videos</a></li>
+      <li>
+        <a href="#">Servicios</a>
+        <ul>
+          <li><a href="buscar.php">buscar</a></li>
+          <li><a href="ofrecer.php">ofrecer</a></li>
+        </ul>
+      </li>
 
-        <li><a href="#">Contactos</a>
-          <ul>
-            <li><a href="#">Whats App</a></li>
-            <li><a href="#">Email</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Muro</a></li>
-        <li><a href="cierre.php">cerrar sesión</a></li>
-      </ul>
-    </nav>
-  </header>
+      <li><a href="#">Categorias</a>
+        <ul>
+          <li><a href="#">categoria 1</a></li>
+          <li><a href="#">categoria 2</a></li>
+          <li><a href="#">categoria 3</a></li>
+          <li><a href="#">categoria 4</a></li>
+        </ul>
+      </li>
+
+      <li><a href="Formulario.php">Comentarios</a></li>
+      <li><a href="fotos.php">Fotos</a></li>
+      <li><a href="videos.php">videos</a></li>
+
+      <li><a href="#">Contactos</a>
+        <ul>
+          <li><a href="#">Whats App</a></li>
+          <li><a href="email.php">Email</a></li>
+        </ul>
+      </li>
+      <li><a href="muro.php">Muro</a></li>
+      <li><a href="cierre.php">cerrar sesion</a></li>
+    </ul>
+  </nav>
+   </article>
   <?php
   session_start();
   if (!isset($_SESSION["usuario"])) {
-    header("location:index.php");
+    header("location:login.php");
   }
   ?>
-  <h1>Aqui agrega articulo que quieras vender</h1>
+  <br><br>
+  <h1>! Aqui puedes publicar lo que quieras vender !</h1>
   <?php
   echo "<h2>¡Hola, " . $_SESSION["usuario"] . "!<br></h2>";
   ?>
+
 
 <form action="Insertar_Contenido.php" method="post" enctype="multipart/form-data" name="form1">
     <table>
@@ -69,11 +90,12 @@
       <td colspan="2" align="left"><input type="file" name="imagen" id="imagen"></td>
       </tr>
 
+
       <tr>
         <td>Precio:
           <label for="campo_precio"></label>
         </td>
-        <td><input type='int' name='campo_precio' id='campo_precio'></td>
+        <td><input type='number_format' name='campo_precio' id='campo_precio'></td>
       </tr>
 
       <tr>
@@ -86,7 +108,6 @@
       </tr>
     </table>
   </form>
-
   
 </body>
 

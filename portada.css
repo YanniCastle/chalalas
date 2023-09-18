@@ -1,0 +1,24 @@
+/*Imagenes y contenidos */
+h1 {
+  font-size: large;
+  color: #1f720a;
+}
+section{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 
+  minmax(200px, 2fr));
+}
+article{
+  /*height: 50px;
+  border-style:solid;
+  border-color: white ;
+  border-radius: 0px;
+  border-width: 1px;*/
+
+  background-color: #1f720a;
+  border-radius: .5em;
+  margin: 0.5em auto;
+  
+  padding: 0.25em;
+  text-align: center;
+}

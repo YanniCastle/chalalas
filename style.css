@@ -1,97 +1,63 @@
-body {
-  background-color: #96a7b8;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0px;
+table {
+  width: 25%;
+  background-color: rgb(218, 218, 18);
+  border: 2px dotted rgb(17, 17, 17);
+  margin: auto;
 }
-h1 {
-  color: #dd2407;
+.izq {
+  text-align: right;
 }
-h2 {
-  color: #290601;
+.der {
+  text-align: left;
 }
-form {
-  width: 200px;
-  background-color:rgb(58, 122, 46);
+td {
+  text-align: center;
   padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1.1);
-  font-size: large;
 }
-label {
-  display: block;
-  margin-bottom: 20px;
+.marca {
+  width: 300px
 }
 
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-bottom: 10px;
-}
-input[type="submit"] {
-  background-color: #7e4727;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+table {
+  width: 50%;
+  margin: auto;
+  background-color: #ff9;
+  border: 2px solid #FF9900;
+  padding: 5px;
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  
-}
-nav ul li {
-  display: inline-block;
-  position: relative;
-}
-
-nav ul li a {
-  display: block;
-  padding: 15px 20px;
-  text-decoration: none;
-  color: #fff;
-}
-
-nav ul li:hover>ul {
-  display: block;
-}
-
-nav ul ul {
-  display: none;
-  position: absolute;
-  background-color: #555;
-}
-
-nav ul ul li {
-  display: block;
-}
-
-nav ul ul li a {
-  padding: 10px 20px;
+td {
+  padding: 5px 0;
 }
 
 
-
-
-
-
-nav {
-  background-color:rgb(58, 122, 46);
+.subtitulo {
+  font-size: 12px;
 }
-nav ul li a {
-  display: block;
-  padding: 15px 20px;
-  text-decoration: none;
-  color: #fff;
+
+table td {
+  text-align: center;
+  border: 1px #000099 dotted;
 }
-nav ul li a:hover {
-  display: block;
-  background-color: #555;
+
+table .sin {
+  border: 0;
+}
+
+table .bot {
+  padding: 0 5px;
+  display: inline;
+
+
+  border: 0;
+}
+
+table .primera_fila {
+  font-size: 1.5em;
+  text-decoration: underline;
+  background-color: rgb(22, 127, 212);
+}
+
+.centrado {
+  text-align: center;
 }
