@@ -1,8 +1,8 @@
 <?php
 
-$Chost = "localhost";
+$Chost = "";
 $Cuser = "root";
-$Cpass = "";
+$Cpass = "QWERTYu5544";
 $Cdb = "chalalas";
 
 $con = new mysqli($Chost, $Cuser, $Cpass, $Cdb);
