@@ -1,8 +1,8 @@
 <?php 
-$conn = new mysqli(" ","root","QWERTYu5544","chalalas");//agrege de recuperar
+$conn = new mysqli("localhost","root","QWERTYu5544","chalalas");//agrege de recuperar
 //Usaremos libreria PDO
 try{
-    $base=new PDO('mysql:host= ; dbname=chalalas', 'root', 'QWERTYu5544');
+    $base=new PDO('mysql:host=localhost; dbname=chalalas', 'root', 'QWERTYu5544');
                             
     $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $base->exec("SET CHARACTER SET UTF8");

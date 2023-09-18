@@ -1,6 +1,6 @@
 <?php
 
-$Chost = "";
+$Chost = "localhost";
 $Cuser = "root";
 $Cpass = "QWERTYu5544";
 $Cdb = "chalalas";
