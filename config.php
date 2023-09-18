@@ -2,7 +2,7 @@
 
 $Chost = "localhost";
 $Cuser = "root";
-$Cpass = "QWERTYu5544";
+$Cpass = "";
 $Cdb = "chalalas";
 
 $con = new mysqli($Chost, $Cuser, $Cpass, $Cdb);
