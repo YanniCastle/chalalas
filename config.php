@@ -1,4 +1,4 @@
-<!--No debe subirse-->
+<!--Solo localhost-->
 <?php
 
 $Chost = "localhost";
