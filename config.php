@@ -2,9 +2,9 @@
 <?php
 
 $Chost = "localhost";
-$Cuser = "root";
-$Cpass = "";
-$Cdb = "chalalas";
+$Cuser = "u909812438_root";
+$Cpass = "QWERTYu5544";
+$Cdb = "u909812438_chalalas";
 
 $con = new mysqli($Chost, $Cuser, $Cpass, $Cdb);
 

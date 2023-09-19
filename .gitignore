@@ -1,3 +1,7 @@
 .env
 red/
 .vscode/
+conexion.php
+config.php
+fotos.php
+fotos2.php

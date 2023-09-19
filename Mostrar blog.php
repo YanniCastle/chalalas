@@ -20,7 +20,7 @@
 
   <hr>
   <?php
-  $miconexion = mysqli_connect("localhost", "root", "", "pruebas");
+  $miconexion = mysqli_connect("localhost", "u909812438_root", "QWERTYu5544", "u909812438_chalalas");
   /*Comprobar conexion*/
   if (!$miconexion) {                /*mysqli_error()*/
     echo "La conexión ha fallado: " . mysqli_connect_error();/*¿falta algo?*/

@@ -16,10 +16,10 @@
     $login = htmlentities(addslashes($_POST["login"]));
     $password = htmlentities(addslashes($_POST["password"]));
     $contador = 0;//PARA SABER SI EL login esta o no esta en bd
-    $base = new PDO("mysql:host=localhost; dbname=chalalas", "root", "");
+    $base = new PDO("mysql:host=localhost; dbname=u909812438_chalalas", "u909812438_root", "QWERTYu5544");
     $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $sql = "SELECT * FROM USUARIOS_PASS2 WHERE USUARIOS= :login";//ENTREGA CONSULTA DE REGISTROS EN LOGIN
+    $sql = "SELECT * FROM usuarios_pass2 WHERE USUARIOS= :login";//ENTREGA CONSULTA DE REGISTROS EN LOGIN
     $resultado = $base->prepare($sql);
     $resultado->execute(array(":login" => $login));
      //bucle

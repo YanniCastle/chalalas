@@ -50,12 +50,12 @@
       $pass_cifrado = password_hash($contrasenia, PASSWORD_DEFAULT, array("cost" => 12));
                                                                 //array default 10,
       try {
-        $base = new PDO('mysql:host=localhost; dbname=chalalas', 'root', '');
+        $base = new PDO('mysql:host=localhost; dbname=u909812438_chalalas', 'u909812438_root', 'QWERTYu5544');
 
         $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $base->exec("SET CHARACTER SET UTF8");
 
-        $sql = "INSERT INTO USUARIOS_PASS2 (USUARIOS, NOMBRE, MAIL, TELEFONO, PASSWORD) VALUES (:usu, :nom, :mail, :number, :contra)";
+        $sql = "INSERT INTO usuarios_pass2 (USUARIOS, NOMBRE, MAIL, TELEFONO, PASSWORD) VALUES (:usu, :nom, :mail, :number, :contra)";
 
         $resultado = $base->prepare($sql);                                                                      //sin cifrar:  contrasenia
         $resultado->execute(array(":usu" => $usuario, ":nom" => $nombre, ":mail" => $mail, ":number" => $Telefono, ":contra" => $pass_cifrado));
