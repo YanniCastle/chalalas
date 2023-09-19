@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style4.css" />
 </head>
 
-<body><!--INTRODUCE DATOS-->
+<body>
   <header>
     <img src="chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
     <nav>
@@ -22,7 +22,7 @@
     </nav>
   </header>
   
-  <H2>¡Felicidades, ya estas registrad@!, inicia sesión por primera vez</H2>
+  <H2>¡Felicidades, ya estas registrad@!, inicia sesión con tu nueva contraseña</H2>
 
   <form action="comprueba_login3.php" method="post">
     <label for="username">Usuario:</label>

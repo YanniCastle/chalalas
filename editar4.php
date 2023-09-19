@@ -14,7 +14,7 @@
    <nav>
     <ul>
       <li>
-        <a href="usuarios_registrados1.php"><img src="imagenes/chalalas4.png"></a>
+        <a href="#"><img src="imagenes/chalalas4.png"></a>
       </li>
       <li>
         <a href="#">Productos</a>
@@ -25,12 +25,6 @@
       </li>
 
       <li>
-        <a href="#">Servicios</a>
-        <ul>
-          <li><a href="buscar.php">buscar</a></li>
-          <li><a href="ofrecer.php">ofrecer</a></li>
-        </ul>
-      </li>
 
       <li><a href="#">Categorias</a>
         <ul>
@@ -41,19 +35,18 @@
         </ul>
       </li>
 
-      <li><a href="Formulario.php">Comentarios</a></li>
-      <li><a href="fotos.php">Fotos</a></li>
-      <li><a href="videos.php">videos</a></li>
-      <li><a href="crud2.php">CRUD2</a></li>
+      <li><a href="#">Comentarios</a></li>
+      <li><a href="#">Fotos</a></li>
+      <li><a href="#">videos</a></li>
+      <li><a href="#">CRUD2</a></li>
 
       <li><a href="#">Contactos</a>
         <ul>
           <li><a href="#">Whats App</a></li>
-          <li><a href="email.php">Email</a></li>
+          <li><a href="#">Email</a></li>
         </ul>
       </li>
-      <li><a href="muro.php">Muro</a></li>
-      <li><a href="cierre.php">cerrar sesion</a></li>
+      <li><a href="#">Muro</a></li>
     </ul>
   </nav>
    </article><br><br>
@@ -83,7 +76,7 @@ $sql = "UPDATE usuarios_pass2 SET Password=:miPas WHERE Id=:miId";
     $resultado = $base->prepare($sql);   //":miPas" => $pas//
     $resultado->execute(array(":miId" => $Id, ":miPas" => $pass_cifrado));
 
-    header("Location:crud4.php");
+    header("Location:confirmacionderegistro.php");
   }
   ?>
 

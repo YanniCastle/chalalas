@@ -19,8 +19,8 @@
       <li>
         <a href="#">Productos</a>
         <ul>
-          <li><a href="comprar.php">Comprar</a></li>
-          <li><a href="vender.php">Vender</a></li>
+          <li><a href="#">Comprar</a></li>
+          <li><a href="#">Vender</a></li>
         </ul>
       </li>
 
@@ -32,8 +32,6 @@
           <li><a href="#">categoria 4</a></li>
         </ul>
       </li>
-
-      <li><a href="cierre.php">cerrar sesion</a></li>
     </ul>
   </nav>
    </article><br><br>
