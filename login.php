@@ -9,9 +9,8 @@
   <link rel="stylesheet" href="stylefoto2.css" /><!--menu-->
 </head>
 
-<body><!--INTRODUCE DATOS-->
+<body>
   <header>
-   <!-- <img src="chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">-->
     <nav>
       <ul>
       <li>
@@ -23,9 +22,7 @@
       </ul>
     </nav>
   </header>
- <!-- <h3>Usuario de prueba:Guadalupe  Contraseña:123456</h3>-->
-  <!--<h3>Usuarios con "ñ" no funciona..(Pendiente)<br>login2 PENDIENTE</h3>-->
-  <H2>Iniciar Sesión</H2>
+
   <H2>Sitio en Construcción...</H2>
 
   <form action="comprueba_login3.php" method="post">
@@ -55,8 +52,8 @@
     }
     ?>
 
-    <label for="username">Usuario:</label>
-    <input type="text" id="username" name="login" required>
+    <label for="username"><h2>Inicia sesión:</h2></label>
+    <input type="text" id="username" name="login" placeholder="usuario, email" required>
 
     <label for="password">Contraseña:</label>
     <input type="password" id="password" name="password" required>
