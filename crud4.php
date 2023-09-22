@@ -1,95 +1,94 @@
-<!doctype html>
-<html>
+<?php
 
+  include("conexion.php");
+
+  session_start();
+
+  if(isset($_SESSION["usuario"])){
+
+  $email_sesion = $_SESSION["usuario"];
+  $query_sesion = $base->prepare("SELECT * FROM usuarios_pass2 WHERE USUARIOS = '$email_sesion' ");
+  $query_sesion->execute();
+  $sesion_usuarios = $query_sesion->fetchAll(PDO::FETCH_ASSOC);
+  foreach($sesion_usuarios as $sesion_usuario){
+
+   $id_sesion = $sesion_usuario['ID'];
+   $nombre_sesion = $sesion_usuario['NOMBRE'];
+   $usuarios_sesion = $sesion_usuario['USUARIOS'];
+   $mail_sesion = $sesion_usuario['MAIL'];
+   $telefono_sesion = $sesion_usuario['TELEFONO'];
+   $password_sesion = $sesion_usuario['PASSWORD'];
+  }
+  }
+  ?>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Cambiar contraseña</title>
-  <link rel="stylesheet" href="style8.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DATOS SESSION</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="stylefoto2.css" />
   <link rel="shortcut icon" href="letraCfondonegro.png">
 </head>
-
 <body>
-<article id="position">
-   <nav>
-    <ul>
+<nav>
+    <ul>    
       <li>
-        <a href="#"><img src="imagenes/chalalas4.png"></a>
+        <a href="usuarios_registrados1.php"><img src="imagenes/chalalas4.png"></a>
       </li>
-      <li>
-        <a href="#">Productos</a>
-        <ul>
-          <li><a href="#">Comprar</a></li>
-          <li><a href="#">Vender</a></li>
-        </ul>
-      </li>
-
-      <li><a href="#">Categorias</a>
-        <ul>
-          <li><a href="#">categoria 1</a></li>
-          <li><a href="#">categoria 2</a></li>
-          <li><a href="#">categoria 3</a></li>
-          <li><a href="#">categoria 4</a></li>
-        </ul>
-      </li>
+      <li><a href="cierre.php">cerrar sesion</a></li>
     </ul>
   </nav>
-   </article><br><br>
-  <?php  /* suspendi session para probar cambio de contraseña
+  <h1>Escribe tu nueva contraseña</h1>
+<?php  echo "<h2>¡Hola, " . $_SESSION["usuario"] . "!<br></h2>"; 
+
+if (!isset($_POST["bot_actualizar"])) {
+
+} else {
+  $Id = $_POST["id"];
+  $usu = $_POST["usu"];
+  $mai = $_POST["mai"];
+  $pas = $_POST["pas"];
+  
+  $pass_cifrado = password_hash($pas, PASSWORD_DEFAULT, array("cost" => 12));    
+$sql = "UPDATE usuarios_pass2 SET USUARIOS=:miUsu, MAIL=:miMai, PASSWORD=:miPas WHERE Id=:miId";
+  $resultado = $base->prepare($sql);
+  $resultado->execute(array(":miId" => $Id, ":miUsu" => $usu, ":miMai" => $mai, ":miPas" => $pass_cifrado));
   session_start();
-  if (!isset($_SESSION["usuario"])) {
-    header("Location:login.php");
-  }*/
-  ?>
-  <?php
-  include("conexion.php");
-  $registros = $base->query("SELECT * FROM usuarios_pass2")->fetchAll(PDO::FETCH_OBJ);
+  session_destroy();
+  header("Location:confirmacionderegistro.php");
+}
+?>
 
-  if (isset($_POST["cr"])) {
-    
-    $password = $_POST["Pas"];
+<form name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
-    $sql = "INSERT INTO usuarios_pass2 (PASSWORD) VALUES(:pas)";
-
-    $resultado = $base->prepare($sql);
-    $resultado->execute(array(":pas" => $password));
-    header("Location:crud4.php");
-  }
-  ?>
-
-  <h1>Cambia Contraseña    tabla:usuarios_pass2</h1>
-  <h2>Quitar el bucle de lista</h2>
-  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-    <table width="50%" border="0" align="center">
+  <table width="20%" border="1" align="center">
       <tr>
-        <td class="primera_fila">ID</td>     
-        <td class="primera_fila">PASSWORD</td>
-        <td class="sin">&nbsp;</td>
+          <input type="hidden" name="id" id="id" value="<?php echo $id_sesion ?>" >
+      </tr>
+      
+      <tr>
+<!--NO cambiar, deja de funcionar SESSION-->
+          <input type="hidden" name="usu" id="usu" value="<?php echo $usuarios_sesion ?>">
       </tr>
 
-      <?php   //bucle//
-      foreach ($registros as $persona) : ?>
-        <tr>                 
-          <td><?php echo $persona->ID ?></td>         
-          <td><?php echo $persona->PASSWORD ?></td>
-
-          <td class="bot"><a href="borrar4.php?Id=<?php echo $persona->ID ?>">
-          <input type='button' name='del' id='del' value='Borrar'></a></td>
-
-
-<td class='bot'><a href="editar4.php?Id=<?php echo $persona->ID ?> & pas=<?php echo $persona->PASSWORD ?>">
-<input type='button' name='up' id='up' value='Actualizar'></a></td>
-        </tr>
-
-
-      <?php endforeach; ?>
-
       <tr>
-        <td><input type='text' name='Pas' size='10' class='centrado'></td>
+          <input type="hidden" name="mai" id="mai" value="<?php echo $mail_sesion ?>">   
+      </tr>
+           
+      <tr>
+        <td>Contraseña</td>
+        <td><label for="pas"></label>
+          <input type="text" name="pas" id="pas" value="" placeholder="Nueva contraseña">
+        </td>
+      </tr>
+     
+      <tr>
+        <td colspan="2"><input type="submit" name="bot_actualizar" id="bot_actualizar" value="Actualizar"></td>
       </tr>
     </table>
   </form>
-  <p>&nbsp;</p>
+  
 </body>
-
 </html>
