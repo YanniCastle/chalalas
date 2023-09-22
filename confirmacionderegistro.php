@@ -22,7 +22,7 @@
     </nav>
   </header>
   
-  <H2>¡Felicidades, ya estas registrad@!, inicia sesión con tu nueva contraseña</H2>
+  <H2>¡Felicidades, ya estas registrad@!, inicia sesión</H2>
 
   <form action="comprueba_login3.php" method="post">
     <label for="username">Usuario:</label>
