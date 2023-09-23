@@ -57,7 +57,7 @@ $sql = "UPDATE usuarios_pass2 SET USUARIOS=:miUsu, MAIL=:miMai, PASSWORD=:miPas 
   $resultado->execute(array(":miId" => $Id, ":miUsu" => $usu, ":miMai" => $mai, ":miPas" => $pass_cifrado));
   session_start();
   session_destroy();
-  header("Location:confirmacionderegistro.php");
+  header("Location:login.php");
 }
 ?>
 
