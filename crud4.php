@@ -7,7 +7,7 @@
   if(isset($_SESSION["usuario"])){
 
   $email_sesion = $_SESSION["usuario"];
-  $query_sesion = $base->prepare("SELECT * FROM usuarios_pass2 WHERE USUARIOS = '$email_sesion' ");
+  $query_sesion = $base->prepare("SELECT ID, USUARIOS, MAIL, PASSWORD FROM usuarios_pass2 WHERE USUARIOS = '$email_sesion' OR MAIL = '$email_sesion' ");
   $query_sesion->execute();
   $sesion_usuarios = $query_sesion->fetchAll(PDO::FETCH_ASSOC);
   foreach($sesion_usuarios as $sesion_usuario){
