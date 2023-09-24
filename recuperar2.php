@@ -19,7 +19,7 @@ $enviarlink = "http://chalalas.com/crud7.php?correo=$correo";
 $paracorreo 		= $correo;
 $titulo				= "Cambia tu contraseña";
 $mensaje			="Haz clic en el enlace para restablecer tu contraseña:  " . $enviarlink;
-$tucorreo			= "From: xxxx@gmail.com";
+$tucorreo			= "From: chalalasmx@gmail.com";
 
 if(mail($paracorreo,$titulo,$mensaje,$tucorreo))
 {
