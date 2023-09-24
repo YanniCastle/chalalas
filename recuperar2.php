@@ -33,5 +33,8 @@ else{
 else{
 	echo "<script> alert('Este correo no existe');window.location= 'recuperacion2.php' </script>";
     }
-	}		
+	}	
+	else{
+		echo "<script> alert('Este correo no existe');window.location= 'recuperacion2.php' </script>";
+    }	
 ?>
