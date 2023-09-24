@@ -61,7 +61,7 @@
     <input type="submit" value="Iniciar Sesión">
     <tr>
       <td>
-        <a href="recuperacion.php">¿Olvidaste tu contraseña?</a>
+        <a href="recuperacion2.php">¿Olvidaste tu contraseña?</a>
       </td>
     </tr>
   </form>
