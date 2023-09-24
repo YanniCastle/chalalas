@@ -3,7 +3,7 @@ include('conexion.php');
 
 $correo = $_POST['txtcorreo'];
 
-$queryusuario 	= mysqli_query($conn,"SELECT ID, USUARIOS, MAIL, FROM usuarios_pass2 WHERE MAIL = '$correo'");
+$queryusuario 	= mysqli_query($conn,"SELECT ID, USUARIOS, MAIL FROM usuarios_pass2 WHERE MAIL = '$correo'");
 $nr 			= mysqli_num_rows($queryusuario); 
 if ($nr == 1)
 {
