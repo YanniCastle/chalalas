@@ -1,22 +1,17 @@
 <?php
-
-  include("conexion.php");
-
   session_start();
 
-  if(isset($_SESSION["txtcorreo"])){
-
-  $email_sesion = $_SESSION["txtcorreo"];
-  $query_sesion = $base->prepare("SELECT ID, USUARIOS, MAIL FROM usuarios_pass2 WHERE MAIL = '$email_sesion' ");
+  if(isset($_SESSION["correo"])){
+    include("conexion.php");
+  $email_sesion = $_SESSION["correo"];
+  $query_sesion = $base->prepare("SELECT * FROM usuarios_pass2 WHERE MAIL = '$email_sesion' ");
   $query_sesion->execute();
   $sesion_usuarios = $query_sesion->fetchAll(PDO::FETCH_ASSOC);
   foreach($sesion_usuarios as $sesion_usuario){
 
    $id_sesion = $sesion_usuario['ID'];
-  
    $usuarios_sesion = $sesion_usuario['USUARIOS'];
    $mail_sesion = $sesion_usuario['MAIL'];
- 
    $password_sesion = $sesion_usuario['PASSWORD'];
   }
   }
@@ -26,7 +21,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>crud7</title>
+  <title>nueva contraseña</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="stylefoto2.css" />
   <link rel="shortcut icon" href="letraCfondonegro.png">
@@ -41,7 +36,7 @@
     </ul>
   </nav>
   <h1>Escribe tu nueva contraseña</h1>
-<?php  echo "<h2>¡Hola, " . $_SESSION["txtcorreo"] . "!<br></h2>"; 
+<?php  echo "<h2>¡Hola, " . $_SESSION["correo"] . "!<br></h2>"; 
 
 if (!isset($_POST["bot_actualizar"])) {
 
@@ -55,8 +50,6 @@ if (!isset($_POST["bot_actualizar"])) {
 $sql = "UPDATE usuarios_pass2 SET USUARIOS=:miUsu, MAIL=:miMai, PASSWORD=:miPas WHERE Id=:miId";
   $resultado = $base->prepare($sql);
   $resultado->execute(array(":miId" => $Id, ":miUsu" => $usu, ":miMai" => $mai, ":miPas" => $pass_cifrado));
- // session_start();
- // session_destroy();
   header("Location:login.php");
 }
 ?>
