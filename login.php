@@ -4,28 +4,30 @@
 <head>
   <meta charset="utf-8">
   <title>Chalalas.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="initial-scale=1, width=device-width">
   <link rel="shortcut icon" href="letraCfondonegro.png">
-  <link rel="stylesheet" href="style3.css" /><!--fondo-->
-  <link rel="stylesheet" href="stylefoto2.css" /><!--menu-->
+
+  <link rel="stylesheet"
+      href="mobile.css"
+      media="(max-width: 640px)">
+
+  <link rel="stylesheet"
+      href="tablet.css"
+      media="(min-width: 640px) and (max-width: 1280px)">
+
+  <link rel="stylesheet"
+      href="desktop.css"
+      media="(min-width: 1280px)">
+      
 </head>
 
 <body>
-  <header>
-    <nav>
-      <ul>
-      <li>
-        <a href="#"><img src="imagenes/chalalas4.png" alt="Sitio de comercio electronico"></a>
-      </li>
-        <li><a href="#">Acerca de</a></li>
-        <li><a href="Formulario_Insertar_Usuarios3.php">Registrate</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <H2>Sitio en Construcción...</H2>
-
+<div class="ocultar-div">
+  <h3>Sitio en Construcción...</h3>
+</div>
   <form action="comprueba_login3.php" method="post">
+  <img src="chalalas6.png">
   <?php
     if (isset($_POST['login'])) {
       $nombre = $_POST['login'];
@@ -56,19 +58,21 @@
     <input type="text" id="username" name="login" placeholder="usuario, email" required>
 
     <label for="password">Contraseña:</label>
-    <input type="password" id="password" name="password" required>
+    <input type="password" id="password" name="password" placeholder="Escribe contraseña" required>
 
     <input type="submit" value="Iniciar Sesión">
     <tr>
       <td>
-        <a href="recuperar_password.php">¿Olvidaste tu contraseña?</a>
+        <a href="recuperar_password.php"><h3>¿Olvidaste tu contraseña?</h3></a>
       </td>
     </tr>
   </form>
 
+  <div class="ocultar-div">
   <marquee bgcolor="#AAEEEE" behavior="alternate" direction="right">
 <b><font color="#green" size="22"><img src="imagenes/chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">En Linea</font></b>
 </marquee>
+</div>
 </body>
 
 </html>
