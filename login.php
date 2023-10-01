@@ -13,7 +13,7 @@
       media="(max-width: 640px)">
 
   <link rel="stylesheet"
-      href="tablet.css"
+      href="tablet1.css"
       media="(min-width: 640px) and (max-width: 1280px)">
 
   <link rel="stylesheet"
