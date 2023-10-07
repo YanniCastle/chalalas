@@ -6,7 +6,7 @@
   <title>prueba subir</title>
 </head>
 <body>
-  <h1>Prueba subir a hostinger</h1>
+  <h1>Prueba subir a hostinger repositorio</h1>
   
 </body>
 </html>
