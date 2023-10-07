@@ -1,0 +1,39 @@
+body {
+  background-color: #9b8888;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-align: center;
+  color: rgb(236, 8, 8);
+}
+
+h2 {
+  text-align: center;
+  color: rgb(23, 120, 231);
+}
+h3 {
+  text-align: left;
+  color: rgb(245, 83, 54);
+}
+h4 {
+  text-align: left;
+  color: rgb(21, 126, 35);
+}
+
+#campo_titulo, #area_comentarios,
+#campo_precio{
+  background-color: white;
+}
+
+.iframe0 {
+  width: 30%;
+  float: left;
+  height: 600px;
+}
+.iframe1 {
+  width: 66%;
+  float: left;
+  height: 600px;
+}

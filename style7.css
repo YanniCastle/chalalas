@@ -3,6 +3,9 @@
   margin:0;
   padding:0;
 }
+h1 {
+  color: rgb(18, 216, 28);
+}
 /*menu adaptable*/
 #position {/*fija el menu*/
   width: 100%;
@@ -28,7 +31,7 @@ nav {
   border-radius: 0rem;
 }
 nav .logo {
-  font-weight: 700;
+  font-weight: 500;
 }
 nav ul {
   list-style: none;
@@ -69,7 +72,7 @@ nav label {
 /* Smartphones (portrait ) Moto g8---------- */  
 @media only screen  
 and (min-width : 100px)  
-and (max-width : 950px)  
+and (max-width : 1200px) /*950*/ 
 /*and (orientation:portrait)*/ 
 {  
 body{
@@ -94,3 +97,25 @@ background-color: black;
   font-size: 18px; 
   }  
 }  
+
+
+input[type="text"]{
+     /*width: 120%;*/
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-size: 26px;
+  background-color: #fff;
+  }
+  
+  input[type="submit"] {
+    font-size: 18px;
+    background-color: #af704c;
+    color: #fff;
+    padding: 14px 60px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
