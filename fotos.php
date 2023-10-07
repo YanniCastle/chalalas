@@ -109,10 +109,10 @@
       echo "<h4>" . $registro['Fecha'] . "</h4>";
       echo "<div style='width:400px'>" . $registro['Comentario'] . "</div><br/>";
       if ($registro['Imagen'] != "") {
-        echo "<img src='imagenes/" . $registro['Imagen'] . "' width='180px'/>";
+        echo "<img src='imagenes/productos/" . $registro['Imagen'] . "' width='180px'/>";
       }
       echo  " <h3>Precio : $" . $registro['precio'] . " pesos MX</h3>";
-      echo "<hr/>";/*Linea divisoria para capturas*/
+      echo "<hr/><hr/><hr/><hr/><hr/><hr/>";/*Linea divisoria para capturas*/
     }
   }
   ?>
