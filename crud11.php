@@ -19,7 +19,7 @@
   <?php
   /*conexion.php */
   try {
-    $base = new PDO('mysql:host=localhost; dbname=pruebas', 'root', '');
+    $base = new PDO('mysql:host=localhost; dbname=u909812438_chalalas2', 'u909812438_root2', 'QWERTYu55442');
     /*Para poder ver los errores y tipos */
     $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $base->exec("SET CHARACTER SET UTF8");
