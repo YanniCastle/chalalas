@@ -8,9 +8,9 @@
 
 <body>
   <?php     /*Diferente forma de conexion a base de datos */
-  $miconexion = mysqli_connect("localhost", "u909812438_root2", "QWERTYu55442", "u909812438_chalalas2");
+  include("conexion.php");
   /*Comprobar conexion*/
-  if (!$miconexion) {                /*mysqli_error()*/
+  if (!$mibase) {                /*mysqli_error()*/
     echo "La conexión ha fallado: " . mysqli_connect_error();/*¿falta algo?*/
     exit();
   }
