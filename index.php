@@ -5,42 +5,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chalalas.com</title>
-  <link rel="stylesheet" media="screen and (color)" href="style7.css" /><!--menu plegable-->
-  <!--<link rel="stylesheet" media="screen and (color)" href="portada.css" />menu plegable-->
-  <link rel="shortcut icon" href="letraCfondonegro.png"><!--icono-navegador-->
+  <link rel="stylesheet" href="style1b.css" /><!--barra de menu plegable-->
+  <script src="a2dd6045c4.js" crossorigin="anonymous"></script><!--js para iconos-->
+  <link rel="stylesheet" type="text/css" href="estilos.css"><!--Iconos-->
 
- 
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="shortcut icon" href="letraCfondonegro.png">
 </head>
 
 <body>
-  <br><br>
-
-  <header id="position">
-    <div class="wrapper">
-      <nav>
-        <a href="" class="logo"><img src="imagenes/chalalas4.png"></a>
-        <a>
-          <form action="" method="get">
-            <input type="text" name="busqueda" required placeholder="Agrega tu busqueda">
-            <input type="submit" name="enviar" value="Buscar"><br><br>
-          </form>
-        </a>
-        <input type="checkbox" name="" id="toggle">
-        <label for="toggle"><i class="material-icons">menu</i></label>
-        <div class="menu">
-          <ul>
-            <li><a href="Formulario_Insertar_Usuarios3.php">Registrate</a></li>
-            <li><a href="">Acercaaaaaaaaaa de </a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="login.php">Iniciar Sesión</a></li>
-          </ul>
-        </div>
+  <article id="position">
+    <header>
+      <div class="ocultar-div">
+        <a><img src="chalalas2.png"></a>
+      </div>
+      <div class="ocultar-div2">
+        <a><img src="imagenes/chalalas4.png"></a>
+      </div>
+      <a>
+        <form action="" method="get">
+          <input type="search" id="busqueda" name="busqueda" required placeholder="¿Que artículo buscas?">
+          <input type="submit" id="enviar" name="enviar" value="Buscar"><br><br>
+        </form>
+      </a>
+      <input type="checkbox" id="check">
+      <label for="check" class="mostrar-menu">
+        &#8801<!--hamburguesa-->
+      </label>
+      <nav class="menu">
+        <a href="Formulario_Insertar_Usuarios3.php">Registrate<i class="fa-regular fa-image"></i></a>
+        <a href="login.php">Iniciar Sesión<i class="fa-solid fa-user"></i></a>
+        <label for="check" class="esconder-menu">
+          &#215 <!--la x-->
+        </label>
       </nav>
-    </div>
-  </header>
-<br>
-  <h1>Prueba</h1>
+    </header>
+  </article>
+  <?php
+  include 'config.php';
+  if (isset($_GET['enviar'])) {
+    $busqueda = $_GET['busqueda'];
+    $consulta = $con->query("SELECT * FROM contenido WHERE Titulo LIKE '%$busqueda%'");
+    while ($row = $consulta->fetch_array()) {
+      echo "<br/><h3>" . $row['Titulo'] . "</h3>";
+      echo "<h5>" . $row['Fecha'] . "</h5>";
+      echo "<div style='width:400px'>" . $row['Comentario'] . "</div><br/>";
+      if ($row['Imagen'] != "") {
+        echo "<img src='imagenes/productos/" . $row['Imagen'] . "' width='150px'/>";
+      }
+      echo  " <h3>Precio : $" . $row['precio'] . " pesos MX</h3>";
+      echo "<hr/>";
+    }
+  }
+  ?>
 </body>
-
 </html>
