@@ -8,9 +8,9 @@
 
 <body>
   <?php     /*Diferente forma de conexion a base de datos */
-  include("config.php");
+  include("conexion.php");
   /*Comprobar conexion*/
-  if (!$con) {                /*mysqli_error()*/
+  if (!$miconexion) {                /*mysqli_error()*/
     echo "La conexión ha fallado: " . mysqli_connect_error();/*¿falta algo?*/
     exit();
   }
