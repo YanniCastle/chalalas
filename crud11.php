@@ -35,7 +35,7 @@
     header("Location:crud11.php");
   }
   ?>
-  <a href="cierre.php">cerrar sesion</a>
+
   <h1>Imagenes en catalogo</h1>
   <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
     <table width="50%" border="0" align="center">
