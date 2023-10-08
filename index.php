@@ -31,7 +31,7 @@
         <div class="menu">
           <ul>
             <li><a href="Formulario_Insertar_Usuarios3.php">Registrate</a></li>
-            <li><a href="">Acerca de </a></li>
+            <li><a href="">Acercaaaaaaaaaa de </a></li>
             <li><a href="">Contact</a></li>
             <li><a href="login.php">Iniciar Sesión</a></li>
           </ul>
