@@ -10,7 +10,7 @@
   <?php     /*Diferente forma de conexion a base de datos */
   include("conexion.php");
   /*Comprobar conexion*/
-  if (!$mibase) {                /*mysqli_error()*/
+  if (!$conn) {                /*mysqli_error()*/
     echo "La conexión ha fallado: " . mysqli_connect_error();/*¿falta algo?*/
     exit();
   }
