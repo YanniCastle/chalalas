@@ -17,17 +17,7 @@
   }
   ?>
   <?php
-  /*conexion.php */
-  try {
-    $base = new PDO('mysql:host=localhost; dbname=u909812438_chalalas2', 'u909812438_root2', 'QWERTYu55442');
-    /*Para poder ver los errores y tipos */
-    $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $base->exec("SET CHARACTER SET UTF8");
-  } catch (Exception $e) {
-    die('Error' . $e->getMessage()); //acabe conexion y cual es//
-    echo "Linea de error" . $e->getLine(); //esto da la linea del error//
-  }
-  /*archivo de conexion */
+  include('conexion.php');
 
   $registros = $base->query("SELECT * FROM contenido ORDER BY FECHA DESC")->fetchAll(PDO::FETCH_OBJ);
 
@@ -81,7 +71,7 @@
           <td class='bot'><a href="editar11.php?Id=<?php echo $persona->Id ?> & Tit=<?php echo $persona->Titulo ?> & Fec=<?php echo $persona->Fecha ?> & Com=<?php echo $persona->Comentario ?> & Ima=<?php echo $persona->Imagen ?> & Pre=<?php echo $persona->precio ?>">
               <input type='button' name='up' id='up' value='Actualizar datos'></a></td>
         </tr>
-        <!--ACOMODAR DATOS PARA VERSE BIEN EN TABLA ,  ORDENAR QUE NO SE VEA RUTA-->
+       
 
       <?php endforeach; ?>
 
