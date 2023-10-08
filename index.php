@@ -12,7 +12,7 @@
   <link rel="shortcut icon" href="letraCfondonegro.png">
 </head>
 
-<body>
+<body><br><br>
   <h1>Bienvenid@s</h1><br>
   <h2>Sitio web de comercio electronico</h2>
   <article id="position">
