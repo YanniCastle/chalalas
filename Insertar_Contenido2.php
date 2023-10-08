@@ -27,7 +27,7 @@
   
   $elprecio = $_POST['campo_precio'];
    
-if ($tamaño_imagen<=5000000) {
+if ($tamaño_imagen<=5120000) {
 
 
   if($tipo_imagen=="image/jpeg" OR $tipo_imagen=="image/jpg" OR $tipo_imagen=="image/png" OR $tipo_imagen=="image/gif"){
