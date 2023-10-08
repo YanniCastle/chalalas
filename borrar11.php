@@ -7,7 +7,7 @@
 
 <body>
     <?php
-    include('conexion.php');
+    include("conexion.php");
     if (isset($_GET)) {
         $id = 0;
         $ruta = '';
