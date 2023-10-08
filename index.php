@@ -13,6 +13,8 @@
 </head>
 
 <body>
+  <h1>Bienvenid@s</h1><br>
+  <h2>Sitio web de comercio electronico</h2>
   <article id="position">
     <header>
       <div class="ocultar-div">
@@ -58,4 +60,5 @@
   }
   ?>
 </body>
+
 </html>
