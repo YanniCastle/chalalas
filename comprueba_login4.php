@@ -3,12 +3,12 @@ try {
   $login = htmlentities(addslashes($_POST["login"]));
   $password = htmlentities(addslashes($_POST["password"]));
   $contador = 0;
-
-  $base = new PDO("mysql:host=localhost; dbname=u909812438_chalalas3", "u909812438_root3", "QWERTYu55443");
-  $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  include('conexion.php');
+  //$base = new PDO("mysql:host=localhost; dbname=u909812438_chalalas3", "u909812438_root3", "QWERTYu55443");
+ // $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   //, TELEFONO= :login//
   $sql = "SELECT ID, USUARIOS, MAIL, PASSWORD, id_cargo FROM usuarios_pass2 WHERE USUARIOS= :login OR MAIL= :login";
-  $resultado = $base->prepare($sql);     ////
+  $resultado = $base->prepare($sql); 
   $resultado->execute(array(":login" => $login));
 
   while ($registro = $resultado->fetch(PDO::FETCH_ASSOC)) {
@@ -20,7 +20,6 @@ try {
     session_start();
     $_SESSION["usuario"] = $_POST["login"];
     include('conexion.php');
-//$conn = new mysqli("localhost", "u909812438_root3", "QWERTYu55443", "u909812438_chalalas3");
 $consulta = "SELECT * FROM usuarios_pass2 WHERE USUARIOS= '$login' OR MAIL= '$login'";
     $resultado = mysqli_query($conn, $consulta);
     $filas = mysqli_fetch_array($resultado);
@@ -30,18 +29,15 @@ $consulta = "SELECT * FROM usuarios_pass2 WHERE USUARIOS= '$login' OR MAIL= '$lo
   if ($filas['id_cargo'] > 0) {
       switch ($filas['id_cargo']) {
         case 1:
-          //echo $login . " es administrador";
           header("location:usuarios_registrados1.php");
           break;
         case 2:
-          //echo $login . " es Desarrollador nivel 1";
           header("location:usuarios_registrados2.php");
           break;
         case 3:
-          //echo $login . " es Usuario registado";
           header("location:usuarios_registrados3.php");
           break;
-      } //fin de swicht//
+      } //fin de switch//
     } //fin del if//
   } //fin de contador//
   else {
