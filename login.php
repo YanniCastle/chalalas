@@ -26,7 +26,7 @@
 <div class="ocultar-div">
   <h3>Sitio en Construcción...</h3>
 </div>
-  <form action="comprueba_login3.php" method="post">
+  <form action="comprueba_login.php" method="post">
   <img src="chalalas6.png">
   <?php
     if (isset($_POST['login'])) {
