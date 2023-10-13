@@ -1,12 +1,13 @@
 <?php
-try { //copiado de:comprueba_login de curso_php, checando en servidor y BD3//
+try {
   $login = htmlentities(addslashes($_POST["login"]));
   $password = htmlentities(addslashes($_POST["password"]));
   $contador = 0;
-  include('conexion.php');
-  //$conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//Las propiedades de la conexion//
-  $consulta = "SELECT * FROM usuarios_pass2 WHERE USUARIOS= '$login' OR MAIL= '$login'";
-  $resultado = $base->prepare($consulta);
+  $base = new PDO("mysql:host=localhost; dbname=u909812438_chalalas3", "u909812438_root3", "QWERTYu55443");
+  $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  //, TELEFONO= :login//
+  $sql = "SELECT ID, USUARIOS, MAIL, PASSWORD, id_cargo FROM usuarios_pass2 WHERE USUARIOS= :login OR MAIL= :login";
+  $resultado = $base->prepare($sql);     ////
   $resultado->execute(array(":login" => $login));
 
   while ($registro = $resultado->fetch(PDO::FETCH_ASSOC)) {
