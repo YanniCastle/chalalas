@@ -17,8 +17,8 @@ try {
     session_start();
     $_SESSION["usuario"] = $_POST["login"];
     include('conexion.php');
-//$consulta = "SELECT * FROM usuarios_pass2 WHERE USUARIOS= '$login' OR MAIL= '$login'";
-    $resultado = mysqli_query($conn, $sql);
+$consulta = "SELECT * FROM usuarios_pass2 WHERE USUARIOS= '$login' OR MAIL= '$login'";
+    $resultado = mysqli_query($conn, $consulta);
     $filas = mysqli_fetch_array($resultado);
     if (null == $filas) {
       echo $login . ", No esta en registros";
