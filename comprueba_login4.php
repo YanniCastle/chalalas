@@ -3,7 +3,7 @@ try {
   $login = htmlentities(addslashes($_POST["login"]));
   $password = htmlentities(addslashes($_POST["password"]));
   $contador = 0;
-  include('conexion.php');
+  $conn = new mysqli("localhost", "u909812438_root3", "QWERTYu55443", "u909812438_chalalas3");
   $base = new PDO("mysql:host=localhost; dbname=u909812438_chalalas3", "u909812438_root3", "QWERTYu55443");
   $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   //, TELEFONO= :login//
