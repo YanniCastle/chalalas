@@ -4,9 +4,6 @@ try {
   $password = htmlentities(addslashes($_POST["password"]));
   $contador = 0;
   include('conexion.php');
-  //$base = new PDO("mysql:host=localhost; dbname=u909812438_chalalas3", "u909812438_root3", "QWERTYu55443");
- // $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  //, TELEFONO= :login//
   $sql = "SELECT ID, USUARIOS, MAIL, PASSWORD, id_cargo FROM usuarios_pass2 WHERE USUARIOS= :login OR MAIL= :login";
   $resultado = $base->prepare($sql); 
   $resultado->execute(array(":login" => $login));
@@ -20,8 +17,8 @@ try {
     session_start();
     $_SESSION["usuario"] = $_POST["login"];
     include('conexion.php');
-$consulta = "SELECT * FROM usuarios_pass2 WHERE USUARIOS= '$login' OR MAIL= '$login'";
-    $resultado = mysqli_query($conn, $consulta);
+//$consulta = "SELECT * FROM usuarios_pass2 WHERE USUARIOS= '$login' OR MAIL= '$login'";
+    $resultado = mysqli_query($conn, $sql);
     $filas = mysqli_fetch_array($resultado);
     if (null == $filas) {
       echo $login . ", No esta en registros";
