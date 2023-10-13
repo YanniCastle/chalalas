@@ -33,7 +33,7 @@
         &#8801<!--hamburguesa-->
       </label>
       <nav class="menu">
-        <a href="">Registrate<i class="fa-solid fa-address-card"></i></a>
+        <a href="Formulario_Insertar_Usuarios3.php">Registrate<i class="fa-solid fa-address-card"></i></a>
         <a href=""><i class="fa-solid fa-video"></i></a>
         <a href="login.php">Iniciar Sesión<i class="fa-solid fa-user"></i></a>
         <label for="check" class="esconder-menu">
