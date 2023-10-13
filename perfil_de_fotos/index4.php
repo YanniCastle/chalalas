@@ -21,7 +21,7 @@
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4"><br><br>
 				<center><h3>Iniciar Sesión</h3></center><br><br>
-				<form action="../perfil_de_fotos/login4.php" method="post">
+				<form action="login4.php" method="post">
 					
 					<div class="form-group">
 						<span>Email</span>
