@@ -53,7 +53,7 @@
   }
   include 'config.php';
 
-  echo "<br/><br/><br/><h2>¡Hola, " . $_SESSION["usuario"] . "!<br></h2>";
+  echo "<br/><br/><br/><h2>¡Hola, Administrador" . $_SESSION["usuario"] . "!<br></h2>";
 
   if (isset($_GET['enviar'])) {
     $busqueda = $_GET['busqueda'];
