@@ -3,6 +3,7 @@ try {
   $login = htmlentities(addslashes($_POST["login"]));
   $password = htmlentities(addslashes($_POST["password"]));
   $contador = 0;
+  include('conexion.php');
   $base = new PDO("mysql:host=localhost; dbname=u909812438_chalalas3", "u909812438_root3", "QWERTYu55443");
   $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   //, TELEFONO= :login//
@@ -41,7 +42,7 @@ try {
     } //fin del if//
   } //fin de contador//
   else {
-    echo '<script type="text/javascript"> alert("Error, ¡revisa tus datos!"); window.location="loginroles.php";</script>';
+    echo '<script type="text/javascript"> alert("Error, ¡revisa tus datos!"); window.location="login.php";</script>';
   }
   mysqli_free_result($resultado); //pertenecen a debajo de contador//
   mysqli_close($conn); //pertenecen a contador//
