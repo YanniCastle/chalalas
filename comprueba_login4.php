@@ -19,7 +19,8 @@ try {
   if ($contador > 0) {
     session_start();
     $_SESSION["usuario"] = $_POST["login"];
-$conn = new mysqli("localhost", "u909812438_root3", "QWERTYu55443", "u909812438_chalalas3");
+    include('conexion.php');
+//$conn = new mysqli("localhost", "u909812438_root3", "QWERTYu55443", "u909812438_chalalas3");
 $consulta = "SELECT * FROM usuarios_pass2 WHERE USUARIOS= '$login' OR MAIL= '$login'";
     $resultado = mysqli_query($conn, $consulta);
     $filas = mysqli_fetch_array($resultado);
