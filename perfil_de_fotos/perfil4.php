@@ -33,7 +33,7 @@
 		<div class="row">
 			<div class="col-mg-4"></div>
 			<div class="col-mg-4">-->
-				<h1><?php echo $nombre; ?></h1>
+	<h1><?php echo $nombre; ?></h1>
 	<!--			<h5><?php echo $email; ?></h5>
 				<img src="<?php echo $foto; ?>" width="150px">
 				<a href="cambiarfoto4.php">foto de perfil</a>
@@ -80,7 +80,7 @@
 		</div>
 	</div>
 	<br>-->
-
+	<h1><?php echo $nombre; ?></h1>
 	<div class="row">
 		<div class="column">
 			<img src="<?php echo $foto; ?>">
