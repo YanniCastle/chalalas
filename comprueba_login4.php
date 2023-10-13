@@ -3,7 +3,7 @@ try {
   $login = htmlentities(addslashes($_POST["login"]));
   $password = htmlentities(addslashes($_POST["password"]));
   $contador = 0;
-  $conn = new mysqli("localhost", "u909812438_root3", "QWERTYu55443", "u909812438_chalalas3");
+
   $base = new PDO("mysql:host=localhost; dbname=u909812438_chalalas3", "u909812438_root3", "QWERTYu55443");
   $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   //, TELEFONO= :login//
@@ -19,6 +19,8 @@ try {
   if ($contador > 0) {
     session_start();
     $_SESSION["usuario"] = $_POST["login"];
+$conn = new mysqli("localhost", "u909812438_root3", "QWERTYu55443", "u909812438_chalalas3");
+$consulta = "SELECT * FROM usuarios_pass2 WHERE USUARIOS= '$login' OR MAIL= '$login'";
     $resultado = mysqli_query($conn, $consulta);
     $filas = mysqli_fetch_array($resultado);
     if (null == $filas) {
