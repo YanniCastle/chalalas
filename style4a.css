@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;/**/
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+}
+.row {
+  display: flex;
+  padding: 5px;
+  flex-wrap: wrap;/*cuando no cabe pasa a la siguiente*/
+}
+.column{
+  flex: 25%;
+  padding: 25px;/*ajuste margen de imagenes*/
+}
+.column img{
+  margin-top: 5px;
+}
+@media (max-width: 800px){
+  .column{
+    flex: 50%;
+  }
+}
+@media (max-width: 600px){
+  .column{
+    flex: 100%;
+  }
+}
