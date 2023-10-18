@@ -55,22 +55,62 @@
 
   echo "<br/><br/><br/><h2>¡Bienvenid@, Usuari@ " . $_SESSION["usuario"] . "!<br></h2>";
 
+  //ESTRUCTURA DE BUSCADOR (titulofoto1, titulofoto2, titulofoto3, titulofoto4)//
   if (isset($_GET['enviar'])) {
     $busqueda = $_GET['busqueda'];
 
-    $consulta = $con->query("SELECT * FROM contenido WHERE Titulo LIKE '%$busqueda%'");
+    $consulta1 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto1 LIKE '%$busqueda%'");
+    $consulta2 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto2 LIKE '%$busqueda%'");
+    $consulta3 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto3 LIKE '%$busqueda%'");
+    $consulta4 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto4 LIKE '%$busqueda%'");
 
-    while ($row = $consulta->fetch_array()) {
-      echo "<br/><h3>" . $row['Titulo'] . "</h3>";
-      echo "<h5>" . $row['Fecha'] . "</h5>";
-      echo "<div style='width:400px'>" . $row['Comentario'] . "</div><br/>";
-      if ($row['Imagen'] != "") {
-        echo "<img src='imagenes/productos/" . $row['Imagen'] . "' width='150px'/>";
+    //para titulofoto1//
+    while ($row = $consulta1->fetch_array()) {
+      echo "<br/><h3>" . $row['titulofoto1'] . "</h3>";
+      //echo "<h5>" . $row['Fecha'] . "</h5>";
+      echo "<div style='width:400px'>" . $row['descripcionfoto1'] . "</div><br/>";
+      if ($row['nombrefoto1'] != "") {
+        echo "<img src='imagenes/productos/" . $row['nombrefoto1'] . "' width='150px'/>";
       }
-      echo  " <h3>Precio : $" . $row['precio'] . " pesos MX</h3>";
+      echo  " <h3>Precio : $" . $row['preciofoto1'] . " pesos MX</h3>";
+      echo "<hr/>";
+    }
+    //para titulofoto2//
+    while ($row = $consulta2->fetch_array()) {
+      echo "<br/><h3>" . $row['titulofoto2'] . "</h3>";
+      //echo "<h5>" . $row['Fecha'] . "</h5>";
+      echo "<div style='width:400px'>" . $row['descripcionfoto2'] . "</div><br/>";
+      if ($row['nombrefoto2'] != "") {
+        echo "<img src='imagenes/productos/" . $row['nombrefoto2'] . "' width='150px'/>";
+      }
+      echo  " <h3>Precio : $" . $row['preciofoto2'] . " pesos MX</h3>";
+      echo "<hr/>";
+    }
+    //para titulofoto3//
+    while ($row = $consulta3->fetch_array()) {
+      echo "<br/><h3>" . $row['titulofoto3'] . "</h3>";
+      //echo "<h5>" . $row['Fecha'] . "</h5>";
+      echo "<div style='width:400px'>" . $row['descripcionfoto3'] . "</div><br/>";
+      if ($row['nombrefoto3'] != "") {
+        echo "<img src='imagenes/productos/" . $row['nombrefoto3'] . "' width='150px'/>";
+      }
+      echo  " <h3>Precio : $" . $row['preciofoto3'] . " pesos MX</h3>";
+      echo "<hr/>";
+    }
+    //para titulofoto4//
+    while ($row = $consulta4->fetch_array()) {
+      echo "<br/><h3>" . $row['titulofoto4'] . "</h3>";
+      //echo "<h5>" . $row['Fecha'] . "</h5>";
+      echo "<div style='width:400px'>" . $row['descripcionfoto4'] . "</div><br/>";
+      if ($row['nombrefoto4'] != "") {
+        echo "<img src='imagenes/productos/" . $row['nombrefoto4'] . "' width='150px'/>";
+      }
+      echo  " <h3>Precio : $" . $row['preciofoto4'] . " pesos MX</h3>";
       echo "<hr/>";
     }
   }
+  //FIN DE ESTRUCTURA DE BUSCADOR//
+
   ?>
 
   <!--Aqui mostrar imagenes de usuario-->
@@ -79,36 +119,41 @@
   $consulta = mysqli_query($con, "SELECT * FROM usuarios_pass2 WHERE USUARIOS= '$login' OR MAIL= '$login'");
   $valores = mysqli_fetch_array($consulta);
   $nombre = $valores['NOMBRE'];
-  $email = $valores['MAIL'];
   $email1 = $valores['MAIL'];
   $email2 = $valores['MAIL'];
   $email3 = $valores['MAIL'];
-  $foto = $valores['foto'];
-  $foto1 = $valores['foto1'];
-  $foto2 = $valores['foto2'];
-  $foto3 = $valores['foto3'];
+  $email4 = $valores['MAIL'];
+  //$nombrefoto1 = $valores['nombrefoto1'];
+  //$nombrefoto2 = $valores['nombrefoto2'];
+  //$nombrefoto3 = $valores['nombrefoto3'];
+  // $nombrefoto4 = $valores['nombrefoto4'];
+  $rutafoto1 = $valores['rutafoto1'];
+  $rutafoto2 = $valores['rutafoto2'];
+  $rutafoto3 = $valores['rutafoto3'];
+  $rutafoto4 = $valores['rutafoto4'];
   ?>
-
+  <h1>usuarios registrados 4 formularios de imagenes</h1>
   <div class="row">
     <div class="column">
-      <img src="<?php echo $foto; ?>">
-      <a href="cambiarfoto4.php">foto perfil</a>
+      <img src="<?php echo $rutafoto1; ?>">
+      <a href="cambiarfoto5.php">foto 1</a>
     </div>
 
     <div class="column">
-      <img src="<?php echo $foto1; ?>">
-      <a href="cambiarfoto4.php">foto 1</a>
+      <img src="<?php echo $rutafoto2; ?>">
+      <a href="cambiarfoto5.php">foto 2</a>
     </div>
 
     <div class="column">
-      <img src="<?php echo $foto2; ?>">
-      <a href="cambiarfoto4.php">foto 2</a>
+      <img src="<?php echo $rutafoto3; ?>">
+      <a href="cambiarfoto5.php">foto 3</a>
     </div>
 
     <div class="column">
-      <img src="<?php echo $foto3; ?>">
-      <a href="cambiarfoto4.php">foto 3</a>
+      <img src="<?php echo $rutafoto4; ?>">
+      <a href="cambiarfoto5.php">foto 4</a>
     </div>
+
 
 
 </body>
