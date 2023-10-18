@@ -3,11 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Chalalas.com</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chalalas.com</title>
   <link rel="stylesheet" href="style1b.css" /><!--barra de menu plegable-->
+
   <script src="a2dd6045c4.js" crossorigin="anonymous"></script><!--js para iconos-->
   <link rel="stylesheet" type="text/css" href="estilos.css"><!--Iconos-->
+
   <link rel="shortcut icon" href="letraCfondonegro.png">
 </head>
 
@@ -31,12 +33,13 @@
         &#8801<!--hamburguesa-->
       </label>
       <nav class="menu">
+        <a href="usuarios_registrados4.php">registrados4<i class="fa-solid fa-shop"></i></a>
         <a href="subir_imagenes.php"><i class="fa-solid fa-shop"></i></a>
         <a href="Formulario.php"><i class="fa-regular fa-comment"></i></a>
         <a href="crud11.php"><i class="fa-regular fa-image"></i></a>
         <a href="videos.php"><i class="fa-solid fa-video"></i></a>
-        <a href="">usuarios</a><!--privada online-->
-        <a href=""><i class="fa-solid fa-user"></i></a>
+        <a href="crud3.php">usuarios</a><!--privada online-->
+        <a href="crud6.php"><i class="fa-solid fa-user"></i></a>
         <a href="crud4.php"><i class="fa-solid fa-key"></i></a>
         <a href="muro.php">Muro</a>
         <a href="cierre.php">cerrar sesion</a>
@@ -55,22 +58,62 @@
 
   echo "<br/><br/><br/><h2>¡Hola, Administrador " . $_SESSION["usuario"] . "!<br></h2>";
 
+  //ESTRUCTURA DE BUSCADOR (titulofoto1, titulofoto2, titulofoto3, titulofoto4)//
   if (isset($_GET['enviar'])) {
     $busqueda = $_GET['busqueda'];
 
-    $consulta = $con->query("SELECT * FROM contenido WHERE Titulo LIKE '%$busqueda%'");
+    $consulta1 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto1 LIKE '%$busqueda%'");
+    $consulta2 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto2 LIKE '%$busqueda%'");
+    $consulta3 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto3 LIKE '%$busqueda%'");
+    $consulta4 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto4 LIKE '%$busqueda%'");
 
-    while ($row = $consulta->fetch_array()) {
-      echo "<br/><h3>" . $row['Titulo'] . "</h3>";
-      echo "<h5>" . $row['Fecha'] . "</h5>";
-      echo "<div style='width:400px'>" . $row['Comentario'] . "</div><br/>";
-      if ($row['Imagen'] != "") {
-        echo "<img src='imagenes/productos/" . $row['Imagen'] . "' width='150px'/>";
+    //para titulofoto1//
+    while ($row = $consulta1->fetch_array()) {
+      echo "<br/><h3>" . $row['titulofoto1'] . "</h3>";
+      //echo "<h5>" . $row['Fecha'] . "</h5>";
+      echo "<div style='width:400px'>" . $row['descripcionfoto1'] . "</div><br/>";
+      if ($row['nombrefoto1'] != "") {
+        echo "<img src='imagenes/productos/" . $row['nombrefoto1'] . "' width='150px'/>";
       }
-      echo  " <h3>Precio : $" . $row['precio'] . " pesos MX</h3>";
+      echo  " <h3>Precio : $" . $row['preciofoto1'] . " pesos MX</h3>";
+      echo "<hr/>";
+    }
+    //para titulofoto2//
+    while ($row = $consulta2->fetch_array()) {
+      echo "<br/><h3>" . $row['titulofoto2'] . "</h3>";
+      //echo "<h5>" . $row['Fecha'] . "</h5>";
+      echo "<div style='width:400px'>" . $row['descripcionfoto2'] . "</div><br/>";
+      if ($row['nombrefoto2'] != "") {
+        echo "<img src='imagenes/productos/" . $row['nombrefoto2'] . "' width='150px'/>";
+      }
+      echo  " <h3>Precio : $" . $row['preciofoto2'] . " pesos MX</h3>";
+      echo "<hr/>";
+    }
+    //para titulofoto3//
+    while ($row = $consulta3->fetch_array()) {
+      echo "<br/><h3>" . $row['titulofoto3'] . "</h3>";
+      //echo "<h5>" . $row['Fecha'] . "</h5>";
+      echo "<div style='width:400px'>" . $row['descripcionfoto3'] . "</div><br/>";
+      if ($row['nombrefoto3'] != "") {
+        echo "<img src='imagenes/productos/" . $row['nombrefoto3'] . "' width='150px'/>";
+      }
+      echo  " <h3>Precio : $" . $row['preciofoto3'] . " pesos MX</h3>";
+      echo "<hr/>";
+    }
+    //para titulofoto4//
+    while ($row = $consulta4->fetch_array()) {
+      echo "<br/><h3>" . $row['titulofoto4'] . "</h3>";
+      //echo "<h5>" . $row['Fecha'] . "</h5>";
+      echo "<div style='width:400px'>" . $row['descripcionfoto4'] . "</div><br/>";
+      if ($row['nombrefoto4'] != "") {
+        echo "<img src='imagenes/productos/" . $row['nombrefoto4'] . "' width='150px'/>";
+      }
+      echo  " <h3>Precio : $" . $row['preciofoto4'] . " pesos MX</h3>";
       echo "<hr/>";
     }
   }
+  //FIN DE ESTRUCTURA DE BUSCADOR//
+
   ?>
 
 </body>
