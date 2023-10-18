@@ -7,7 +7,7 @@
   <title>Chalalas.com</title>
   <link rel="stylesheet" href="style1b.css" /><!--barra de menu plegable-->
   <script src="a2dd6045c4.js" crossorigin="anonymous"></script><!--js para iconos-->
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/estilosb.css">
   <link rel="stylesheet" type="text/css" href="style12.css"><!--galeria-->
   <link rel="shortcut icon" href="letraCfondonegro.png"><!--icono-navegador-->
 </head>
