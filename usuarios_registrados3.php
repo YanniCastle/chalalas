@@ -54,7 +54,7 @@
   }
   include 'config.php';
 
-  echo "<br/><br/><br/><h2>¡Bienvenid@, Usuari@ " . $_SESSION["usuario"] . "!<br></h2>";
+  echo "<br/><br/><br/><h2>¡Bienvenid@, " . $_SESSION["usuario"] . "!<br></h2>";
 
   //ESTRUCTURA DE BUSCADOR 
   if (isset($_GET['enviar'])) {
@@ -148,7 +148,7 @@
   $rutafoto3 = $valores['rutafoto3'];
   $rutafoto4 = $valores['rutafoto4'];
   ?>
-  <h1>usuarios registrados 4 formularios de imagenes</h1>
+  <h1>Agrega tus imagenes</h1>
   <div class="row">
     <div class="column">
       <img src="<?php echo $rutafoto1; ?>">

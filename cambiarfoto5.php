@@ -54,7 +54,7 @@
 
 	echo "<br/><br/><br/><h2>¡Bienvenido, " . $_SESSION["usuario"] . "!<br></h2>";
 
-	//ESTRUCTURA DE BUSCADOR (titulofoto1, titulofoto2, titulofoto3, titulofoto4)//
+	//ESTRUCTURA DE BUSCADOR 
     if (isset($_GET['enviar'])) {
       $busqueda = $_GET['busqueda'];
 
@@ -63,50 +63,69 @@
       $consulta3 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto3 LIKE '%$busqueda%'");
       $consulta4 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto4 LIKE '%$busqueda%'");
 
-      //para titulofoto1//
-      while ($row = $consulta1->fetch_array()) {
-        echo "<br/><h3>" . $row['titulofoto1'] . "</h3>";
-        //echo "<h5>" . $row['Fecha'] . "</h5>";
-        echo "<div style='width:400px'>" . $row['descripcionfoto1'] . "</div><br/>";
-        if ($row['nombrefoto1'] != "") {
-          echo "<img src='imagenes/productos/" . $row['nombrefoto1'] . "' width='150px'/>";
-        }
-        echo  " <h3>Precio : $" . $row['preciofoto1'] . " pesos MX</h3>";
-        echo "<hr/>";
-      }
-      //para titulofoto2//
-      while ($row = $consulta2->fetch_array()) {
-        echo "<br/><h3>" . $row['titulofoto2'] . "</h3>";
-        //echo "<h5>" . $row['Fecha'] . "</h5>";
-        echo "<div style='width:400px'>" . $row['descripcionfoto2'] . "</div><br/>";
-        if ($row['nombrefoto2'] != "") {
-          echo "<img src='imagenes/productos/" . $row['nombrefoto2'] . "' width='150px'/>";
-        }
-        echo  " <h3>Precio : $" . $row['preciofoto2'] . " pesos MX</h3>";
-        echo "<hr/>";
-      }
-      //para titulofoto3//
-      while ($row = $consulta3->fetch_array()) {
-        echo "<br/><h3>" . $row['titulofoto3'] . "</h3>";
-        //echo "<h5>" . $row['Fecha'] . "</h5>";
-        echo "<div style='width:400px'>" . $row['descripcionfoto3'] . "</div><br/>";
-        if ($row['nombrefoto3'] != "") {
-          echo "<img src='imagenes/productos/" . $row['nombrefoto3'] . "' width='150px'/>";
-        }
-        echo  " <h3>Precio : $" . $row['preciofoto3'] . " pesos MX</h3>";
-        echo "<hr/>";
-      }
-      //para titulofoto4//
-      while ($row = $consulta4->fetch_array()) {
-        echo "<br/><h3>" . $row['titulofoto4'] . "</h3>";
-        //echo "<h5>" . $row['Fecha'] . "</h5>";
-        echo "<div style='width:400px'>" . $row['descripcionfoto4'] . "</div><br/>";
-        if ($row['nombrefoto4'] != "") {
-          echo "<img src='imagenes/productos/" . $row['nombrefoto4'] . "' width='150px'/>";
-        }
-        echo  " <h3>Precio : $" . $row['preciofoto4'] . " pesos MX</h3>";
-        echo "<hr/>";
-      }
+		//juntar las consultas 
+		if ($consulta1->num_rows > 0 or $consulta2->num_rows > 0 or $consulta3->num_rows > 0 or $consulta4->num_rows > 0) {
+			//CONSULTA 1
+			if ($consulta1->num_rows > 0) {
+				while ($row = $consulta1->fetch_array()) {
+					echo "<br/><h3>" . $row['titulofoto1'] . "</h3>";
+					//echo "<h5>" . $row['Fecha'] . "</h5>";
+					echo "<div style='width:400px'>" . $row['descripcionfoto1'] . "</div><br/>";
+					if ($row['nombrefoto1'] != "") {
+						echo "<img src='imagenes/productos/" . $row['nombrefoto1'] . "' width='150px'/>";
+					}
+					echo  " <h3>Precio : $" . $row['preciofoto1'] . " pesos MX</h3>";
+					echo "<hr/>";
+				}
+			}
+			//CONSULTA 2
+			if ($consulta2->num_rows > 0) {
+				while ($row = $consulta2->fetch_array()) {
+					echo "<br/><h3>" . $row['titulofoto2'] . "</h3>";
+					//echo "<h5>" . $row['Fecha'] . "</h5>";
+					echo "<div style='width:400px'>" . $row['descripcionfoto2'] . "</div><br/>";
+					if ($row['nombrefoto2'] != "") {
+						echo "<img src='imagenes/productos/" . $row['nombrefoto2'] . "' width='150px'/>";
+					}
+					echo  " <h3>Precio : $" . $row['preciofoto2'] . " pesos MX</h3>";
+					echo "<hr/>";
+				}
+			}
+			//CONSULTA 3
+			if ($consulta3->num_rows > 0) {
+				while ($row = $consulta3->fetch_array()) {
+					echo "<br/><h3>" . $row['titulofoto3'] . "</h3>";
+					//echo "<h5>" . $row['Fecha'] . "</h5>";
+					echo "<div style='width:400px'>" . $row['descripcionfoto3'] . "</div><br/>";
+					if ($row['nombrefoto3'] != "") {
+						echo "<img src='imagenes/productos/" . $row['nombrefoto3'] . "' width='150px'/>";
+					}
+					echo  " <h3>Precio : $" . $row['preciofoto3'] . " pesos MX</h3>";
+					echo "<hr/>";
+				}
+			}
+			//CONSULTA 4
+			if ($consulta4->num_rows > 0) {
+				while ($row = $consulta4->fetch_array()) {
+					echo "<br/><h3>" . $row['titulofoto4'] . "</h3>";
+					//echo "<h5>" . $row['Fecha'] . "</h5>";
+					echo "<div style='width:400px'>" . $row['descripcionfoto4'] . "</div><br/>";
+					if ($row['nombrefoto4'] != "") {
+						echo "<img src='imagenes/productos/" . $row['nombrefoto4'] . "' width='150px'/>";
+					}
+					echo  " <h3>Precio : $" . $row['preciofoto4'] . " pesos MX</h3>";
+					echo "<hr/>";
+				}
+			}
+		} //FIN DE JUNTAR CONSULTAS
+		else {
+			echo '<tr>';
+			echo '<td colspan=3>No se ha encontrado ningun registro</td>';
+			echo '</tr>';
+		}
+
+
+
     }
   //FIN DE ESTRUCTURA DE BUSCADOR//
 
