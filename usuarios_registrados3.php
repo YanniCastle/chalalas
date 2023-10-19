@@ -39,6 +39,7 @@
         <a href="videos.php"><i class="fa-solid fa-video"></i></a>
         <a href="crud4.php"><i class="fa-solid fa-key"></i></a>
         <a href="muro.php">Muro</a>
+        <a href="ajustes.php">Ajustes</a>
         <a href="cierre.php">cerrar sesion</a>
         <label for="check" class="esconder-menu">
           &#215 <!--la x-->
@@ -123,10 +124,7 @@
   $email2 = $valores['MAIL'];
   $email3 = $valores['MAIL'];
   $email4 = $valores['MAIL'];
-  //$nombrefoto1 = $valores['nombrefoto1'];
-  //$nombrefoto2 = $valores['nombrefoto2'];
-  //$nombrefoto3 = $valores['nombrefoto3'];
-  // $nombrefoto4 = $valores['nombrefoto4'];
+ 
   $rutafoto1 = $valores['rutafoto1'];
   $rutafoto2 = $valores['rutafoto2'];
   $rutafoto3 = $valores['rutafoto3'];
