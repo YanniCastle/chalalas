@@ -1,3 +1,99 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*HEADER*/
+#position {/*FIJAR EL HEADER*/
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+header {
+  height: 40px;
+  background: #404346;
+  padding: 0 50px;
+  color: #fff;
+  display: flex;/*orden, uno a lado de otro*/
+  justify-content: space-between;/*separacion de palabras*/
+  align-items: center;/*centra en horizontal*/
+}
+.menu a{
+  color: #fff;
+  text-decoration: none;/*quita subrrayado*/
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.mostrar-menu, 
+.esconder-menu {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  transition: 0.4s;
+}
+.mostrar-menu{
+  order:1;
+}
+.menu a:hover,
+.mostrar-menu,
+.esconder-menu:hover{
+  color: #f89443;
+}
+#check{
+  display: none;
+}
+h2{
+  text-align: center;
+  color: #f89443;
+}
+h3{
+  text-align: left;
+  color: #f81606;
+}
+h4{
+  text-align: left;
+  color: #3910cf;
+}
+
+/*RESPONSIVE para tablet 768px*/
+@media(max-width: 1120px){
+  /*HEADER*/
+  .mostrar-menu,
+  .esconder-menu{
+    display: block;
+  }
+  .menu{
+    position: fixed;
+    width: 28%;
+    height: 80vh;
+    background: #131316;
+    /*left: 0; solo era para ver como estaba quedando*/
+    right: -100%;/*este estaba comenrado*/
+    top: 0;
+    text-align: left;
+    padding: 70px 0px; 
+    z-index: 100;
+    transition: 0.8s;
+  }
+  .menu a{
+    display: block;
+    padding: 18px;
+
+  }
+  .esconder-menu{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+  #check:checked ~ .menu{
+    right: 0;/*le decimos aparece*/
+  }
+}/*fin de HEADER*/
+body{
+  background: #d8d4d4;
+}
+
 table {
   width: 25%;
   background-color: rgb(218, 218, 18);

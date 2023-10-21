@@ -3,9 +3,10 @@
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
 }
 body{
-  background: #b0b1b8;
+  background: #37393b;
 }
 /*HEADER*/
 #position {/*FIJAR EL HEADER*/

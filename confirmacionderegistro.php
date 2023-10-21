@@ -20,7 +20,7 @@
   <div class="ocultar-div">
     <h3>¡Felicidades, ya estas registrad@!, inicia sesión</h3>
   </div>
-  <form action="comprueba_login3.php" method="post">
+  <form action="comprueba_login4.php" method="post">
     <img src="chalalas6.png">
     <?php
     if (isset($_POST['login'])) {

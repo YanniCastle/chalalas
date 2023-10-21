@@ -33,6 +33,7 @@
         &#8801<!--hamburguesa-->
       </label>
       <nav class="menu">
+        <a href="usuarios_registrados4.php">registrados4<i class="fa-solid fa-shop"></i></a>
         <a href="subir_imagenes.php"><i class="fa-solid fa-shop"></i></a>
         <a href="Formulario.php"><i class="fa-regular fa-comment"></i></a>
         <a href="crud11.php"><i class="fa-regular fa-image"></i></a>
@@ -55,24 +56,82 @@
   }
   include 'config.php';
 
-  echo "<br/><br/><br/><h2>¡Hola, " . $_SESSION["usuario"] . "!<br></h2>";
+  echo "<br/><br/><br/><h2>¡Hola, Administrador " . $_SESSION["usuario"] . "!<br></h2>";
 
+  //ESTRUCTURA DE BUSCADOR
   if (isset($_GET['enviar'])) {
     $busqueda = $_GET['busqueda'];
 
-    $consulta = $con->query("SELECT * FROM contenido WHERE Titulo LIKE '%$busqueda%'");
+    $consulta1 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto1 LIKE '%$busqueda%'");
+    $consulta2 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto2 LIKE '%$busqueda%'");
+    $consulta3 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto3 LIKE '%$busqueda%'");
+    $consulta4 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto4 LIKE '%$busqueda%'");
 
-    while ($row = $consulta->fetch_array()) {
-      echo "<br/><h3>" . $row['Titulo'] . "</h3>";
-      echo "<h5>" . $row['Fecha'] . "</h5>";
-      echo "<div style='width:400px'>" . $row['Comentario'] . "</div><br/>";
-      if ($row['Imagen'] != "") {
-        echo "<img src='imagenes/productos/" . $row['Imagen'] . "' width='150px'/>";
+    //juntar las consultas 
+    if ($consulta1->num_rows > 0 or $consulta2->num_rows > 0 or $consulta3->num_rows > 0 or $consulta4->num_rows > 0) {
+      //CONSULTA 1
+      if ($consulta1->num_rows > 0) {
+        while ($row = $consulta1->fetch_array()) {
+          echo "<br/><h3>" . $row['titulofoto1'] . "</h3>";
+          //echo "<h5>" . $row['Fecha'] . "</h5>";
+          echo "<div style='width:400px'>" . $row['descripcionfoto1'] . "</div><br/>";
+          if ($row['nombrefoto1'] != "") {
+            echo "<img src='imagenes/productos/" . $row['nombrefoto1'] . "' width='150px'/>";
+          }
+          echo  " <h3>Precio : $" . $row['preciofoto1'] . " pesos MX</h3>";
+          echo "<hr/>";
+        }
       }
-      echo  " <h3>Precio : $" . $row['precio'] . " pesos MX</h3>";
-      echo "<hr/>";
+      //CONSULTA 2
+      if ($consulta2->num_rows > 0) {
+        while ($row = $consulta2->fetch_array()) {
+          echo "<br/><h3>" . $row['titulofoto2'] . "</h3>";
+          //echo "<h5>" . $row['Fecha'] . "</h5>";
+          echo "<div style='width:400px'>" . $row['descripcionfoto2'] . "</div><br/>";
+          if ($row['nombrefoto2'] != "") {
+            echo "<img src='imagenes/productos/" . $row['nombrefoto2'] . "' width='150px'/>";
+          }
+          echo  " <h3>Precio : $" . $row['preciofoto2'] . " pesos MX</h3>";
+          echo "<hr/>";
+        }
+      }
+      //CONSULTA 3
+      if ($consulta3->num_rows > 0) {
+        while ($row = $consulta3->fetch_array()) {
+          echo "<br/><h3>" . $row['titulofoto3'] . "</h3>";
+          //echo "<h5>" . $row['Fecha'] . "</h5>";
+          echo "<div style='width:400px'>" . $row['descripcionfoto3'] . "</div><br/>";
+          if ($row['nombrefoto3'] != "") {
+            echo "<img src='imagenes/productos/" . $row['nombrefoto3'] . "' width='150px'/>";
+          }
+          echo  " <h3>Precio : $" . $row['preciofoto3'] . " pesos MX</h3>";
+          echo "<hr/>";
+        }
+      }
+      //CONSULTA 4
+      if ($consulta4->num_rows > 0) {
+        while ($row = $consulta4->fetch_array()) {
+          echo "<br/><h3>" . $row['titulofoto4'] . "</h3>";
+          //echo "<h5>" . $row['Fecha'] . "</h5>";
+          echo "<div style='width:400px'>" . $row['descripcionfoto4'] . "</div><br/>";
+          if ($row['nombrefoto4'] != "") {
+            echo "<img src='imagenes/productos/" . $row['nombrefoto4'] . "' width='150px'/>";
+          }
+          echo  " <h3>Precio : $" . $row['preciofoto4'] . " pesos MX</h3>";
+          echo "<hr/>";
+        }
+      }
+    } //FIN DE JUNTAR CONSULTAS
+    else {
+      echo '<tr>';
+      echo '<td colspan=3>No se ha encontrado ningun registro</td>';
+      echo '</tr>';
     }
+
+
   }
+  //FIN DE ESTRUCTURA DE BUSCADOR//
+
   ?>
 
 </body>

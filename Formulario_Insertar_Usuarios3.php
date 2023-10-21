@@ -5,23 +5,16 @@
   <meta charset="utf-8">
   <title>Registrate</title>
   <link rel="shortcut icon" href="letraCfondonegro.png">
-  <link rel="stylesheet" href="style8.css" />
-  <link rel="stylesheet" href="stylefoto2.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style4.css" />
 </head>
 
 <body>
   <header>
     <img src="chalalas.png" width="212" height="75" alt="Sitio de comercio electronico">
-    <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Acerca de</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </nav>
+    <h2>Registrate</h2>
   </header>
-  <h1>Registrate</h1>
-
+  <br>
   <form action="pagina_insertar_usuarios3.php" method="post">
 
     <table>
@@ -48,8 +41,8 @@
       <td><input type='text' name='contra' id='contra' required maxlength="30" placeholder="minimo 6 caracteres"></td>
       </tr>
       <tr>
-      <td> Confirmar contraseña:</td>
-      <td><input type='text' name='contra2' id='contra2' required maxlength="30" placeholder="Debes repetirla para confirmar"></td>
+        <td> Confirmar contraseña:</td>
+        <td><input type='text' name='contra2' id='contra2' required maxlength="30" placeholder="Debes repetirla para confirmar"></td>
       </tr>
       <tr>
 

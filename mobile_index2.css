@@ -1,0 +1,106 @@
+/*RESET configuracion para Moto C*/
+/*pantalla de moto g8 vertical 320x500*/
+@media(min-width: 275px) and (max-width: 600px){
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: #99a2ec;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  font-size: large;
+}
+#position2{ /*Trabajar con vista de MOTO C....pENDIENTE*/
+  height: 40px;
+  background: #000;
+  padding: 0px 0px;
+  display:flex;/*orden, uno a lado de otro*/
+  justify-content:last baseline;/*separacion de palabras*/
+  align-items:center;/*centra en horizontal*/
+}
+#position2{/*FIJAR EL HEADER en moto C*/
+  width: 100%;
+  position: fixed;
+  left:0px;
+  top: 0px;
+}
+.position2 { /*posicion de header 2*/
+  height: 50px;
+  background: #0e6133;
+  padding: 0px 0px;
+  color: #c9dd14;
+  display:flex;/*orden, uno a lado de otro*/
+  justify-content:center;/*separacion de palabras*/
+  align-items:center;/*centra en horizontal*/
+}
+#registrate2, #login2{/*botones de segundo header*/
+  background: #11771e;
+  font-size: 18px;
+  color: #fff;
+  padding: 1px 1px;
+  margin-top: 0px;
+  margin-left: 5px;
+}
+#position1{/*Ocultar el primer HEADER*/
+  display: none;
+}
+
+/*Aqui colocare la segunda linea de abajo*/
+#position3{ /*Trabajar con vista de MOTO C....pENDIENTE*/
+  height: 30px;
+  background: #000;
+  padding: 0px 0px;
+  display:flex;/*orden, uno a lado de otro*/
+  justify-content:last baseline;/*separacion de palabras*/
+  align-items:last baseline;/*centra en horizontal*/
+}
+#position3{/*FIJAR EL HEADER en moto C*/
+  width: 100%;
+  position: fixed;
+  left:0px;
+  top: 40px;
+}
+.position3 { /*posicion de header 2*/
+  height: 50px;
+  background: #4a4b44;
+  padding: 0px 0px;
+  color: #c9dd14;
+  display:flex;/*orden, uno a lado de otro*/
+  justify-content:center;/*separacion de palabras*/
+  align-items:center;/*centra en horizontal*/
+}
+#busqueda3{
+  font-size: 18px;
+  background-color: white;
+  padding: 4px 2px;/*tamaño de buscador*/
+  margin-top: 0px;
+  margin-left: 1px;
+}
+#enviar3{
+  background: #11771e;
+  font-size: 18px;
+  color: #fff;
+  padding: 2px 1px;
+  margin-top: 15px;
+  margin-left: 0px;
+}
+.logo{
+margin-top: 0px;
+  margin-left: 0px;
+  padding: 25px 25px;
+  width: 200px;
+  height: 100px;
+}
+h1 {
+  color: #0e6133;
+}
+
+
+
+}
+
+
+
+
+
