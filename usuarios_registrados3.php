@@ -152,22 +152,22 @@
   <div class="row">
     <div class="column">
       <img src="<?php echo $rutafoto1; ?>">
-      <a href="cambiarfoto5.php">foto 1</a>
+      <a href="cambiarfoto7.php">foto 1</a>
     </div>
 
     <div class="column">
       <img src="<?php echo $rutafoto2; ?>">
-      <a href="cambiarfoto5.php">foto 2</a>
+      <a href="cambiarfoto7.php">foto 2</a>
     </div>
 
     <div class="column">
       <img src="<?php echo $rutafoto3; ?>">
-      <a href="cambiarfoto5.php">foto 3</a>
+      <a href="cambiarfoto7.php">foto 3</a>
     </div>
 
     <div class="column">
       <img src="<?php echo $rutafoto4; ?>">
-      <a href="cambiarfoto5.php">foto 4</a>
+      <a href="cambiarfoto7.php">foto 4</a>
     </div>
 
 

@@ -14,7 +14,7 @@ if (isset($_POST["eliminar_imagen"])) {
   $res = mysqli_query($cn, $sql);
   if ($res) {
     unlink($ruta_imagen);
-    echo '<script>alert("Eliminado Correctamente"); window.location="usuarios_registrados4.php";</script>';
+    echo '<script>alert("Eliminado Correctamente"); window.location="usuarios_registrados3.php";</script>';
   }
 } else {
   echo "No se pudo eliminar la imagen.";
