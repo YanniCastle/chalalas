@@ -27,7 +27,7 @@
         &#8801<!--hamburguesa-->
       </label>
       <nav class="menu">
-        <a href="subir_imagenes.php"><i class="fa-solid fa-shop"></i></a>
+        <a href=""><i class="fa-solid fa-shop"></i></a>
   
         <a href=""><i class="fa-regular fa-image"></i></a>
         <a href="videos.php"><i class="fa-solid fa-video"></i></a>
