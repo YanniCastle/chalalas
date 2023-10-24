@@ -38,6 +38,11 @@ table td {/*Lineas de tabla*/
   background-color: white;
   color: #000;
 }
+#btn_enviar, #borrar{/*botones subir y Eliminar foto*/
+  background: #f89443;
+  font-size: 16px;
+  color: white;
+}
 
 
 

@@ -132,7 +132,7 @@
 	$nombrefoto4 = $valores['nombrefoto4'];
 
 	?>
-	
+
 	<!--/ / / / / Formulario foto 1 / / / / / / / / / / / / / / / / / /-->
 	<form action="upload8.php" method="post" enctype="multipart/form-data">
 		<input type="text" name="email1" value="<?php echo $email1; ?>" style="display: none;">
@@ -170,7 +170,7 @@
 		<table class="uno">
 			<tr>
 				<td>
-					<button type="submit" name="eliminar_imagen">Eliminar foto</button>
+					<button type="submit" name="eliminar_imagen" id="borrar">Eliminar foto</button>
 				</td>
 			</tr>
 		</table>
@@ -216,7 +216,7 @@
 		<table class="uno">
 			<tr>
 				<td>
-					<button type="submit" name="eliminar_imagen">Eliminar foto</button>
+					<button type="submit" name="eliminar_imagen" id="borrar">Eliminar foto</button>
 				</td>
 			</tr>
 		</table>
@@ -263,7 +263,7 @@
 		<table class="uno">
 			<tr>
 				<td>
-					<button type="submit" name="eliminar_imagen">Eliminar foto</button>
+					<button type="submit" name="eliminar_imagen" id="borrar">Eliminar foto</button>
 				</td>
 			</tr>
 		</table>
@@ -310,7 +310,7 @@
 		<table class="uno">
 			<tr>
 				<td>
-					<button type="submit" name="eliminar_imagen">Eliminar foto</button>
+					<button type="submit" name="eliminar_imagen" id="borrar">Eliminar foto</button>
 				</td>
 			</tr>
 		</table>
