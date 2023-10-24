@@ -29,7 +29,7 @@
       <nav class="menu">
         <a href="subir_imagenes.php"><i class="fa-solid fa-shop"></i></a>
   
-        <a href="crud11.php"><i class="fa-regular fa-image"></i></a>
+        <a href=""><i class="fa-regular fa-image"></i></a>
         <a href="videos.php"><i class="fa-solid fa-video"></i></a>
 <!--        <a href="crud6.php"><i class="fa-solid fa-user"></i></a>-->
         <a href="muro.php">Muro</a>
