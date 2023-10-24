@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="style1c.css" /><!--barra de menu plegable-->
 	<script src="a2dd6045c4.js" crossorigin="anonymous"></script><!--js para iconos-->
 	<link rel="stylesheet" type="text/css" href="estilos.css"><!--Iconos -->
-	<link rel="stylesheet" type="text/css" href="formulario_imagenes2.css"><!--formulario Imagenes-->
+	<link rel="stylesheet" type="text/css" href="formulario_imagenes3.css"><!--formulario Imagenes-->
 	<link rel="shortcut icon" href="letraCfondonegro.png">
 </head>
 
@@ -141,7 +141,7 @@
 				<td>Articulo:
 					<label for="campo_titulo"></label>
 				</td>
-				<td><input type='text' name='campo_titulo1' id='campo_titulo' placeholder="Titulo de foto 1"></td>
+				<td><input type='text' name='campo_titulo1' id='campo_titulo1' placeholder="Titulo de foto 1"></td>
 			</tr>
 
 			<tr>
@@ -281,7 +281,7 @@
 				<td>Articulo:
 					<label for="campo_titulo4"></label>
 				</td>
-				<td><input type='text' name='campo_titulo4' id='campo_titulo2' placeholder="Titulo de foto 4"></td>
+				<td><input type='text' name='campo_titulo4' id='campo_titulo4' placeholder="Titulo de foto 4"></td>
 			</tr>
 
 			<tr>
