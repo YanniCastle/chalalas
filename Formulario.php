@@ -31,9 +31,7 @@
   
         <a href="crud11.php"><i class="fa-regular fa-image"></i></a>
         <a href="videos.php"><i class="fa-solid fa-video"></i></a>
-        <a href="crud3.php">usuarios</a><!--privada online-->
-        <a href="crud6.php"><i class="fa-solid fa-user"></i></a>
-        <a href="crud4.php"><i class="fa-solid fa-key"></i></a>
+<!--        <a href="crud6.php"><i class="fa-solid fa-user"></i></a>-->
         <a href="muro.php">Muro</a>
         <a href="cierre.php">cerrar sesion</a>
         <label for="check" class="esconder-menu">
