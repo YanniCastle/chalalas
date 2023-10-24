@@ -23,7 +23,9 @@ table td {/*Lineas de tabla*/
 }
 #campo_titulo, #campo_descripcion,
 #campo_precio{
-  font-size: 16px;
+  font-size: 18px;
+  background-color: white;
+  color: #000;
 }
 
 
