@@ -21,9 +21,19 @@ table td {/*Lineas de tabla*/
   text-align: center;
   border: 1px #000 dotted;
 }
-#campo_titulo, #campo_descripcion,
-#campo_precio{
-  font-size: 20px;
+#campo_titulo1, 
+#campo_descripcion1,
+#campo_precio1,
+#campo_titulo2, 
+#campo_descripcion2,
+#campo_precio2,
+#campo_titulo3, 
+#campo_descripcion3,
+#campo_precio3,
+#campo_titulo4, 
+#campo_descripcion4,
+#campo_precio4{
+  font-size: 18px;
   background-color: white;
   color: #000;
 }
