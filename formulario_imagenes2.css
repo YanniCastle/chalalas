@@ -8,7 +8,7 @@ table, table.uno {/*fondos de tabla*/
   font-size: 14px;
   width: 37%;
   margin: auto;
-  background-color: #ff9;
+  background-color: rgb(194, 154, 69);
   border: 2px solid #FF9900;
   padding: 5px;
 }
@@ -23,7 +23,7 @@ table td {/*Lineas de tabla*/
 }
 #campo_titulo, #campo_descripcion,
 #campo_precio{
-  font-size: 18px;
+  font-size: 20px;
   background-color: white;
   color: #000;
 }
