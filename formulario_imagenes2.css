@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius:3px;
+}
+table, table.uno {/*fondos de tabla*/
+  font-size: 14px;
+  width: 37%;
+  margin: auto;
+  background-color: #ff9;
+  border: 2px solid #FF9900;
+  padding: 5px;
+}
+
+td {/*Margenes de tabla*/
+  padding: 5px 0;
+}
+
+table td {/*Lineas de tabla*/
+  text-align: center;
+  border: 1px #000 dotted;
+}
+#campo_titulo, #campo_descripcion,
+#campo_precio{
+  font-size: 16px;
+}
+
+
+
