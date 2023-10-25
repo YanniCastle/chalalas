@@ -147,7 +147,7 @@
 			<tr>
 				<td>Imagen:<label for="ventana_imagen"></label></td>
 				<td><img src="<?php echo $rutafoto1; ?>" width="200px" name='ventana_imagen' id="ventana_imagen">
-					<input type="file" accept="imagen/*" name="image" id="imagen">
+					<input type="file"  name="image" id="imagen">
 				</td>
 			</tr>
 
@@ -193,7 +193,7 @@
 			<tr>
 				<td>Imagen:<label for="ventana_imagen2"></label></td>
 				<td><img src="<?php echo $rutafoto2; ?>" width="200px" name='ventana_imagen2' id="ventana_imagen2">
-					<input type="file" accept="imagen/*" name="image2" id="imagen">
+					<input type="file"  name="image2" id="imagen">
 				</td>
 			</tr>
 
@@ -240,7 +240,7 @@
 			<tr>
 				<td>Imagen:<label for="ventana_imagen3"></label></td>
 				<td><img src="<?php echo $rutafoto3; ?>" width="200px" name='ventana_imagen3' id="ventana_imagen3">
-					<input type="file" accept="imagen/*" name="image3" id="imagen">
+					<input type="file"  name="image3" id="imagen">
 				</td>
 			</tr>
 
@@ -287,7 +287,7 @@
 			<tr>
 				<td>Imagen:<label for="ventana_imagenb4"></label></td>
 				<td><img src="<?php echo $rutafoto4; ?>" width="200px" name='ventana_imagen4' id="ventana_imagen4">
-					<input type="file" accept="imagen/*" name="image4" id="imagen">
+					<input type="file"  name="image4" id="imagen">
 				</td>
 			</tr>
 
