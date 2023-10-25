@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="style1c.css" /><!--barra de menu plegable-->
 	<script src="a2dd6045c4.js" crossorigin="anonymous"></script><!--js para iconos-->
 	<link rel="stylesheet" type="text/css" href="estilos.css"><!--Iconos -->
-	<link rel="stylesheet" type="text/css" href="formulario_imagenes4.css"><!--formulario Imagenes-->
+	<link rel="stylesheet" type="text/css" href="formulario_imagenes5.css"><!--formulario Imagenes-->
 	<link rel="shortcut icon" href="letraCfondonegro.png">
 </head>
 
