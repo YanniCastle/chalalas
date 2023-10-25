@@ -9,8 +9,8 @@ table, table.uno {/*fondos de tabla*/
   color: #000;
   width: 37%;
   margin: auto;
-  background-color: rgb(145, 112, 42);
-  border: 2px solid #FF9900;
+  background-color: rgb(23, 155, 23);
+  border: 2px solid #eb5e0cb6;
   padding: 5px;
 }
 
@@ -41,7 +41,7 @@ table td {/*Lineas de tabla*/
 #btn_enviar, #borrar{/*botones subir y Eliminar foto*/
   background: #f89443;
   font-size: 16px;
-  color: white;
+  color: #000;
 }
 
 
