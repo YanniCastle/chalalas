@@ -9,6 +9,7 @@
   <meta name="keywords" content="articulo usado, compra ocasional, seminuevo"><!--palabras clave-->
   <meta name="author" content="Chalalas.com">
   <meta name="date" content="2023-02-20">
+  <meta name="robots" content="index, follow"><!-- sigan los enlaces de una página-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chalalas.com</title>
   <link rel="shortcut icon" href="letraCfondonegro.png"><!--icono-navegador-->
