@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <!--Trabajar con index2 para mejorar el resposive moto C -->
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8"><!--Así se evita que la ñ o las tildes no se muestren correctamente-->
+  <meta charset="ISO-8859-1"><!--caracteres para el alfabeto latino-->
+  <meta name="description" content="Sitio web de comercio electrónico, compra/venta de artículos de ocasión">
+  <meta name="keywords" content="articulo usado, compra ocasional, seminuevo"><!--palabras clave-->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chalalas.com</title>
   <link rel="shortcut icon" href="letraCfondonegro.png"><!--icono-navegador-->
@@ -172,7 +176,8 @@
       <img alt="photo 12" src="img/IMG_20230531_003537_082.jpg" />
       <img alt="photo 13" src="img/IMG_20230603_023752_895.jpg" />
       <img alt="photo 14" src="img/IMG_20230626_201617_060.jpg" />
-      <a href="proximamente.php"><img alt="photo 15" src="img/lampara_amarilla_3.jpg" /><</a>
+      <a href="proximamente.php"><img alt="photo 15" src="img/lampara_amarilla_3.jpg" />
+        << /a>
     </div>
 
     <div class="column">
