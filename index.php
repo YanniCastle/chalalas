@@ -7,6 +7,8 @@
   <meta charset="ISO-8859-1"><!--caracteres para el alfabeto latino-->
   <meta name="description" content="Sitio web de comercio electrónico, compra/venta de artículos de ocasión">
   <meta name="keywords" content="articulo usado, compra ocasional, seminuevo"><!--palabras clave-->
+  <meta name="author" content="Chalalas.com">
+  <meta name="date" content="2023-02-20">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chalalas.com</title>
