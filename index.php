@@ -29,8 +29,8 @@
         <input type="submit" id="enviar1" name="enviar" value="Buscar"><br><br>
       </form>
     </a>
-    <a>
-      <form action="Formulario_Insertar_Usuarios3.php">
+    <a><!--Formulario_Insertar_Usuarios3.php-->
+      <form action="">
         <input type="submit" id="registrate1" name="registrate" value="Registrate"><br><br>
       </form>
     </a>
@@ -48,8 +48,8 @@
           <img src="imagenes/chalalas4.png">
         </div>
       </td>
-      <td>
-        <form action="Formulario_Insertar_Usuarios3.php">
+      <td><!--Formulario_Insertar_Usuarios3.php-->
+        <form action="">
           <input type="submit" id="registrate2" name="registrate" value="Registrate">
         </form>
       </td>
