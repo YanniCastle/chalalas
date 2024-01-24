@@ -13,7 +13,7 @@ body{
 }
 #position2{ /*Trabajar con vista de MOTO C....pENDIENTE*/
   height: 40px;
-  background: #000;
+  background: #0e6133;
   padding: 0px 0px;
   display:flex;/*orden, uno a lado de otro*/
   justify-content:last baseline;/*separacion de palabras*/
@@ -27,7 +27,7 @@ body{
 }
 .position2 { /*posicion de header 2*/
   height: 50px;
-  background: #0e6133;
+  background: #f89443;
   padding: 0px 0px;
   color: #c9dd14;
   display:flex;/*orden, uno a lado de otro*/
@@ -35,7 +35,7 @@ body{
   align-items:center;/*centra en horizontal*/
 }
 #registrate2, #login2{/*botones de segundo header*/
-  background: #11771e;
+  background: #f89443;
   font-size: 18px;
   color: #fff;
   padding: 1px 1px;
