@@ -70,7 +70,7 @@
   <!--Aqui esta la presentacion-->
   <!--<div class="logo"><img src="imagenes/imagenes_chalalas/chalalas2.gif" alt="chalalas.com"></div>-->
   <main class="contenido-principal">
-    <h1 class="contenido-principal__titulo">Sitio en construcción... proximamente</h1>
+    <h1 class="contenido-principal__titulo">Sitio en construcción, proximamente...</h1>
     <p class="contenido-principal__resumen">
       Sitio web de comercio electronico, aqui podras encontrar o vender ese articulo que necesitas ya sea nuevo o usado y cerca de ti de persona a persona.
     </p>
