@@ -209,6 +209,10 @@
               <a href="proximamente.php"><img alt="photo 20" src="img/vasos de cafe desechables.jpg" /></a>
     </div>
   </div>
+
+  <br>
+  <a aria-label="Chat on WhatsApp" href="https://wa.me/5525289298"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" />
+  </a>
 </body>
 
 </html>
