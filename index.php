@@ -104,7 +104,6 @@
             echo "<img src='imagenes/productos/" . $row['nombrefoto1'] . "' width='150px'/>";
           }
           echo  " <h3>Precio : $" . $row['preciofoto1'] . " pesos MX</h3>";
-          echo "<hr/>";
         }
   ?>
         <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" width="100px" />
@@ -123,7 +122,6 @@
             echo "<img src='imagenes/productos/" . $row['nombrefoto2'] . "' width='150px'/>";
           }
           echo  " <h3>Precio : $" . $row['preciofoto2'] . " pesos MX</h3>";
-          echo "<hr/>";
         }
       ?>
         <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" width="100px" />
@@ -142,7 +140,6 @@
             echo "<img src='imagenes/productos/" . $row['nombrefoto3'] . "' width='150px'/>";
           }
           echo  " <h3>Precio : $" . $row['preciofoto3'] . " pesos MX</h3>";
-          echo "<hr/>";
         }
       ?>
         <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" width="100px" />
@@ -161,7 +158,6 @@
             echo "<img src='imagenes/productos/" . $row['nombrefoto4'] . "' width='150px'/>";
           }
           echo  " <h3>Precio : $" . $row['preciofoto4'] . " pesos MX</h3>";
-          echo "<hr/>";
         }
       ?>
         <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" width="100px" />
