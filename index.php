@@ -14,7 +14,7 @@
   <title>Chalalas.com</title>
   <link rel="shortcut icon" href="letraCfondonegro.png"><!--icono-navegador-->
   <link rel="stylesheet" type="text/css" href="style13a.css"><!--galeria-->
-  <link rel="stylesheet" type="text/css" href="mobile_index2.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="mobile_index3.css" media="screen">
   <link rel="stylesheet" type="text/css" href="index2a.css" media="screen">
 </head>
 
