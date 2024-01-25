@@ -211,7 +211,7 @@
   </div>
 
   <br>
-  <a aria-label="Chat on WhatsApp" href="https://wa.me/5525289298"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" />
+  <a aria-label="Chat on WhatsApp" href="https://wa.me/5517602354"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" />
   </a>
 </body>
 
