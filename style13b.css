@@ -5,8 +5,11 @@ body {
   margin: 0;
   padding: 0;
 }
-img {
+img.galeria {
   width: 100%;
+}/*Para WhatsApp*/
+img.whatsapp {
+  width: 40%;
 }
 .row {
   display: flex;
