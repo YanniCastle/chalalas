@@ -73,9 +73,9 @@
     <h1 class="construccion">Sitio en construcción, proximamente...</h1>
     <p class="contenido_resumen">
       Sitio web de comercio electronico, aqui podras encontrar o vender ese articulo que necesitas ya sea nuevo o usado y cerca de ti de persona a persona.
-    
+
       Registrate para recibir notificaciones de lo que llegues estar buscando que no existe o para esa compra/venta de oportunidad.
-    
+
   </main>
 
   <!--BUSCADOR COMPLETO-->
@@ -95,10 +95,10 @@
       //CONSULTA 1
       if ($consulta1->num_rows > 0) {
         while ($row = $consulta1->fetch_array()) {
-          echo "<br/><h3>" . $row['titulofoto1'] . "</h3>";
+          echo "<br/><h1>" . $row['titulofoto1'] . "</h1>";
           //echo "<h5>" . $row['Fecha'] . "</h5>";
           $whats = $row['TELEFONO'];
-          echo "<div style='width:400px'>" . $row['descripcionfoto1'] . "</div><br/>";
+          echo "<h2><div style='width:400px'>" . $row['descripcionfoto1'] . "</h2></div><br/>";
           if ($row['nombrefoto1'] != "") {
             echo "<img src='imagenes/productos/" . $row['nombrefoto1'] . "' width='150px'/>";
           }
@@ -107,16 +107,18 @@
   ?>
         <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" width="100px" />
         </a>
+        <br>
+        <hr width="1000" color="black"><br>
       <?php
         echo "<hr/>";
       }
       //CONSULTA 2
       if ($consulta2->num_rows > 0) {
         while ($row = $consulta2->fetch_array()) {
-          echo "<br/><h3>" . $row['titulofoto2'] . "</h3>";
+          echo "<br/><h1>" . $row['titulofoto2'] . "</h1>";
           //echo "<h5>" . $row['Fecha'] . "</h5>";
           $whats = $row['TELEFONO'];
-          echo "<div style='width:400px'>" . $row['descripcionfoto2'] . "</div><br/>";
+          echo "<h2><div style='width:400px'>" . $row['descripcionfoto2'] . "</h2></div><br/>";
           if ($row['nombrefoto2'] != "") {
             echo "<img src='imagenes/productos/" . $row['nombrefoto2'] . "' width='150px'/>";
           }
@@ -125,16 +127,18 @@
       ?>
         <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" width="100px" />
         </a>
+        <br>
+        <hr width="1000" color="black"><br>
       <?php
         echo "<hr/>";
       }
       //CONSULTA 3
       if ($consulta3->num_rows > 0) {
         while ($row = $consulta3->fetch_array()) {
-          echo "<br/><h3>" . $row['titulofoto3'] . "</h3>";
+          echo "<br/><h1>" . $row['titulofoto3'] . "</h1>";
           //echo "<h5>" . $row['Fecha'] . "</h5>";
           $whats = $row['TELEFONO'];
-          echo "<div style='width:400px'>" . $row['descripcionfoto3'] . "</div><br/>";
+          echo "<h2><div style='width:400px'>" . $row['descripcionfoto3'] . "</h2></div><br/>";
           if ($row['nombrefoto3'] != "") {
             echo "<img src='imagenes/productos/" . $row['nombrefoto3'] . "' width='150px'/>";
           }
@@ -143,16 +147,18 @@
       ?>
         <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" width="100px" />
         </a>
+        <br>
+        <hr width="1000" color="black"><br>
       <?php
         echo "<hr/>";
       }
       //CONSULTA 4
       if ($consulta4->num_rows > 0) {
         while ($row = $consulta4->fetch_array()) {
-          echo "<br/><h3>" . $row['titulofoto4'] . "</h3>";
+          echo "<br/><h1>" . $row['titulofoto4'] . "</h1>";
           //echo "<h5>" . $row['Fecha'] . "</h5>";
           $whats = $row['TELEFONO'];
-          echo "<div style='width:400px'>" . $row['descripcionfoto4'] . "</div><br/>";
+          echo "<h2><div style='width:400px'>" . $row['descripcionfoto4'] . "</h2></div><br/>";
           if ($row['nombrefoto4'] != "") {
             echo "<img src='imagenes/productos/" . $row['nombrefoto4'] . "' width='150px'/>";
           }
@@ -161,6 +167,8 @@
       ?>
         <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" width="100px" />
         </a>
+        <br>
+        <hr width="1000" color="black"><br>
   <?php
         echo "<hr/>";
       }
