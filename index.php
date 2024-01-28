@@ -15,7 +15,7 @@
   <link rel="shortcut icon" href="letraCfondonegro.png"><!--icono-navegador-->
   <link rel="stylesheet" type="text/css" href="style13b.css"><!--galeria-->
   <link rel="stylesheet" type="text/css" href="mobile_index4.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="index2a.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="index2b.css" media="screen">
 </head>
 
 <body>
