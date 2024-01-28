@@ -50,7 +50,23 @@ chalalas2{/*oculta logo chalalas4*/
   height: 100px;
 }
 h1 {
-  color: #dd5404;
+  /*color: #dd5404;*/
+  color: #1b0de2;
+}
+h1.construccion {
+  color:#850a85
+}
+p.contenido_resumen {
+  text-align: center;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #097217;
+}
+h2 {
+  color: #ee1a0b;
+}
+h3 {
+  color: rgb(217, 10, 236);
 }
 
 }
