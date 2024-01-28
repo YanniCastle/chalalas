@@ -178,40 +178,40 @@
   <!--Galeria-->
   <div class="row">
     <div class="column">
-      <a href="proximamente.php"><img alt="photo 1" src="img/audifonos bluetooh.jpg" />
-        <a href="proximamente.php"> <img alt="photo 2" src="img/cargador_sony_1.jpg" />
-          <a href="proximamente.php"> <img alt="photo 3" src="img/IMG_20221112_111654_742.jpg" />
-            <a href="proximamente.php"> <img alt="photo 4" src="img/IMG_20230404_173830_587.jpg" />
-              <a href="proximamente.php"> <img alt="photo 5" src="img/IMG_20230411_020301_788.jpg" />
+      <a href="proximamente.php"><img class="galeria" alt="photo 1" src="img/audifonos bluetooh.jpg" />
+        <a href="proximamente.php"> <img class="galeria" alt="photo 2" src="img/cargador_sony_1.jpg" />
+          <a href="proximamente.php"> <img class="galeria" alt="photo 3" src="img/IMG_20221112_111654_742.jpg" />
+            <a href="proximamente.php"> <img class="galeria" alt="photo 4" src="img/IMG_20230404_173830_587.jpg" />
+              <a href="proximamente.php"> <img class="galeria" alt="photo 5" src="img/IMG_20230411_020301_788.jpg" />
     </div>
 
     <div class="column">
-      <a href="proximamente.php"> <img alt="photo 6" src="img/IMG_20230417_002758_978.jpg" />
-        <a href="proximamente.php"> <img alt="photo 7" src="img/IMG_20230417_003024_468.jpg" />
-          <a href="proximamente.php"> <img alt="photo 8" src="img/IMG_20230421_170947_190.jpg" />
-            <a href="proximamente.php"> <img alt="photo 9" src="img/IMG_20230423_175747_290.jpg" />
-              <a href="proximamente.php"> <img alt="photo 10" src="img/IMG_20230429_123940_723.jpg" />
+      <a href="proximamente.php"> <img class="galeria" alt="photo 6" src="img/IMG_20230417_002758_978.jpg" />
+        <a href="proximamente.php"> <img class="galeria" alt="photo 7" src="img/IMG_20230417_003024_468.jpg" />
+          <a href="proximamente.php"> <img class="galeria" alt="photo 8" src="img/IMG_20230421_170947_190.jpg" />
+            <a href="proximamente.php"> <img class="galeria" alt="photo 9" src="img/IMG_20230423_175747_290.jpg" />
+              <a href="proximamente.php"> <img class="galeria" alt="photo 10" src="img/IMG_20230429_123940_723.jpg" />
     </div>
 
     <div class="column">
-      <a href="proximamente.php"> <img alt="photo 11" src="img/IMG_20230523_170746_823.jpg" />
-        <a href="proximamente.php"> <img alt="photo 12" src="img/IMG_20230531_003537_082.jpg" />
-          <a href="proximamente.php"> <img alt="photo 13" src="img/IMG_20230603_023752_895.jpg" />
-            <a href="proximamente.php"> <img alt="photo 14" src="img/IMG_20230626_201617_060.jpg" />
-              <a href="proximamente.php"> <a href="proximamente.php"><img alt="photo 15" src="img/lampara_amarilla_3.jpg" />
+      <a href="proximamente.php"> <img class="galeria" alt="photo 11" src="img/IMG_20230523_170746_823.jpg" />
+        <a href="proximamente.php"> <img class="galeria" alt="photo 12" src="img/IMG_20230531_003537_082.jpg" />
+          <a href="proximamente.php"> <img class="galeria" alt="photo 13" src="img/IMG_20230603_023752_895.jpg" />
+            <a href="proximamente.php"> <img class="galeria" alt="photo 14" src="img/IMG_20230626_201617_060.jpg" />
+              <a href="proximamente.php"> <img class="galeria" alt="photo 15" src="img/lampara_amarilla_3.jpg" />
     </div>
 
     <div class="column">
-      <a href="proximamente.php"> <img alt="photo 16" src="img/marcador_verde.jpg" />
-        <a href="proximamente.php"> <img alt="photo 17" src="img/Marzo 2023 Zona de trabajo Yanni.jpg" />
-          <a href="proximamente.php"> <img alt="photo 18" src="img/Screenshot_20230305-153431.png" />
-            <a href="proximamente.php"> <img alt="photo 19" src="img/Screenshot_20230324-190323.png" />
-              <a href="proximamente.php"><img alt="photo 20" src="img/vasos de cafe desechables.jpg" /></a>
+      <a href="proximamente.php"> <img class="galeria" alt="photo 16" src="img/marcador_verde.jpg" />
+        <a href="proximamente.php"> <img class="galeria" alt="photo 17" src="img/Marzo 2023 Zona de trabajo Yanni.jpg" />
+          <a href="proximamente.php"> <img class="galeria" alt="photo 18" src="img/Screenshot_20230305-153431.png" />
+            <a href="proximamente.php"> <img class="galeria" alt="photo 19" src="img/Screenshot_20230324-190323.png" />
+              <a href="proximamente.php"><img class="galeria" alt="photo 20" src="img/vasos de cafe desechables.jpg" /></a>
     </div>
   </div>
 
   <br>
-  <a aria-label="Chat on WhatsApp" href="https://wa.me/5517602354"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" />
+  <a aria-label="Chat on WhatsApp" href="https://wa.me/5517602354"><img class="whatsapp" alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" />
   </a>
 </body>
 
