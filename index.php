@@ -110,7 +110,6 @@
         <br>
         <hr width="1000" color="black"><br>
       <?php
-        echo "<hr/>";
       }
       //CONSULTA 2
       if ($consulta2->num_rows > 0) {
@@ -130,7 +129,6 @@
         <br>
         <hr width="1000" color="black"><br>
       <?php
-        echo "<hr/>";
       }
       //CONSULTA 3
       if ($consulta3->num_rows > 0) {
@@ -150,7 +148,6 @@
         <br>
         <hr width="1000" color="black"><br>
       <?php
-        echo "<hr/>";
       }
       //CONSULTA 4
       if ($consulta4->num_rows > 0) {
@@ -169,13 +166,12 @@
         </a>
         <br>
         <hr width="1000" color="black"><br>
-  <?php
-        echo "<hr/>";
+      <?php
       }
     } //FIN DE JUNTAR CONSULTAS
     else {
       echo '<tr>';
-      echo '<td colspan=3>No se ha encontrado ningun registro</td>';
+      echo '<td colspan=3><h2>No se ha encontrado ningun registro.</h2></td>';
       echo '</tr>';
     }
   }
