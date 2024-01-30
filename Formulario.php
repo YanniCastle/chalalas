@@ -6,7 +6,7 @@
   <title>Tus comentarios</title>
   <link rel="shortcut icon" href="letraCfondonegro.png">
   <link rel="stylesheet" href="" />
-  <link rel="stylesheet" href="style1b.css" /><!--barra de menu plegable-->
+  <link rel="stylesheet" href="style1d.css" /><!--barra de menu plegable-->
 
   <script src="a2dd6045c4.js" crossorigin="anonymous"></script><!--js para iconos-->
   <link rel="stylesheet" type="text/css" href="estilos.css"><!--Iconos-->
