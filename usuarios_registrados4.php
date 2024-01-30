@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chalalas.com</title>
-  <link rel="stylesheet" href="style1b.css" /><!--barra de menu plegable-->
+  <link rel="stylesheet" href="style1d.css" /><!--barra de menu plegable-->
   <script src="a2dd6045c4.js" crossorigin="anonymous"></script><!--js para iconos-->
   <link rel="stylesheet" type="text/css" href="estilos.css"><!--Iconos -->
   <link rel="stylesheet" type="text/css" href="style4a.css"><!--diseño de columnas-fotos-->
