@@ -24,13 +24,13 @@
       <a><img src="chalalas2.png"></a>
     </div>
     <a>
-      <form action="" method="get">
+      <form action="index_search.php" method="get">
         <input type="search" id="busqueda1" name="busqueda" required placeholder="¿Que artículo buscas?">
         <input type="submit" id="enviar1" name="enviar" value="Buscar"><br><br>
       </form>
     </a>
     <a><!--Formulario_Insertar_Usuarios3.php-->
-      <form action="">
+      <form action="Formulario_Insertar_Usuarios3.php">
         <input type="submit" id="registrate1" name="registrate" value="Registrate"><br><br>
       </form>
     </a>
@@ -49,7 +49,7 @@
         </div>
       </td>
       <td><!--Formulario_Insertar_Usuarios3.php-->
-        <form action="">
+        <form action="Formulario_Insertar_Usuarios3.php">
           <input type="submit" id="registrate2" name="registrate" value="Registrate">
         </form>
       </td>
@@ -61,7 +61,7 @@
     </tr>
   </header>
   <header id="position3"><!--moto C, en vertical-->
-    <form action="" method="get">
+    <form action="index_search.php" method="get">
       <input type="search" id="busqueda3" name="busqueda" required placeholder="¿Que artículo buscas?">
       <input type="submit" id="enviar3" name="enviar" value="Buscar">
     </form>
@@ -78,106 +78,6 @@
 
   </main>
 
-  <!--BUSCADOR COMPLETO-->
-  <?php
-  include 'config.php';
-
-  if (isset($_GET['enviar'])) {
-    $busqueda = $_GET['busqueda'];
-
-    $consulta1 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto1 LIKE '%$busqueda%'");
-    $consulta2 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto2 LIKE '%$busqueda%'");
-    $consulta3 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto3 LIKE '%$busqueda%'");
-    $consulta4 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto4 LIKE '%$busqueda%'");
-
-    //juntar las consultas 
-    if ($consulta1->num_rows > 0 or $consulta2->num_rows > 0 or $consulta3->num_rows > 0 or $consulta4->num_rows > 0) {
-      //CONSULTA 1
-      if ($consulta1->num_rows > 0) {
-        while ($row = $consulta1->fetch_array()) {
-          echo "<br/><h1>" . $row['titulofoto1'] . "</h1>";
-          //echo "<h5>" . $row['Fecha'] . "</h5>";
-          $whats = $row['TELEFONO'];
-          echo "<h2><div style='width:400px'>" . $row['descripcionfoto1'] . "</h2></div><br/>";
-          if ($row['nombrefoto1'] != "") {
-            echo "<img src='imagenes/productos/" . $row['nombrefoto1'] . "' width='150px'/>";
-          }
-          echo  " <h3>Precio : $" . $row['preciofoto1'] . " pesos MX</h3>";
-        }
-  ?>
-        <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" width="100px" />
-        </a>
-        <br>
-        <hr width="1000" color="black"><br>
-      <?php
-      }
-      //CONSULTA 2
-      if ($consulta2->num_rows > 0) {
-        while ($row = $consulta2->fetch_array()) {
-          echo "<br/><h1>" . $row['titulofoto2'] . "</h1>";
-          //echo "<h5>" . $row['Fecha'] . "</h5>";
-          $whats = $row['TELEFONO'];
-          echo "<h2><div style='width:400px'>" . $row['descripcionfoto2'] . "</h2></div><br/>";
-          if ($row['nombrefoto2'] != "") {
-            echo "<img src='imagenes/productos/" . $row['nombrefoto2'] . "' width='150px'/>";
-          }
-          echo  " <h3>Precio : $" . $row['preciofoto2'] . " pesos MX</h3>";
-        }
-      ?>
-        <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" width="100px" />
-        </a>
-        <br>
-        <hr width="1000" color="black"><br>
-      <?php
-      }
-      //CONSULTA 3
-      if ($consulta3->num_rows > 0) {
-        while ($row = $consulta3->fetch_array()) {
-          echo "<br/><h1>" . $row['titulofoto3'] . "</h1>";
-          //echo "<h5>" . $row['Fecha'] . "</h5>";
-          $whats = $row['TELEFONO'];
-          echo "<h2><div style='width:400px'>" . $row['descripcionfoto3'] . "</h2></div><br/>";
-          if ($row['nombrefoto3'] != "") {
-            echo "<img src='imagenes/productos/" . $row['nombrefoto3'] . "' width='150px'/>";
-          }
-          echo  " <h3>Precio : $" . $row['preciofoto3'] . " pesos MX</h3>";
-        }
-      ?>
-        <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" width="100px" />
-        </a>
-        <br>
-        <hr width="1000" color="black"><br>
-      <?php
-      }
-      //CONSULTA 4
-      if ($consulta4->num_rows > 0) {
-        while ($row = $consulta4->fetch_array()) {
-          echo "<br/><h1>" . $row['titulofoto4'] . "</h1>";
-          //echo "<h5>" . $row['Fecha'] . "</h5>";
-          $whats = $row['TELEFONO'];
-          echo "<h2><div style='width:400px'>" . $row['descripcionfoto4'] . "</h2></div><br/>";
-          if ($row['nombrefoto4'] != "") {
-            echo "<img src='imagenes/productos/" . $row['nombrefoto4'] . "' width='150px'/>";
-          }
-          echo  " <h3>Precio : $" . $row['preciofoto4'] . " pesos MX</h3>";
-        }
-      ?>
-        <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" width="100px" />
-        </a>
-        <br>
-        <hr width="1000" color="black"><br>
-      <?php
-      }
-    } //FIN DE JUNTAR CONSULTAS
-    else {
-      echo '<tr>';
-      echo '<td colspan=3><h2>No se ha encontrado ningun registro.</h2></td>';
-      echo '</tr>';
-    }
-  }
-  //FIN DE ESTRUCTURA DE BUSCADOR//
-
-  ?>
   <!--Galeria-->
   <div class="row">
     <div class="column">
