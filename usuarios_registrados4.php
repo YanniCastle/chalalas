@@ -53,7 +53,7 @@
   include 'config.php';
   echo "<br/><br/><br/><h2>¡Bienvenid@, " . $_SESSION["usuario"] . "!<br></h2>";
 
-//ESTRUCTURA DE BUSCADOR 
+  //ESTRUCTURA DE BUSCADOR 
   if (isset($_GET['enviar'])) {
     $busqueda = $_GET['busqueda'];
 
@@ -122,12 +122,9 @@
       echo '<td colspan=3>No se ha encontrado ningun registro</td>';
       echo '</tr>';
     }
-   
-
-
   }
   //FIN DE ESTRUCTURA DE BUSCADOR//
-  
+
   ?>
 
   <!--Aqui mostrar imagenes de usuario-->
@@ -140,7 +137,7 @@
   $email2 = $valores['MAIL'];
   $email3 = $valores['MAIL'];
   $email4 = $valores['MAIL'];
-  
+
   $rutafoto1 = $valores['rutafoto1'];
   $rutafoto2 = $valores['rutafoto2'];
   $rutafoto3 = $valores['rutafoto3'];
@@ -150,22 +147,23 @@
   <div class="row">
     <div class="column">
       <img src="<?php echo $rutafoto1; ?>">
-      <a href="cambiarfoto5.php">foto 1</a>
+      <!--<a href="cambiarfoto5.php">foto 1</a>-->
+      <a href="cambiarfoto8.php">foto 1</a>
     </div>
 
     <div class="column">
       <img src="<?php echo $rutafoto2; ?>">
-      <a href="cambiarfoto5.php">foto 2</a>
+      <a href="cambiarfoto8.php">foto 2</a>
     </div>
 
     <div class="column">
       <img src="<?php echo $rutafoto3; ?>">
-      <a href="cambiarfoto5.php">foto 3</a>
+      <a href="cambiarfoto8.php">foto 3</a>
     </div>
 
     <div class="column">
       <img src="<?php echo $rutafoto4; ?>">
-      <a href="cambiarfoto5.php">foto 4</a>
+      <a href="cambiarfoto8.php">foto 4</a>
     </div>
 
 
