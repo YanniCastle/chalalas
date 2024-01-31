@@ -36,7 +36,31 @@
         <td>Telefono:</td>
         <td><input type='tel' name='number' pattern="[0-9]{10}" maxlength="10" id='number' required placeholder="ingresa tus 10 numeros"></td>
       </tr>
-
+      <td>Ubicación:</td>
+      <td>
+        <select name='sector' id='sector'>
+          <!--<option disabled selected="">Sin especificar</option>-->
+          <option value="0">Sin especificar</option>
+          <option value="1">Álvaro Obregón</option>
+          <option value="2">Azcapotzalco</option>
+          <option value="3">Benito Juárez</option>
+          <option value="4">Coyoacán</option>
+          <option value="5">Cuajimalpa de Morelos</option>
+          <option value="6">Cuauhtémoc</option>
+          <option value="7">Gustavo A. Madero</option>
+          <option value="8">Iztacalco</option>
+          <option value="9">Iztapalapa</option>
+          <option value="10">La Magdalena Contreras</option>
+          <option value="11">Miguel Hidalgo</option>
+          <option value="12">Milpa Alta</option>
+          <option value="13">Tláhuac</option>
+          <option value="14">Tlalpan</option>
+          <option value="15">Venustiano Carranza</option>
+          <option value="16">Xochimilco</option>
+          <option value="17">Edo. de México</option>
+        </select>
+      </td>
+      </tr>
       <td> Contraseña:</td>
       <td><input type='text' name='contra' id='contra' required maxlength="30" placeholder="minimo 6 caracteres"></td>
       </tr>
