@@ -46,8 +46,9 @@ chalalas2{/*oculta logo chalalas4*/
 }
 
 .logo{
-  width: 200px;
-  height: 100px;
+  display: nose;
+ /* width: 200px;*/
+  /*height: 100px;*/
 }
 h1 {
   /*color: #dd5404;*/
