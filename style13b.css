@@ -34,3 +34,26 @@ img.whatsapp {
     flex: 50%;
   }
 }
+
+/*OCULTA GALERIA*/
+@media(min-width: 3501px) and (max-width: 5500px){
+#position3{/*Ocultar el primer HEADER y buscador*/
+  display: none;
+}
+img.galeria {
+  display: none;
+}
+/*Para WhatsApp*/
+img.whatsapp {
+  display: none;
+}
+.row {
+  display: none;
+}
+.column{
+  display: none;
+}
+.column img{
+  display: none;
+}
+} 

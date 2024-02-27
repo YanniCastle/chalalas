@@ -1,5 +1,5 @@
 /*RESET Comfiguracion para PC*/
-@media(min-width: 600px) and (max-width: 1380px){
+@media(min-width: 600px) and (max-width: 3500px){
 *{
   margin: 0;
   padding: 0;
@@ -68,5 +68,43 @@ h2 {
 h3 {
   color: rgb(217, 10, 236);
 }
+}
 
+/*PANTALLA BLANCA*/
+@media(min-width: 3501px) and (max-width: 5500px){
+body{
+  /*display: none;*/
+}
+#position1 {
+  display: none;
+}
+#position1 {/*FIJAR EL HEADER en desktop*/
+  display: none;
+}
+#busqueda1{
+  display: none;
+}
+#enviar1, #registrate1, #login1{
+  display: none;
+}
+chalalas2{/*oculta logo chalalas4*/
+    display:none;
+}
+#position2{/*Ocultar el segundo HEADER*/
+  display: none;
+}
+.logo{/*LOGO EN PANTALLA BLANCA*/
+  width: 200px;
+  height: 100px;
+}
+h1 {
+  display: none;
+}
+h1.construccion {
+  display: flex;
+  margin-top: 225px;
+}
+p.contenido_resumen {
+  display: none;
+}
 }
