@@ -68,7 +68,7 @@
   </header>
   <br><br><br>
   <!--Aqui esta la presentacion-->
-  <!--<div class="logo"><img src="imagenes/imagenes_chalalas/chalalas2.gif" alt="chalalas.com"></div>-->
+  <div class="logo"><img src="imagenes/imagenes_chalalas/chalalas2.gif" alt="chalalas.com"></div>
   <main class="contenido-principal">
     <h1 class="construccion">Sitio en construcción, proximamente...</h1>
     <p class="contenido_resumen">
