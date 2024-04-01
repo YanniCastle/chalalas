@@ -13,9 +13,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chalalas.com</title>
   <link rel="shortcut icon" href="letraCfondonegro.png"><!--icono-navegador-->
-  <link rel="stylesheet" type="text/css" href="style13b.css"><!--galeria-->
-  <link rel="stylesheet" type="text/css" href="mobile_index4.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="index2b.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="style13c.css"><!--galeria-->
+  <link rel="stylesheet" type="text/css" href="mobile_index4a.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="index2c.css" media="screen">
 </head>
 
 <body>
@@ -68,7 +68,7 @@
   </header>
   <br><br><br>
   <!--Aqui esta la presentacion-->
-  <!--<div class="logo"><img src="imagenes/imagenes_chalalas/chalalas2.gif" alt="chalalas.com"></div>-->
+  <div class="logo"><img src="imagenes/imagenes_chalalas/chalalas2.gif" alt="chalalas.com"></div>
   <main class="contenido-principal">
     <h1 class="construccion">Sitio en construcción, proximamente...</h1>
     <p class="contenido_resumen">
