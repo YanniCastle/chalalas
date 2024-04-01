@@ -7,6 +7,7 @@ body {
 }
 img.galeria {
   width: 100%;
+  height:20%;/*agrege ajustar altura*/
 }/*Para WhatsApp*/
 img.whatsapp {
   width: 40%;

@@ -95,7 +95,9 @@ margin-top: 0px;
 h1 {
   color: #dd5404;
 }
-
+.logo{
+  display: none;
+}
 
 
 }
