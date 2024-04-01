@@ -1,0 +1,72 @@
+/*RESET Comfiguracion para PC*/
+@media(min-width: 600px) and (max-width: 1380px){
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: #b8bacf;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+}
+#position1 {
+  height: 40px;
+  background: #1e86db;
+  padding: 0px 0px;
+  color: #c9dd14;
+  display:flex;/*orden, uno a lado de otro*/
+  justify-content:last baseline;/*separacion de palabras*/
+  align-items:center;/*centra en horizontal*/
+}
+#position1 {/*FIJAR EL HEADER en desktop*/
+  width: 100%;
+  position: fixed;
+  left:0px;
+  top: 0px;
+}
+#busqueda1{
+  font-size: 18px;
+  background-color: white;
+  padding: 6px 30px;/*tamaño de buscador*/
+  margin-top: 15px;
+  margin-left: 5px;
+}
+#enviar1, #registrate1, #login1{
+  background: #f89443;
+  font-size: 18px;
+  padding: 6px 5px;
+  margin-top: 15px;
+  margin-left: 0px;
+}
+chalalas2{/*oculta logo chalalas4*/
+    display:none;
+}
+#position2{/*Ocultar el segundo HEADER*/
+  display: none;
+}
+
+.logo{
+  width: 200px;
+  height: 100px;
+}
+h1 {
+  /*color: #dd5404;*/
+  color: #1b0de2;
+}
+h1.construccion {
+  color:#db2b1e;
+}
+p.contenido_resumen {
+  text-align: center;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e86db;
+}
+h2 {
+  color: #ee1a0b;
+}
+h3 {
+  color: rgb(217, 10, 236);
+}
+
+}

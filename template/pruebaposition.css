@@ -1,0 +1,8 @@
+#positionnn {
+  width: 100%;
+ position:fixed; 
+ left: 13px;
+ font-size: 40px;
+ background: red;
+ /*top: 25px;*/
+}

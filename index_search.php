@@ -2,23 +2,29 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8"><!--Así se evita que la ñ o las tildes no se muestren correctamente-->
-  <meta charset="ISO-8859-1"><!--caracteres para el alfabeto latino-->
+  <meta charset="UTF-8">
+  <!--Así se evita que la ñ o las tildes no se muestren correctamente-->
+  <meta charset="ISO-8859-1">
+  <!--caracteres para el alfabeto latino-->
   <meta name="description" content="Sitio web de comercio electrónico, compra/venta de artículos de ocasión">
-  <meta name="keywords" content="articulo usado, compra ocasional, seminuevo"><!--palabras clave-->
+  <meta name="keywords" content="articulo usado, compra ocasional, seminuevo">
+  <!--palabras clave-->
   <meta name="author" content="Chalalas.com">
   <meta name="date" content="2023-02-20">
   <meta name="robots" content="index, follow"><!-- sigan los enlaces de una página-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chalalas.com</title>
-  <link rel="shortcut icon" href="letraCfondonegro.png"><!--icono-navegador-->
-  <link rel="stylesheet" type="text/css" href="style13c.css"><!--galeria-->
+  <link rel="shortcut icon" href="letraCfondonegro.png">
+  <!--icono-navegador-->
+  <link rel="stylesheet" type="text/css" href="style13c.css">
+  <!--galeria-->
   <link rel="stylesheet" type="text/css" href="mobile_index4a.css" media="screen">
   <link rel="stylesheet" type="text/css" href="index2c.css" media="screen">
 </head>
 
 <body>
-  <header id="position1"><!--desktop-->
+  <header id="position1">
+    <!--desktop-->
     <div class="chalalas2">
       <a><img src="chalalas2.png"></a>
     </div>
@@ -28,7 +34,8 @@
         <input type="submit" id="enviar1" name="enviar" value="Buscar"><br><br>
       </form>
     </a>
-    <a><!--Formulario_Insertar_Usuarios3.php-->
+    <a>
+      <!--Formulario_Insertar_Usuarios3.php-->
       <form action="Formulario_Insertar_Usuarios3.php">
         <input type="submit" id="registrate1" name="registrate" value="Registrate"><br><br>
       </form>
@@ -40,14 +47,16 @@
     </a>
   </header>
   <!--/////////////////////////////////////////////////////////-->
-  <header id="position2"><!--moto C, en vertical-->
+  <header id="position2">
+    <!--moto C, en vertical-->
     <tr>
       <td>
         <div class="chalalas4">
           <img src="imagenes/chalalas4.png">
         </div>
       </td>
-      <td><!--Formulario_Insertar_Usuarios3.php-->
+      <td>
+        <!--Formulario_Insertar_Usuarios3.php-->
         <form action="Formulario_Insertar_Usuarios3.php">
           <input type="submit" id="registrate2" name="registrate" value="Registrate">
         </form>
@@ -59,7 +68,8 @@
       </td>
     </tr>
   </header>
-  <header id="position3"><!--moto C, en vertical-->
+  <header id="position3">
+    <!--moto C, en vertical-->
     <form action="index_search.php" method="get">
       <input type="search" id="busqueda3" name="busqueda" required placeholder="¿Que artículo buscas?">
       <input type="submit" id="enviar3" name="enviar" value="Buscar">
@@ -96,11 +106,12 @@
           echo "<h2>Ubicacion: " . $row['UBICACION'] . "</h2><br/>";
           echo  " <h3>Precio : $" . $row['preciofoto1'] . " pesos MX</h3>";
        ?>
-        <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" width="100px" />
-        </a>
-        <br>
-        <hr width="1000" color="black"><br>
-      <?php
+  <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp"
+      src="WhatsAppButtonGreenSmall.png" width="100px" />
+  </a>
+  <br>
+  <hr width="300" color="green"><br>
+  <?php
       }
       }
       //CONSULTA 2
@@ -118,11 +129,12 @@
           echo  " <h3>Precio : $" . $row['preciofoto2'] . " pesos MX</h3>";
         }
       ?>
-        <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" width="100px" />
-        </a>
-        <br>
-        <hr width="1000" color="black"><br>
-      <?php
+  <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp"
+      src="WhatsAppButtonGreenSmall.png" width="100px" />
+  </a>
+  <br>
+  <hr width="300" color="green"><br>
+  <?php
       }
       //CONSULTA 3
       if ($consulta3->num_rows > 0) {
@@ -138,11 +150,12 @@
           echo "<h2>Ubicacion: " . $row['UBICACION'] . "</h2><br/>";
           echo  " <h3>Precio : $" . $row['preciofoto3'] . " pesos MX</h3>";
       ?>
-        <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" width="100px" />
-        </a>
-        <br>
-        <hr width="1000" color="black"><br>
-      <?php
+  <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp"
+      src="WhatsAppButtonGreenSmall.png" width="100px" />
+  </a>
+  <br>
+  <hr width="300" color="green"><br>
+  <?php
       }
       }
       //CONSULTA 4
@@ -160,10 +173,11 @@
           echo  " <h3>Precio : $" . $row['preciofoto4'] . " pesos MX</h3>";
         }
       ?>
-        <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" width="100px" />
-        </a>
-        <br>
-        <hr width="1000" color="black"><br>
+  <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp"
+      src="WhatsAppButtonGreenSmall.png" width="100px" />
+  </a>
+  <br>
+  <hr width="300" color="green"><br>
   <?php
       }
     } //FIN DE JUNTAR CONSULTAS
