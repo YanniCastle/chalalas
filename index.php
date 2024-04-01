@@ -93,7 +93,7 @@
   <!--Galeria-->
   <div class="row">
     <div class="column">
-      <a href="proximamente.php"><img class="galeria" alt="photo 1" src="img/audifonos bluetooh.jpg" />
+      <a href="carrusel2.html"><img class="galeria" alt="photo 1" src="img/audifonos bluetooh.jpg" />
         <a href="proximamente.php"> <img class="galeria" alt="photo 2" src="img/cargador_sony_1.jpg" />
           <a href="proximamente.php"> <img class="galeria" alt="photo 3" src="img/IMG_20221112_111654_742.jpg" />
             <a href="proximamente.php"> <img class="galeria" alt="photo 4" src="img/IMG_20230404_173830_587.jpg" />
