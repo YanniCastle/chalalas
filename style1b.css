@@ -1,0 +1,287 @@
+/*RESET*/
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  background: #b0b1b8;
+}
+/*HEADER*/
+#position {/*FIJAR EL HEADER*/
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+
+.ocultar-div2{
+    display:none;
+}
+header {
+  height: 40px;
+  background: #37393b;
+  padding: 0 0px;
+  color: #fff;
+  display: flex;/*orden, uno a lado de otro*/
+  justify-content: space-between;/*separacion de palabras*/
+  align-items: center;/*centra en horizontal*/
+}
+#busqueda{
+  font-size: 16px;
+  background-color: white;
+  padding: 6px 20px;
+  margin-top: 15px;
+  margin-left: 0px;
+}
+#enviar{
+  background: #f89443;
+  font-size: 16px;
+  padding: 6px 7px;
+  margin-top: 15px;
+  margin-left: 0px;
+}
+
+#Galeria_foto{
+  width: 50%;
+}
+
+.menu a{
+  color: #fff;
+  text-decoration: none;/*quita subrrayado*/
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.mostrar-menu, 
+.esconder-menu {
+  font-size: 45px;
+  cursor: pointer;
+  display: none;
+  transition: 0.4s;
+}
+.mostrar-menu{
+  order:1;
+}
+.menu a:hover,
+.mostrar-menu,
+.esconder-menu:hover{
+  color: #f89443;
+}
+#check{
+  display: none;
+}
+h1{
+  text-align: left;
+  color: red;
+}
+h2{
+  text-align: center;
+  color: #e97415;
+}
+
+/*RESPONSIVE para tablet*/
+@media(min-width: 800px) and (max-width: 1120px){
+  body{
+  background: #b5ce72;
+}
+  header {
+  height: 40px;
+  background: #37393b;
+  padding: 0 0px;
+  color: #fff;
+  display: flex;/*orden, uno a lado de otro*/
+  justify-content: space-between;/*separacion de palabras*/
+  align-items: center;/*centra en horizontal*/
+}
+#busqueda{
+  font-size: 14px;
+  background-color: white;
+  padding: 6px 0px;
+  margin-top: 17px;
+  margin-left: 0px;
+}
+#enviar{
+  background: #f89443;
+  font-size: 16px;
+  padding: 6px 3px;
+  margin-top: 17px;
+  margin-left: 0px;
+  cursor: pointer;
+}
+
+.menu a{
+  color: #fff;
+  text-decoration: none;/*quita subrrayado*/
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.mostrar-menu, 
+.esconder-menu {
+  font-size: 45px;
+  cursor: pointer;
+  display: none;
+  transition: 0.4s;
+}
+.mostrar-menu{
+  order:1;
+}
+.menu a:hover,
+.mostrar-menu,
+.esconder-menu:hover{
+  color: #f89443;
+}
+#check{
+  display: none;
+}
+h1{
+  text-align: left;
+  color: red;
+}
+h2{
+  text-align: center;
+  color: #f89443;
+}
+
+}
+
+
+
+/*horizontal moto g8
+@media(min-width: 500px) and (max-width: 576px){
+body{
+  background: #1a2edb;
+}
+}*/
+
+/*pantalla de en vertical tipo tablet*/
+@media(max-width: 799px){
+  body{
+  background: #ab10b1;
+}
+.mostrar-menu,
+  .esconder-menu{
+    font-size: 60px;
+    display: block;
+  }
+.menu{
+    position: fixed;
+    width: 18%;
+    height: 80vh;
+    background: #131316;
+    /*left: 0; solo era para ver como estaba quedando*/
+    right: -100%;/*este estaba comenrado*/
+    top: 0;
+    text-align: left;
+    padding: 85px 0px; 
+    z-index: 100;
+    transition: 0.8s;
+  }
+  .menu a{
+    display: block;
+    padding: 13px;
+
+  }
+  .esconder-menu{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+  #check:checked ~ .menu{
+    right: 0;/*le decimos aparece*/
+  }
+
+
+#busqueda{
+  font-size: 18px;
+  background-color: white;
+  padding: 6px 0px;
+  margin-top: 5px;
+  margin-left: 0px;
+}
+#enviar{
+  background: #f89443;
+  font-size: 14px;
+  padding: 6px 1px;
+  margin-top: 20px;
+  margin-left: 0px;
+}
+.ocultar-div{/*oculta logo chalalas2*/
+    display:none;
+}
+.ocultar-div2{/*muestra en vertical logo chalalas4*/
+    display:grid;
+ 
+}
+}
+
+
+
+
+/*pantalla de moto g8 vertical*/
+@media(max-width: 450px){
+  body{
+  background: #c2c7d8;
+}
+.mostrar-menu,
+  .esconder-menu{
+    font-size: 60px;
+    display: block;
+  }
+.menu{
+    position: fixed;
+    width: 18%;
+    height: 60vh;
+    background: #131316;
+    /*left: 0; solo era para ver como estaba quedando*/
+    right: -100%;/*este estaba comenrado*/
+    top: 0;
+    text-align: left;
+    padding: 85px 0px; 
+    z-index: 100;
+    transition: 0.8s;
+  }
+  .menu a{
+    display: block;
+    padding: 13px;
+
+  }
+  .esconder-menu{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+  #check:checked ~ .menu{
+    right: 0;/*le decimos aparece*/
+  }
+
+#position2 {/*FIJAR EL Whats*/
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  top: 40px;
+}
+
+
+#busqueda{
+  font-size: 18px;
+  background-color: white;
+  padding: 6px 0px;
+  margin-top: 5px;
+  margin-left: 0px;
+}
+#enviar{
+  background: #f89443;
+  font-size: 14px;
+  padding: 6px 1px;
+  margin-top: 20px;
+  margin-left: 0px;
+}
+.ocultar-div{/*oculta logo chalalas2*/
+    display:none;
+}
+.ocultar-div2{/*muestra en vertical logo chalalas4*/
+    display:grid;
+ 
+}
+}
+
