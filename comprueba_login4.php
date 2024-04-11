@@ -32,7 +32,7 @@ $consulta = "SELECT * FROM usuarios_pass2 WHERE USUARIOS= '$login' OR MAIL= '$lo
           header("location:usuarios_registrados2.php");
           break;
         case 3:
-          header("location:usuarios_registrados3.php");
+          header("location:registered_user.php");
           break;
       } //fin de switch//
     } //fin del if//
