@@ -27,7 +27,7 @@ $id = $valores['ID'];
 
 <body>
   <!--Redireccion -->
-  <?php $url = "http://" . $_SERVER['HTTP_HOST'] . "/curso_php"  ?>
+  <?php $url = "http://" . $_SERVER['HTTP_HOST'] . "/chalalas"  ?>
 
 
   <!--Cabecera de Administrador-->
