@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chalalas.com</title>
-  <link rel="stylesheet" href="style1b.css" />
+  <link rel="stylesheet" href="style1bb.css" />
   <!--barra de menu plegable-->
 
   <script src="a2dd6045c4.js" crossorigin="anonymous"></script>
@@ -60,147 +60,57 @@
   <?php
   session_start();
   if (!isset($_SESSION["usuario"])) {
-    header("location:login.php");
+    header("location:../../index.php");
   }
   include 'config.php';
 
   echo "<br/><br/><br/><h2>Usuario: " . $_SESSION["usuario"] . "<br></h2>";
 
-  //ESTRUCTURA DE BUSCADOR (titulofoto1, titulofoto2, titulofoto3, titulofoto4)//
+  //BUSCADOR COMPLETO
   if (isset($_GET['enviar'])) {
     $busqueda = $_GET['busqueda'];
 
-    $consulta1 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto1 LIKE '%$busqueda%'");
-    $consulta2 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto2 LIKE '%$busqueda%'");
-    $consulta3 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto3 LIKE '%$busqueda%'");
-    $consulta4 = $con->query("SELECT * FROM usuarios_pass2 WHERE titulofoto4 LIKE '%$busqueda%'");
-
     /*////Para tabla libros////////////////////////////// */
-    $consulta5 = $con->query("SELECT * FROM libros WHERE nombre LIKE '%$busqueda%'");/*tabla:fotos*/
+    $search = $con->query("SELECT * FROM libros WHERE nombre LIKE '%$busqueda%'");/*tabla:libros*/
 
-    while ($row = $consulta5->fetch_array()) {
-      //$id = $row['id_usuarios_pass2'];/* Para el contacto*/
-      //$whats = $row['TELEFONO'];
-      echo "<br/><h3>" . $row['nombre'] . "</h3>";
-      //echo "<h5>" . $row['fecha'] . "</h5>"; //fecha ?
-      echo "<div style='width:200px'>" . $row['descripcion'] . "</div><br/>";
-      //if ($row['nombre'] != "") {
-      echo "<img src='img/" . $row['imagen'] . "' width='150px'/>";
-      // }
-      echo  " <h3>Precio : $" . $row['precio'] . " pesos MX</h3>";
-      echo  " <h3>Vendedor: " . $row['ID_USER'] . "</h3>"; //Este id es de tabla:libros, colocar el de usuario
+    if ($search->num_rows > 0) {
 
+      while ($row = $search->fetch_array()) {
+        //search en libros
+        echo "<h1>"                         . $row['nombre'] . "</h1>";
+        echo "<h2><div style='width:200px'>" . $row['descripcion'] . "</div></h2><br/>";
+        echo "<img src='img/"               . $row['imagen'] . "' width='150px'/>";
+        echo  "<h3>Precio : $"              . $row['precio'] . " pesos MX</h3>";
+        $ID_USER = $row['ID_USER'];
+
+        if ($ID_USER) {
+          $user_data = $con->query("SELECT * FROM usuarios_pass2 WHERE ID = '$ID_USER' ");
+
+          while ($data = $user_data->fetch_array()) {
+            //user_data en usuarios_pass2
+            "<br/><h2>" .                  $ID = $data['ID']      . "</h2>";
+            "<br/><h2>" .              $NOMBRE = $data['NOMBRE']  . "</h2>";
+            echo "<br/>Vendedor:<h2>" . $USUARIOS = $data['USUARIOS'] . "</h2>";
+            "<br/><h2>" .                $MAIL = $data['MAIL']    . "</h2>";
+            $TELEFONO = $data['TELEFONO'];
+            echo "<br/><h3>Ubicacion:" . $UBICACION = $data['UBICACION'] . "</h3>";
+          }
+        }
   ?>
-  <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp"
-      src="WhatsAppButtonGreenSmall.png" width="150px" />
+  <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $TELEFONO; ?>"><img alt="Chat on WhatsApp"
+      src="WhatsAppButtonGreenSmall.png" width="120px" />
   </a>
+  <br>
+  <hr width="300" color="green"><br>
   <?php
-      echo "<hr/>";
+        echo "<hr/>";
+      } //fin de $row
+    } //fin de $search
+    else {
+      echo '<td colspan=3><h2>No se encontro ningun registro en tabla:libros.</h2></td>';
+      echo '<hr width="400" color="blue"><br>';
     }
-    /* FIN de codigo agregado para consulta5 tabla: libros */
+  } //fin de $_GET['enviar']
 
-    //para titulofoto1//
-    while ($row = $consulta1->fetch_array()) {
-      $id = $row['ID'];/* Para el contacto*/
-      $whats = $row['TELEFONO'];
-      echo "<br/><h3>" . $row['titulofoto1'] . "</h3>";
-      //echo "<h5>" . $row['ID'] . "</h5>"; //fecha ?
-      echo "<div style='width:400px'>" . $row['descripcionfoto1'] . "</div><br/>";
-      if ($row['nombrefoto1'] != "") {
-        echo "<img src='imagenes/productos/" . $row['nombrefoto1'] . "' width='150px'/>";
-      }
-      echo  " <h3>Precio : $" . $row['preciofoto1'] . " pesos MX</h3>";
-      echo  " <h3>Vendedor: " . $row['USUARIOS'] . "</h3>";
-
-    ?>
-  <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp"
-      src="WhatsAppButtonGreenSmall.png" width="150px" />
-  </a>
-  <?php
-      echo "<hr/>";
-      echo "<hr/>";
-    }
-
-    ?>
-  <!--NOTA: Cerre y abri php para agregar codigos de html y sea repetido por cada consulta..Pendiente-->
-  <!--Enlace para whats App-->
-
-  <!--  <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenSmall.png" width="200px" />
-    </a>-->
-  <!--Enlace para datos de Vendedor-->
-  <!--  <form method="post" action="contacto.php?id=<?php echo $id; ?>;">
-      <table>
-        <tr>
-          <td>
-            <button type="submit" name="contacto">Contacto</button>
-          </td>
-        </tr>
-      </table>
-    </form>-->
-
-  <?php
-    echo "<hr/><hr/><hr/><hr/><hr/>";
-    //para titulofoto2//
-    while ($row = $consulta2->fetch_array()) {
-      $id = $row['ID'];/* Para el contacto*/
-      $whats = $row['TELEFONO'];
-      echo "<br/><h3>" . $row['titulofoto2'] . "</h3>";
-      //echo "<h5>" . $row['Fecha'] . "</h5>";
-      echo "<div style='width:400px'>" . $row['descripcionfoto2'] . "</div><br/>";
-      if ($row['nombrefoto2'] != "") {
-        echo "<img src='imagenes/productos/" . $row['nombrefoto2'] . "' width='150px'/>";
-      }
-      echo  " <h3>Precio : $" . $row['preciofoto2'] . " pesos MX</h3>";
-      echo  " <h3>Vendedor: " . $row['USUARIOS'] . "</h3>";
-    ?>
-  <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp"
-      src="WhatsAppButtonGreenSmall.png" width="150px" />
-  </a>
-  <?php
-      echo "<hr/>";
-      echo "<hr/>";
-    }
-    //para titulofoto3//
-    while ($row = $consulta3->fetch_array()) {
-      $id = $row['ID'];/* Para el contacto*/
-      $whats = $row['TELEFONO'];
-      echo "<br/><h3>" . $row['titulofoto3'] . "</h3>";
-      //echo "<h5>" . $row['Fecha'] . "</h5>";
-      echo "<div style='width:400px'>" . $row['descripcionfoto3'] . "</div><br/>";
-      if ($row['nombrefoto3'] != "") {
-        echo "<img src='imagenes/productos/" . $row['nombrefoto3'] . "' width='150px'/>";
-      }
-      echo  " <h3>Precio : $" . $row['preciofoto3'] . " pesos MX</h3>";
-      echo  " <h3>Vendedor: " . $row['USUARIOS'] . "</h3>";
-    ?>
-  <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp"
-      src="WhatsAppButtonGreenSmall.png" width="150px" />
-  </a>
-  <?php
-      echo "<hr/>";
-      echo "<hr/>";
-    }
-    //para titulofoto4//
-    while ($row = $consulta4->fetch_array()) {
-      $id = $row['ID'];/* Para el contacto*/
-      $whats = $row['TELEFONO'];
-      echo "<br/><h3>" . $row['titulofoto4'] . "</h3>";
-      //echo "<h5>" . $row['Fecha'] . "</h5>";
-      echo "<div style='width:400px'>" . $row['descripcionfoto4'] . "</div><br/>";
-      if ($row['nombrefoto4'] != "") {
-        echo "<img src='imagenes/productos/" . $row['nombrefoto4'] . "' width='150px'/>";
-      }
-      echo  " <h3>Precio : $" . $row['preciofoto4'] . " pesos MX</h3>";
-      echo  " <h3>Vendedor: " . $row['USUARIOS'] . "</h3>";
-    ?>
-  <a aria-label="Chat on WhatsApp" href="https://wa.me/<?php echo $whats; ?>"><img alt="Chat on WhatsApp"
-      src="WhatsAppButtonGreenSmall.png" width="150px" />
-  </a>
-  <?php
-      echo "<hr/>";
-      echo "<hr/>";
-    }
-  }
-  //FIN DE ESTRUCTURA DE BUSCADOR//
-
+  //FIN DEL BUSCADOR COMPLETO 2.0
   ?>
