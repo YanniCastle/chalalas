@@ -5,7 +5,7 @@
 <!--Galeria-->
 <div class="row">
   <div class="column">
-    <a href="proximamente.php"><img class="galeria" alt="photo 1" src="galeria_index/cinta_canela_c.jpg" />
+    <a href="../../carrusel2.html"><img class="galeria" alt="photo 1" src="galeria_index/cinta_canela_c.jpg" />
       <a href="proximamente.php"> <img class="galeria" alt="photo 2" src="galeria_index/mouse_c.jpg" />
         <a href="proximamente.php"> <img class="galeria" alt="photo 3" src="galeria_index/ram_c.jpg" />
           <a href="proximamente.php"> <img class="galeria" alt="photo 4" src="galeria_index/teclado_c.jpg" />
