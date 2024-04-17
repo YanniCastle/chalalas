@@ -1,6 +1,6 @@
 <?php
 $host = "localhost";
-$bd = "pruebas";
+$bd = "pruebas";//solo produccion
 $usuario = "root";
 $contrasenia = "";
 //01:35:12   //01:43:32

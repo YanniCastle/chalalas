@@ -1,5 +1,5 @@
 <?php
-$host = "localhost";
+$host = "localhost";//solo produccion
 $bd = "pruebas";
 $usuario = "root";
 $contrasenia = "";
