@@ -18,3 +18,4 @@ administrador/config/bd.php
 administrador/config/
 users/config/bd.php
 users/config/
+bd.php
