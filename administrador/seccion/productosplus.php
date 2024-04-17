@@ -22,7 +22,8 @@ switch ($accion) {
 
 
         if ($_FILES['txtImagen']['size'] <= 5120000) {
-          $sentenciaSQL = $conexion->prepare("INSERT INTO libros (nombre, descripcion, precio, imagen) VALUES (:nombre, :descripcion, :precio, :imagen);");
+          $sentenciaSQL = $conexion->prepare("INSERT INTO libros (ID_USER, nombre, descripcion, precio, imagen) VALUES (:id_user, :nombre, :descripcion, :precio, :imagen);");
+          $sentenciaSQL->bindParam(':id_user', $id);
           $sentenciaSQL->bindParam(':nombre', $txtNombre);
           $sentenciaSQL->bindParam(':descripcion', $txtDescripcion);
           $sentenciaSQL->bindParam(':precio', $txtPrecio);
@@ -186,7 +187,7 @@ switch ($accion) {
 }
 
 //Mostrar todos los registros en tabla
-$sentenciaSQL = $conexion->prepare("SELECT * FROM libros");
+$sentenciaSQL = $conexion->prepare("SELECT * FROM libros ");
 $sentenciaSQL->execute();
 $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -213,6 +214,12 @@ $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
           <label for="txtID">ID:</label>
           <input type="text" required readonly class="form-control" value="<?php echo $txtID; ?>" name="txtID"
             id="txtID" placeholder="ID">
+        </div>
+        <!--Agregue ID_USER-->
+        <div class="form-group">
+          <label for="ID_USER">ID_USER:</label>
+          <input type="text" required readonly class="form-control" value="<?php echo $id; ?>" name="ID_USER"
+            id="ID_USER" placeholder="ID_USER">
         </div>
 
         <div class="form-group">
@@ -273,6 +280,7 @@ $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
     <thead>
       <tr>
         <th>ID</th>
+        <th>ID_USER</th>
         <th>Titulo</th>
         <th>Descripcion</th>
         <th>Precio</th>
@@ -285,6 +293,7 @@ $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
       <?php foreach ($listaLibros as $libro) { ?>
       <tr>
         <td><?php echo $libro['id']; ?></td>
+        <td><?php echo $libro['ID_USER']; ?></td>
         <td><?php echo $libro['nombre']; ?></td>
         <td><?php echo $libro['descripcion']; ?></td>
         <td><?php echo $libro['precio']; ?></td>
