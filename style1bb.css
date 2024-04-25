@@ -14,8 +14,8 @@ body{
   left: 0px;
   top: 0px;
 }
-
-.ocultar-div2{
+/*Acomodando logo*/
+.ocultar-div, .ocultar-div2{
     display:none;
 }
 header {
