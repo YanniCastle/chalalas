@@ -82,7 +82,8 @@ h2{
 /*RESPONSIVE para tablet*/
 @media(min-width: 800px) and (max-width: 1120px){
   body{
-  background: #b5ce72;
+    /*background: #b5ce72;*/
+  background: #eca131;
 }
   header {
   height: 40px;
@@ -94,7 +95,7 @@ h2{
   align-items: center;/*centra en horizontal*/
 }
 #busqueda{
-  font-size: 14px;
+  font-size: 12px;/*14*/
   background-color: white;
   padding: 6px 0px;
   margin-top: 17px;
