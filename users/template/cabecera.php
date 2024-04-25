@@ -43,7 +43,7 @@
         <a href="Formulario.php">Comentarios<i class="fa-regular fa-comment"></i></a>
         <a href="usuarios_registrados3a.php">4 fotos<i class="fa-regular fa-image"></i></a>
         <a href="videos.php">videos<i class="fa-solid fa-video"></i></a>
-        <a href="muro.php">Muro<i class="fa-solid fa-person-through-window"></i></a>
+       <!-- <a href="muro.php">Muro<i class="fa-solid fa-person-through-window"></i></a>-->
         <!-- <a href="caracteres.php">Caracteres</a>-->
         <!-- <a href="Formulario_fotos.php">Fotos</a>-->
         <!--  <a href="Formulario_fotos2.php">Fotos2</a>-->
