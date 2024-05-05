@@ -5,11 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chalalas.com</title>
-  <link rel="stylesheet" href="style1b.css" /><!--barra de menu plegable-->
+  <link rel="stylesheet" href="style1b.css" />
+  <!--barra de menu plegable-->
 
-  <script src="a2dd6045c4.js" crossorigin="anonymous"></script><!--js para iconos-->
-  <link rel="stylesheet" type="text/css" href="estilos.css"><!--Iconos -->
-  <link rel="stylesheet" type="text/css" href="style4a.css"><!--diseño de columnas-fotos-->
+  <script src="a2dd6045c4.js" crossorigin="anonymous"></script>
+  <!--js para iconos-->
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+  <!--Iconos -->
+  <link rel="stylesheet" type="text/css" href="style4a.css">
+  <!--diseño de columnas-fotos-->
   <link rel="shortcut icon" href="letraCfondonegro.png">
 </head>
 
@@ -24,12 +28,14 @@
       </div>
       <input type="checkbox" id="check">
       <label for="check" class="mostrar-menu">
-        &#8801<!--hamburguesa-->
+        &#8801
+        <!--hamburguesa-->
       </label>
       <nav class="menu">
         <a href="cierre.php">cerrar sesión</a>
         <label for="check" class="esconder-menu">
-          &#215 <!--la x-->
+          &#215
+          <!--la x-->
         </label>
       </nav>
     </header>
@@ -66,11 +72,12 @@
 
   ?>
 
-  <form method="post" action="reset_cuenta1.php?id=<?php echo $id; ?>& rutauno=<?php echo $rutafoto1; ?>& rutados=<?php echo $rutafoto2; ?>& rutatres=<?php echo $rutafoto3; ?>& rutacuatro=<?php echo $rutafoto4; ?>">
+  <form method="post"
+    action="reset_cuenta1.php?id=<?php echo $id; ?>& rutauno=<?php echo $rutafoto1; ?>& rutados=<?php echo $rutafoto2; ?>& rutatres=<?php echo $rutafoto3; ?>& rutacuatro=<?php echo $rutafoto4; ?>">
     <table class="uno">
       <tr>
         <td>
-          <button type="submit" name="eliminar_imagen">Eliminar foto</button>
+          <button type="submit" name="eliminar_imagen"> Reiniciar cuenta</button>
         </td>
       </tr>
     </table>
