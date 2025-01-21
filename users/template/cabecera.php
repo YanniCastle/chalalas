@@ -39,15 +39,10 @@
         <!--hamburguesa-->
       </label>
       <nav class="menu">
-        <a href="administrador/seccion/productos.php">artículos<i class="fa-solid fa-shop"></i></a>
+        <a href="administrador/seccion/productosplus.php">Tus artículos<i class="fa-solid fa-shop"></i></a>
         <a href="Formulario.php">Comentarios<i class="fa-regular fa-comment"></i></a>
         <a href="usuarios_registrados3a.php">4 fotos<i class="fa-regular fa-image"></i></a>
         <a href="videos.php">videos<i class="fa-solid fa-video"></i></a>
-       <!-- <a href="muro.php">Muro<i class="fa-solid fa-person-through-window"></i></a>-->
-        <!-- <a href="caracteres.php">Caracteres</a>-->
-        <!-- <a href="Formulario_fotos.php">Fotos</a>-->
-        <!--  <a href="Formulario_fotos2.php">Fotos2</a>-->
-        <!--  <a href="usuarios_registrados5.php">REGISTADOS 5</a>-->
         <a href="ajustes.php">Ajustes<i class="fa-solid fa-gear"></i></a>
         <a href="cierre.php">cerrar sesion</a>
         <label for="check" class="esconder-menu">
