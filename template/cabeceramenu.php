@@ -36,7 +36,6 @@
       <nav class="menu">
       <a href="ver_comentarios.php">Comentarios<i class="fa-regular fa-comment"></i></a>
         <a href="ofertas.php">Ofertas<i class="fa-regular fa-image"></i></a>
-        <a href="">videos<i class="fa-solid fa-video"></i></a>
         <a href="">Lo nuevo<i class="fa-solid fa-person-through-window"></i></a>
         <a href="Formulario_Insertar_Usuarios3.php">Registrate</a>
         <a href="login.php">iniciar sesión</a>
