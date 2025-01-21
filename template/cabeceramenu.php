@@ -7,10 +7,7 @@
   <title>Chalalas.com</title>
   <!--barra de menu plegable-->
   <link rel="stylesheet" href="template/cabeceramenu1.css" />
-  <!--iconos-->
-  <!--Este funciona con el template fuera de users
-  <link rel="stylesheet" type="text/css" href="template/galeria1.css" media="screen">-->
-
+  
   <script src="a2dd6045c4.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="letraCfondonegro.png">
 </head>
@@ -37,7 +34,7 @@
         <!--hamburguesa-->
       </label>
       <nav class="menu">
-      <a href="ver_comentarios.php">Comentarios</a>
+      <a href="ver_comentarios.php">Comentarios<i class="fa-regular fa-comment"></i></a>
         <a href="ofertas.php">Ofertas<i class="fa-regular fa-image"></i></a>
         <a href="">videos<i class="fa-solid fa-video"></i></a>
         <a href="">Lo nuevo<i class="fa-solid fa-person-through-window"></i></a>
