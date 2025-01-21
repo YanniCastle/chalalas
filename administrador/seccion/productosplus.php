@@ -202,11 +202,8 @@ $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
   <div class="card">
     <div class="card-header">
-      Datos de libro
+      Datos de articulo
     </div>
-
-    <!--Agregar mas botones o campos para categoria -->
-    <h4>Agregar:Estado, (Dropdowns)</h4>
 
     <div class="card-body">
 
