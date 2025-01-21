@@ -1,0 +1,53 @@
+.productos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.producto {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+}
+
+.producto img.imagen {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.titulo {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.descripcion {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.precio {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.vendedor, .ubicacion {
+  font-size: 0.9em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.separador {
+  width: 90%;
+  border-top: 1px solid #28a745;
+  margin: 15px auto;
+}

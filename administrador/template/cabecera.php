@@ -33,9 +33,8 @@ $id = $valores['ID'];
   <!--Cabecera de Administrador-->
   <nav class="navbar navbar-expand navbar-light bg-light">
     <div class="nav navbar-nav">
-      <a class="nav-item nav-link active" href="#">Articulos de usuario<span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="<?php echo $url; ?>/registered_user.php">inicio</a>
-      <a class="nav-item nav-link" href="<?php echo $url; ?>/administrador/seccion/productos.php">articulos</a>
+      <a class="nav-item nav-link" href="<?php echo $url; ?>/administrador/seccion/productosplus.php">Tus articulos</a>
       <a class="nav-item nav-link" href="<?php echo $url; ?>/cierre.php">Cerrar</a>
     </div>
   </nav>
