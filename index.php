@@ -9,5 +9,5 @@ if (!isset($_GET['enviar'])) {
 }
 ?>
 
-<?php include("template/piemenu.php"); //Pendiente:reglas i condiciones de uso, soporte. etc.
-?>
+<?php //include("template/piemenu.php");?>
+<?php include("pie.html"); ?>
