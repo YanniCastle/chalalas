@@ -7,7 +7,7 @@ include("template/cabeceramenuintento.php"); //Intento
 if (!isset($_GET['enviar'])) {
   include("template/presentacion.php"); //bienvenido
 
-  //include("users/template/galeria1.php"); //Las imagenes 
+  include("users/template/galeria1.php"); //Las imagenes 
 }
 ?>
 
