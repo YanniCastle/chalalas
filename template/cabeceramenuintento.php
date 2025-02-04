@@ -50,7 +50,7 @@
                 <!--hamburguesa-->
             </label>
             <nav class="menu">
-                <a href="ver_comentarios.php">Comentarios</a>
+                <a id="comentarios" href="ver_comentarios.php">Comentarios</a>
                 <a href="ofertas.php">Ofertas<i class="fa-regular fa-image"></i></a>
                 <a href="">Lo nuevo<i class="fa-solid fa-person-through-window"></i></a>
                 <a href="Formulario_Insertar_Usuarios3.php">Registrate</a>
