@@ -69,47 +69,55 @@
   //BUSCADOR COMPLETO
   if (isset($_GET['enviar'])) {
     $busqueda = $_GET['busqueda'];
+    
+    $estado = isset($_GET['estado']) ? $_GET['estado'] : ''; // Recibe el estado seleccionado
+    $categoria = isset($_GET['categoria']) ? $_GET['categoria'] : '';
+    
+     // Construcción de la consulta con estado si se selecciona uno
+     $sql = "SELECT * FROM libros WHERE nombre LIKE '%$busqueda%'";
+    
+     if (!empty($estado)) {
+         $sql .= " AND estado = '$estado'"; // Filtrar por estado si está definido
+     }
+     if (!empty($categoria)) {
+      $sql .= " AND categoria = '$categoria'";
+  }
+ 
+     $search = $con->query($sql); // Ejecuta la consulta
+ 
+     if ($search->num_rows > 0) {
+         while ($row = $search->fetch_array()) {
+             echo "<div class='titulo'>" . $row['nombre'] . "</div>";
+             echo "<img class='imagen' src='img/" . $row['imagen'] . "'/>";
+             echo "<div class='descripcion'>" . $row['descripcion'] . "</div>";
+             echo "<div class='precio'>$" . $row['precio'] . " pesos MX</div>";
+             echo "<div class='estado'>Estado: " . ucfirst($row['estado']) . "</div>"; // Mostrar estado
+             echo "<div class='categoria'>Categoría: " . ucfirst($row['categoria']) . "</div>"; // Mostrar categoría
+             
+             $ID_USER = $row['ID_USER'];
+             if ($ID_USER) {
+                 $user_data = $con->query("SELECT * FROM usuarios_pass2 WHERE ID = '$ID_USER'");
+                 while ($data = $user_data->fetch_array()) {
+                     echo "<div class='vendedor'>Vendedor: " . $data['USUARIOS'] . "</div>";
+                     echo "<div class='ubicacion'>Ubicación: " . $data['UBICACION'] . "</div>";
+                 }
+             }
+ ?>
 
-    /*////Para tabla libros////////////////////////////// */
-    $search = $con->query("SELECT * FROM libros WHERE nombre LIKE '%$busqueda%'");/*tabla:libros*/
-
-    if ($search->num_rows > 0) {
-
-      while ($row = $search->fetch_array()) {
-        //search en libros
-        echo "<div class='titulo'>"         . $row['nombre'] . "</div>";
-        echo "<img class='imagen' src='img/"  . $row['imagen'] . "'/>";
-        echo "<div class='descripcion'>" . $row['descripcion'] . "</div>";
-        echo "<div class='precio'>$"   . $row['precio'] . " pesos MX</div>";
-        $ID_USER = $row['ID_USER'];
-
-        if ($ID_USER) {
-          $user_data = $con->query("SELECT * FROM usuarios_pass2 WHERE ID = '$ID_USER' ");
-
-          while ($data = $user_data->fetch_array()) {
-            //user_data en usuarios_pass2
-            $ID = $data['ID'];
-            $NOMBRE = $data['NOMBRE'];
-            $MAIL = $data['MAIL'];
-            $TELEFONO = $data['TELEFONO'];
-            echo "<div class='vendedor'>Vendedor:" . $USUARIOS = $data['USUARIOS'] . "</div>";
-            echo "<div class='ubicacion'>Ubicacion:" . $UBICACION = $data['UBICACION'] . "</div>";
-          }
-        }
-  ?>
-    <a aria-label="Chat en WhatsApp" href="https://wa.me/<?php echo $TELEFONO; ?>"><img alt="Chat en WhatsApp"
-            src="WhatsAppButtonGreenSmall.png" width="120px" />
+    <a aria-label="Chat en WhatsApp" href="https://wa.me/<?php echo $TELEFONO; ?>">
+        <img alt="Chat en WhatsApp" src="WhatsAppButtonGreenSmall.png" width="120px" />
     </a>
     <br>
     <hr width="300" color="green" align="left"><br>
+
     <?php
-      } //fin de $row
-    } //fin de $search
-    else {
-      echo '<h2>No se encontro ningún registro.</h2>';
-      echo '<hr width="300" color="red" align="left"><br>';
-    }
-  } //fin de $_GET['enviar']
+         }
+     } else {
+         echo '<h2>No se encontró ningún registro.</h2>';
+         echo '<hr width="300" color="red" align="left"><br>';
+     }
+    
+ }
 
   //FIN DEL BUSCADOR COMPLETO 2.0
   ?>
