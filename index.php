@@ -5,9 +5,9 @@ include("template/cabeceramenuintento.php"); //Intento
 
 <?php
 if (!isset($_GET['enviar'])) {
-  include("template/presentacion.php"); //bienvenido
+ // include("template/presentacion.php"); //bienvenido
 
-  include("users/template/galeria1.php"); //Las imagenes 
+  //include("users/template/galeria1.php"); //Las imagenes 
 }
 ?>
 
