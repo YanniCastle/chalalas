@@ -1,0 +1,255 @@
+/*RESPONSIVE para tablet*/
+@media(min-width: 800px) and (max-width: 2550px){
+  body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  background: #bec2be;
+}
+#position {/*FIJAR EL HEADER*/
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+header {/*Cabecera*/
+  height: 40px;
+  background: #236440;
+  padding: 0 0px;
+  color: #fff;
+  display: flex;/*orden, uno a lado de otro*/
+  justify-content: space-between;/*separacion de palabras*/
+  align-items: center;/*centra en horizontal*/
+}
+.chalalas4{/*muestra logo chalalas4*/
+  height:38px;
+  width: 89px;
+  border: 2px solid #236440;
+  display:grid;
+  margin-left: 1px;
+  margin-right:0px;
+}
+#busqueda{
+  font-size: 8px;
+  background-color: white;
+  padding: 6px 0px;
+  margin-top: 17px;
+  margin-left: 0px;
+}
+#enviar{
+  background: #f89443;
+  font-size: 16px;
+  padding: 6px 3px;
+  margin-top: 17px;
+  margin-left: 0px;
+  cursor: pointer;
+}
+.menu a{
+  color: #fff;
+  text-decoration: none;/*quita subrrayado*/
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.mostrar-menu, 
+.esconder-menu {
+  font-size: 45px;
+  cursor: pointer;
+  display: none;
+  transition: 0.4s;
+}
+.mostrar-menu{
+  order:1;
+}
+.menu a:hover,
+.mostrar-menu,
+.esconder-menu:hover{
+  color: #f89443;
+}
+#check{
+  display: none;
+}
+/*Formato de resultados*/
+.titulo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: red;
+  margin-top: -20px;
+}
+img.imagen{
+  width: 180px;
+  height: 270px;
+}
+.descripcion{
+  width: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: blue;
+}
+.precio{
+  color: #000;
+}
+.vendedor{
+  color: #236440;
+}
+.ubicacion{
+  color: #c4600e;
+}
+
+}
+
+
+/*pantalla de moto g8 vertical*/
+@media(min-width: 387px) and (max-width: 799px){
+  body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  background: #bec2be;
+}
+  #position {/*FIJAR EL HEADER*/
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+header {/*Cabecera*/
+  height: 40px;
+  background: #236440;
+  padding: 0 0px;
+  color: #fff;
+  display: flex;/*orden, uno a lado de otro*/
+  justify-content: space-between;/*separacion de palabras*/
+  align-items: center;/*centra en horizontal*/
+}
+.menu a{
+  color: #fff;
+  text-decoration: none;/*quita subrrayado*/
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.mostrar-menu, 
+.esconder-menu {
+  font-size: 45px;
+  cursor: pointer;
+  display: none;
+  transition: 0.4s;
+}
+.mostrar-menu{
+  order:1;
+}
+.menu a:hover,
+.mostrar-menu,
+.esconder-menu:hover{
+  color: #f89443;
+}
+#check{
+  display: none;
+}
+/*Formato de resultados*/
+.titulo {
+  margin-top: -10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: red;
+}
+img.imagen{
+  width: 180px;
+  height: 270px;
+}
+.descripcion{
+  width: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: blue;
+}
+.precio{
+  color: #000;
+}
+.vendedor{
+  color: #236440;
+}
+.ubicacion{
+  color: #c4600e;
+}
+/**********************************/
+.mostrar-menu,
+  .esconder-menu{
+    font-size: 60px;
+    display: block;
+  }
+.menu{
+    position: fixed;
+    width: 20%;
+    height: 53vh;
+    background: #236440;
+    /*left: 0; solo era para ver como estaba quedando*/
+    right: -100%;/*este estaba comenrado*/
+    top: 0;
+    text-align: left;
+    padding: 85px 0px; 
+    z-index: 100;
+    transition: 0.8s;
+  }
+  .menu a{
+    display: block;
+    padding: 17px;/*separacion de menu*/
+
+  }
+  .esconder-menu{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+  #check:checked ~ .menu{
+    right: 0;/*le decimos aparece*/
+  }
+  .chalalas4{/*muestra logo chalalas4*/
+    height:28px;
+    width: 55px;
+    display:grid;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right:0px;
+  }
+#busqueda{
+  width: 120px;/*ancho de search*/
+  font-size: 14px;
+  background-color: white;
+  padding: 8px 0px;
+  margin-top: 0px;
+  margin-left: -22px;
+  margin-right:0px;
+}
+#estado{
+  width: 70px;
+  font-size: 14px;
+  background-color: white;
+  padding: 6px 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right:0px;
+}
+#categoria{
+  width: 100px;
+  font-size: 14px;
+  background-color: white;
+  padding: 6px 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right:0px;
+}
+#enviar{
+  background: #f89443;
+  font-size: 14px;
+  padding: 6px 0px;
+  margin-top: 20px;
+  margin-left: 0px;
+  margin-right:0px;
+}
+
+
+}
+
+

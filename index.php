@@ -1,5 +1,6 @@
 <?php //include("template/cabeceramenu.php"); //Aqui esta el buscador y el menu
-include ("template/cabeceramenufiltro.php");
+//include ("template/cabeceramenufiltro.php");
+include("template/cabeceramenuintento.php"); //Intento
 ?>
 
 <?php
