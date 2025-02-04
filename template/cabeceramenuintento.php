@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chalalas.com</title>
     <!--barra de menu plegable-->
-    <link rel="stylesheet" href="template/cabeceramenuintento.css" />
+    <link rel="stylesheet" href="template/cabeceramenuintento1.css" />
     <!--iconos-->
     <!--Este funciona con el template fuera de users
   <link rel="stylesheet" type="text/css" href="template/galeria1.css" media="screen">-->
