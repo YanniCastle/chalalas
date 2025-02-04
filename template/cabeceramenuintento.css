@@ -1,5 +1,5 @@
 /*RESPONSIVE para tablet*/
-@media(min-width: 800px) and (max-width: 2550px){
+@media(min-width: 1501px) and (max-width: 2550px){
   body{
   margin: 0;
   padding: 0;
@@ -97,8 +97,136 @@ img.imagen{
 }
 
 }
+/*TABLET HORIZONTAL CON FILTROS*/
+/*RESPONSIVE para tablet*/
+@media(min-width: 800px) and (max-width: 1500px){
+  body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  background: #bec2be;
+}
+#position {/*FIJAR EL HEADER*/
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+header {/*Cabecera*/
+  height: 40px;
+  background: #236440;
+  padding: 0 0px;
+  color: #fff;
+  display: flex;/*orden, uno a lado de otro*/
+  justify-content: space-between;/*separacion de palabras*/
+  align-items: center;/*centra en horizontal*/
+}
+.chalalas4{/*muestra logo chalalas4*/
+  height:28px;
+  width: 65px;
+  display:grid;
+  margin-left: 0px;
+  margin-right:-18px;
+}
+#busqueda{
+  width: 120px;/*ancho de search*/
+  font-size: 14px;
+  background-color: white;
+  padding: 6px 0px;
+  margin-top: 17px;
+  margin-left: 0px;
+}
+#estado{
+  width: 70px;/*ancho de search*/
+  font-size: 12px;
+  background-color: white;
+  padding: 6px 0px;
+  margin-top: 17px;
+  margin-left: 0px;
+}
+#categoria{
+  width: 90px;/*ancho de search*/
+  font-size: 12px;
+  background-color: white;
+  padding: 6px 0px;
+  margin-top: 17px;
+  margin-left: 0px;
+}
+#enviar{
+  background: #f89443;
+  font-size: 12px;
+  padding: 6px 3px;
+  margin-top: 17px;
+  margin-left: 0px;
+  cursor: pointer;
+}
+.menu a{
+  color: #fff;
+  text-decoration: none;/*quita subrrayado*/
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.mostrar-menu, 
+.esconder-menu {
+  font-size: 45px;
+  cursor: pointer;
+  display: none;
+  transition: 0.4s;
+}
+.mostrar-menu{
+  order:1;
+}
+.menu a:hover,
+.mostrar-menu,
+.esconder-menu:hover{
+  color: #f89443;
+}
+#check{
+  display: none;
+}
+/*Formato de resultados*/
+.titulo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: red;
+  margin-top: -20px;
+}
+img.imagen{
+  width: 180px;
+  height: 270px;
+}
+.descripcion{
+  width: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: blue;
+}
+.categoria{
+  width: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: rgb(201, 235, 13);
+}
+.estado{
+  width: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: rgb(230, 74, 12);
+}
+.precio{
+  color: #000;
+}
+.vendedor{
+  color: #236440;
+}
+.ubicacion{
+  color: #c4600e;
+}
 
+}
 
+/*///////////////////////////////*/
 /*pantalla de moto g8 vertical*/
 @media(min-width: 387px) and (max-width: 799px){
   body{

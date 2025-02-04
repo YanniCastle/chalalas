@@ -2,68 +2,68 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chalalas.com</title>
-  <!--barra de menu plegable-->
-  <link rel="stylesheet" href="template/cabeceramenuintento.css" />
-  <!--iconos-->
-  <!--Este funciona con el template fuera de users
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chalalas.com</title>
+    <!--barra de menu plegable-->
+    <link rel="stylesheet" href="template/cabeceramenuintento.css" />
+    <!--iconos-->
+    <!--Este funciona con el template fuera de users
   <link rel="stylesheet" type="text/css" href="template/galeria1.css" media="screen">-->
 
-  <script src="a2dd6045c4.js" crossorigin="anonymous"></script>
-  <link rel="shortcut icon" href="letraCfondonegro.png">
+    <script src="a2dd6045c4.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="letraCfondonegro.png">
 </head>
 
 <body>
-  <article id="position">
-    <header>
+    <article id="position">
+        <header>
 
-      <div>
-        <a href="login.php">
-          <img class="chalalas4" src="imagenes/imagenes_chalalas/chalalas3.png" alt="chalalas.com">
-        </a>
-      </div>
+            <div>
+                <a href="login.php">
+                    <img class="chalalas4" src="imagenes/imagenes_chalalas/chalalas3.png" alt="chalalas.com">
+                </a>
+            </div>
 
-      <a>
-        <form action="" method="GET">
-          <input type="search" id="busqueda" name="busqueda" required placeholder="¿Que artículo buscas?">
-          <select name="estado" id="estado">
-            <option value="">Todos</option>
-            <option value="Nuevo">Nuevo</option>
-            <option value="Seminuevo">Seminuevo</option>
-            <option value="Usado">Usado</option>
-          </select>
-          <select name="categoria" id="categoria">
-            <option value="">Todas las categorías</option>
-            <option value="Electronica">Electronica</option>
-            <option value="Herramientas">Herramientas</option>
-            <option value="Ropa">Ropa</option>
+            <a>
+                <form action="" method="GET">
+                    <input type="search" id="busqueda" name="busqueda" required placeholder="¿Que artículo buscas?">
+                    <select name="estado" id="estado">
+                        <option value="">Todos</option>
+                        <option value="Nuevo">Nuevo</option>
+                        <option value="Seminuevo">Seminuevo</option>
+                        <option value="Usado">Usado</option>
+                    </select>
+                    <select name="categoria" id="categoria">
+                        <option value="">Todas las categorías</option>
+                        <option value="Electronica">Electronica</option>
+                        <option value="Herramientas">Herramientas</option>
+                        <option value="Ropa">Ropa</option>
 
-          </select>
-          <input type="submit" id="enviar" name="enviar" value="Buscar"><br><br>
-        </form>
-      </a>
-      <input type="checkbox" id="check">
-      <label for="check" class="mostrar-menu">
-        &#8801
-        <!--hamburguesa-->
-      </label>
-      <nav class="menu">
-        <a href="ver_comentarios.php">Comentarios</a>
-        <a href="ofertas.php">Ofertas<i class="fa-regular fa-image"></i></a>
-        <a href="">Lo nuevo<i class="fa-solid fa-person-through-window"></i></a>
-        <a href="Formulario_Insertar_Usuarios3.php">Registrate</a>
-        <a href="login.php">iniciar sesión</a>
-        <label for="check" class="esconder-menu">
-          &#215
-          <!--la x-->
-        </label>
-      </nav>
-    </header>
-  </article>
-  <br /><br /><br />
-  <?php
+                    </select>
+                    <input type="submit" id="enviar" name="enviar" value="Buscar"><br><br>
+                </form>
+            </a>
+            <input type="checkbox" id="check">
+            <label for="check" class="mostrar-menu">
+                &#8801
+                <!--hamburguesa-->
+            </label>
+            <nav class="menu">
+                <a href="ver_comentarios.php">Comentarios</a>
+                <a href="ofertas.php">Ofertas<i class="fa-regular fa-image"></i></a>
+                <a href="">Lo nuevo<i class="fa-solid fa-person-through-window"></i></a>
+                <a href="Formulario_Insertar_Usuarios3.php">Registrate</a>
+                <a href="login.php">iniciar sesión</a>
+                <label for="check" class="esconder-menu">
+                    &#215
+                    <!--la x-->
+                </label>
+            </nav>
+        </header>
+    </article>
+    <br /><br /><br />
+    <?php
   include 'config.php';
 
   //BUSCADOR COMPLETO
@@ -97,12 +97,12 @@
           }
         }
   ?>
-  <a aria-label="Chat en WhatsApp" href="https://wa.me/<?php echo $TELEFONO; ?>"><img alt="Chat en WhatsApp"
-      src="WhatsAppButtonGreenSmall.png" width="120px" />
-  </a>
-  <br>
-  <hr width="300" color="green" align="left"><br>
-  <?php
+    <a aria-label="Chat en WhatsApp" href="https://wa.me/<?php echo $TELEFONO; ?>"><img alt="Chat en WhatsApp"
+            src="WhatsAppButtonGreenSmall.png" width="120px" />
+    </a>
+    <br>
+    <hr width="300" color="green" align="left"><br>
+    <?php
       } //fin de $row
     } //fin de $search
     else {
