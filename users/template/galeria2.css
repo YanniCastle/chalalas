@@ -6,21 +6,21 @@ img.galeria {
   height: 18%;
   /*border: 15px solid darkblue;*/
 }
-.row {
+.row1 {
   display: flex;
   padding: 5px;
   flex-wrap: wrap;/*cuando no cabe pasa a la siguiente*/
 }
-.column{
+.column1{
   margin-top: -10px;
   flex: 25%;
   padding: 2px;
 }
-.column img{
+.column1 img{
   margin-top: 2px;
 }
 @media (min-width: 600px) and (max-width: 800px){
-  .column{
+  .column1{
     flex: 33%;
   }
 }
@@ -30,7 +30,7 @@ img.galeria {
   height: 18%;
   /*border: 5px solid red;*/
 }
-  .column{
+  .column1{
     margin-top: -10px;
     margin-bottom: -95px;/*separa cada par de columnas*/
     flex: 50%;
@@ -43,13 +43,13 @@ img.galeria {
 img.galeria {
   display: none;
 }
-.row {
+.row1 {
   display: none;
 }
-.column{
+.column1{
   display: none;
 }
-.column img{
+.column1 img{
   display: none;
 }
 } 

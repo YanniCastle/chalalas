@@ -1,5 +1,4 @@
 <?php include("../template/cabecera.php"); ?>
-
 <?php
 /*SI EXISTE UN VALOR en txtID sera=$txtID, SI NO, SERA VACIO*/
 $txtID = (isset($_POST['txtID'])) ? $_POST['txtID'] : "";
@@ -7,6 +6,8 @@ $txtNombre = (isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : "";
 $txtDescripcion = (isset($_POST['txtDescripcion'])) ? $_POST['txtDescripcion'] : "";
 $txtPrecio = (isset($_POST['txtPrecio'])) ? $_POST['txtPrecio'] : "";
 $txtImagen = (isset($_FILES['txtImagen']['name'])) ? $_FILES['txtImagen']['name'] : "";
+$txtCategoria = (isset($_POST['txtCategoria'])) ? $_POST['txtCategoria'] : "";
+$txtEstado = (isset($_POST['txtEstado'])) ? $_POST['txtEstado'] : "";
 $accion = (isset($_POST['accion'])) ? $_POST['accion'] : "";
 include("../config/bd.php");
 
@@ -22,11 +23,14 @@ switch ($accion) {
 
 
         if ($_FILES['txtImagen']['size'] <= 5120000) {
-          $sentenciaSQL = $conexion->prepare("INSERT INTO libros (ID_USER, nombre, descripcion, precio, imagen) VALUES (:id_user, :nombre, :descripcion, :precio, :imagen);");
+          $sentenciaSQL = $conexion->prepare("INSERT INTO libros (ID_USER, nombre, descripcion, precio, imagen, categoria, estado) 
+          VALUES (:id_user, :nombre, :descripcion, :precio, :imagen, :categoria, :estado);");
           $sentenciaSQL->bindParam(':id_user', $id);
           $sentenciaSQL->bindParam(':nombre', $txtNombre);
           $sentenciaSQL->bindParam(':descripcion', $txtDescripcion);
           $sentenciaSQL->bindParam(':precio', $txtPrecio);
+          $sentenciaSQL->bindParam(':categoria', $txtCategoria);
+          $sentenciaSQL->bindParam(':estado', $txtEstado);
 
           $fecha = new DateTime();
           $nombreArchivo = ($txtImagen != "") ? $fecha->getTimestamp() . "_" . $_FILES["txtImagen"]["name"] : "sin_imagen.jpg";
@@ -114,7 +118,7 @@ switch ($accion) {
     break;
 
 
-  case "Modificar": //AQUI TAMBIEN AGREGAR size Y COMPRIMIR
+  case "Modificar": //AQUI TAMBIEN AGREGAR (size) Y C(OMPRIMIR) PENDIENTE (CATEGORIA Y ESTADO)
     //Aqui solo modificamos el registro
     $sentenciaSQL = $conexion->prepare("UPDATE libros SET nombre=:nombre, descripcion=:descripcion, precio=:precio WHERE id=:id");
     $sentenciaSQL->bindParam(':nombre', $txtNombre);
@@ -147,11 +151,11 @@ switch ($accion) {
       $sentenciaSQL->bindParam(':id', $txtID);
       $sentenciaSQL->execute();
     }
-    header("Location:productos.php");
+    header("Location:productosplus.php");
     break;
 
   case "Cancelar":
-    header("Location:productos.php");
+    header("Location:productosplus.php");
     break;
 
   case "Seleccionar":
@@ -182,12 +186,13 @@ switch ($accion) {
     $sentenciaSQL = $conexion->prepare("DELETE FROM libros WHERE id=:id");
     $sentenciaSQL->bindParam(':id', $txtID);
     $sentenciaSQL->execute();
-    header("Location:productos.php");
+    header("Location:productosplus.php");
     break;
 }
 
-//Mostrar todos los registros en tabla
-$sentenciaSQL = $conexion->prepare("SELECT * FROM libros ");
+//Mostrar todos los registros del Usuario
+$sentenciaSQL = $conexion->prepare("SELECT * FROM libros WHERE ID_USER=$id");
+
 $sentenciaSQL->execute();
 $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -197,15 +202,15 @@ $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
   <div class="card">
     <div class="card-header">
-      Datos de libro
+      Datos de articulo
     </div>
 
     <div class="card-body">
 
       <?php if (isset($mensaje)) { ?>
-      <div class="alert alert-danger" role="alert">
-        <?php echo $mensaje; ?>
-      </div>
+        <div class="alert alert-danger" role="alert">
+          <?php echo $mensaje; ?>
+        </div>
       <?php } ?>
 
       <form action="" method="POST" enctype="multipart/form-data">
@@ -222,7 +227,7 @@ $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
             id="ID_USER" placeholder="ID_USER">
         </div>
 
-        <div class="form-group">
+        <div class="form-group"> <!--Agregue Titulo-->
           <label for="txtNombre">Titulo:</label>
           <input type="text" required class="form-control" value="<?php echo $txtNombre; ?>" name="txtNombre"
             id="txtNombre" placeholder="Titulo de articulo">
@@ -234,12 +239,70 @@ $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
           <input type="text" required class="form-control" value="<?php echo $txtDescripcion; ?>" name="txtDescripcion"
             id="txtDescripcion" placeholder="Describe tu articulo">
         </div>
+<!-----------ESTE ES EL CASO DE LOS PERSIANAS-------------------------------------------->
+<!-- Dropdown para Categoría -->
+<div class="dropdown mt-3 ml-3">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="txtCategoria" data-toggle="dropdown"
+    aria-haspopup="true" aria-expanded="false" required>
+    Categoria
+  </button>
+  <div class="dropdown-menu" aria-labelledby="txtCategoria">
+    <a class="dropdown-item" href="#" data-value="Sin especificar">Sin especificar</a>
+    <a class="dropdown-item" href="#" data-value="Electronica">Electronica</a>
+    <a class="dropdown-item" href="#" data-value="Ropa">Ropa</a>
+    <a class="dropdown-item" href="#" data-value="Herramientas">Herramientas</a>
+  </div>
+</div>
+<!-- Input oculto para enviar el valor -->
+<input type="hidden" id="hiddenCategoria" name="txtCategoria" value="Sin especificar">
 
+<!-- Dropdown para Estado -->
+<div class="dropdown mt-3 ml-3">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="txtEstado" data-toggle="dropdown"
+    aria-haspopup="true" aria-expanded="false" required>
+    Estado
+  </button>
+  <div class="dropdown-menu" aria-labelledby="txtEstado">
+    <a class="dropdown-item" href="#" data-value="Sin especificar">Sin especificar</a>
+    <a class="dropdown-item" href="#" data-value="Nuevo">Nuevo</a>
+    <a class="dropdown-item" href="#" data-value="Usado">Usado</a>
+    <a class="dropdown-item" href="#" data-value="Seminuevo">Seminuevo</a>
+  </div>
+</div>
+<!-- Input oculto para enviar el valor -->
+<input type="hidden" id="hiddenEstado" name="txtEstado" value="Sin especificar">
+
+<script>
+  // Función para manejar las opciones del dropdown
+  function setupDropdown(buttonId, inputId) {
+    document.querySelectorAll(`#${buttonId} + .dropdown-menu .dropdown-item`).forEach(item => {
+      item.addEventListener('click', function (e) {
+        e.preventDefault(); // Evita el comportamiento por defecto del enlace
+        
+        // Obtén el valor del atributo data-value de la opción seleccionada
+        const value = this.getAttribute('data-value');
+        
+        // Actualiza el botón con el texto seleccionado
+        document.getElementById(buttonId).innerText = this.textContent;
+        
+        // Actualiza el input oculto con el valor seleccionado
+        document.getElementById(inputId).value = value;
+      });
+    });
+  }
+
+  // Inicializa los dropdowns
+  setupDropdown('txtCategoria', 'hiddenCategoria');
+  setupDropdown('txtEstado', 'hiddenEstado');
+</script>
+
+
+<!------------------------------------------------------------->
         <!--Agregue Precio-->
         <div class="form-group">
           <label for="txtPrecio">Precio:</label>
-          <input type="number_format" class="form-control" value="<?php echo $txtPrecio; ?>" name="txtPrecio"
-            id="txtPrecio" placeholder="Precio en $ mx">
+          <input type="number" class="form-control" value="<?php echo $txtPrecio; ?>" name="txtPrecio"
+            id="txtPrecio" min="1" oninput=" this.value=Math.abs(this.value)" name='pre' id='pre' maxlength="10" placeholder="Precio en $ mx">
         </div>
 
         <div class="form-group">
@@ -250,7 +313,7 @@ $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
           <?php //Ahora preguntamos
           if ($txtImagen != "") { ?>
-          <img class="img-thumbnail rounded" src="../../img/<?php echo $txtImagen;
+            <img class="img-thumbnail rounded" src="../../img/<?php echo $txtImagen;
                                                               ?>" width="50px" alt="" srcset="">
           <?php } ?>
 
@@ -265,6 +328,7 @@ $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
             value="Modificar" class="btn btn-warning">Modificar</button>
           <button type="submit" name="accion" <?php echo ($accion != "Seleccionar") ? "disabled" : ""; ?>
             value="Cancelar" class="btn btn-info">Cancelar</button>
+            <button type="reset" class="btn btn-reset">Limpiar</button>
         </div>
 
       </form>
@@ -291,32 +355,41 @@ $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
     <tbody>
 
       <?php foreach ($listaLibros as $libro) { ?>
-      <tr>
-        <td><?php echo $libro['id']; ?></td>
-        <td><?php echo $libro['ID_USER']; ?></td>
-        <td><?php echo $libro['nombre']; ?></td>
-        <td><?php echo $libro['descripcion']; ?></td>
-        <td><?php echo $libro['precio']; ?></td>
-        <td>
-          <img class="img-thumbnail rounded" src="../../img/<?php echo $libro['imagen'];
+        <tr>
+          <td><?php echo $libro['id']; ?></td>
+          <td><?php echo $libro['ID_USER']; ?></td>
+          <td><?php echo $libro['nombre']; ?></td>
+          <td><?php echo $libro['descripcion']; ?></td>
+          <td><?php echo $libro['precio']; ?></td>
+          <td>
+            <img class="img-thumbnail rounded" src="../../img/<?php echo $libro['imagen'];
                                                               ?>" width="50px" alt="" srcset="">
-        </td>
+          </td>
 
-        <td>
-          <form method="post">
-            <input type="hidden" name="txtID" id="txtID" value="<?php echo $libro['id']; ?>" />
+          <td>
+            <form method="post">
+              <input type="hidden" name="txtID" id="txtID" value="<?php echo $libro['id']; ?>" />
 
-            <input type="submit" name="accion" value="Seleccionar" class="btn btn-primary" />
-            <input type="submit" name="accion" value="Borrar" class="btn btn-danger" />
-          </form>
-        </td>
+              <input type="submit" name="accion" value="Seleccionar" class="btn btn-primary" />
+              <input type="submit" name="accion" value="Borrar" class="btn btn-danger" />
+            </form>
+          </td>
 
-      </tr>
+        </tr>
       <?php } ?>
 
     </tbody>
   </table>
 
 </div>
+
+<!-- Dependencias necesarias PENDIENTE:Probable bajar archivos de estas-->
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<!-- Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- Bootstrap 4 JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
 <?php include("../template/pie.php"); ?>

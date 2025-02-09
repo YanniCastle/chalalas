@@ -1,4 +1,6 @@
-<?php include("template/cabeceramenu.php"); //Aqui esta el buscador y el menu
+<?php //include("template/cabeceramenu.php"); //Aqui esta el buscador y el menu
+//include ("template/cabeceramenufiltro.php");
+include("template/cabeceramenuintento.php"); //Intento
 ?>
 
 <?php
@@ -9,5 +11,5 @@ if (!isset($_GET['enviar'])) {
 }
 ?>
 
-<?php include("template/piemenu.php"); //Pendiente:reglas i condiciones de uso, soporte. etc.
-?>
+<?php //include("template/piemenu.php");?>
+<?php include("pie.html"); ?>

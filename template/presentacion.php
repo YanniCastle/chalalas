@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <h1>Bienvenido</h1>
+  <h1>Proximamente... comprar y venta de articulos de persona a persona (P2P)</h1>
 </body>
 
 </html>

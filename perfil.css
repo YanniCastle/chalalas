@@ -1,0 +1,28 @@
+table {
+  width: 30%;
+  margin: auto;
+  background-color: #ff9;
+  border: 5px solid #FF9900;
+  padding: 5px;
+}
+.izq {
+  text-align: left;
+}
+.der {
+  text-align: right;
+}
+td {
+  text-align: center;
+  padding: 10px;
+}
+.marca {
+  width: 200px
+}
+
+td {
+  padding: 5px 0;
+}
+
+img.my_photo {
+  width: 250px;
+}
