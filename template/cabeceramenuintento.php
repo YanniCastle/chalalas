@@ -27,20 +27,40 @@
 
             <a>
                 <form action="" method="GET">
-                    <input type="search" id="busqueda" name="busqueda" required placeholder="¿Que artículo buscas?">
                     <select name="estado" id="estado">
                         <option value="">Todos</option>
                         <option value="Nuevo">Nuevo</option>
                         <option value="Seminuevo">Seminuevo</option>
                         <option value="Usado">Usado</option>
                     </select>
-                    <select name="categoria" id="categoria">
-                        <option value="">Todas las categorías</option>
-                        <option value="Electronica">Electronica</option>
-                        <option value="Herramientas">Herramientas</option>
-                        <option value="Ropa">Ropa</option>
-
-                    </select>
+                    <select name="categoria">
+            <option value="">Categorías</option>
+            <option value="Antiguedades">Antiguedades</option>
+            <option value="Articulos de coleccion">Articulos de coleccion</option>
+            <option value="Arte y Manualidades">Arte y Manualidades</option>
+            <option value="Articulos deportivos">Articulos deportivos</option>
+            <option value="Autopartes-Motopartes">Autopartes-Motopartes</option>
+            <option value="Computo y Tecnologia">Computo y Tecnologia</option>
+            <option value="Electronica">Electronica</option>
+            <option value="Equipaje y Viaje">Equipaje y Viaje</option>
+            <option value="Hogar">Hogar</option>
+            <option value="Herramientas">Herramientas</option>
+            <option value="Instrumentos Musicales">Instrumentos Musicales</option>
+            <option value="Joyas y Relojes">Joyas y Relojes</option>
+            <option value="Juguetes y Juegos">Juguetes y Juegos</option>
+            <option value="Libros, Peliculas y Musica">Libros, Peliculas y Musica</option>
+            <option value="Muebles">Muebles</option>
+            <option value="Jardineria">Jardineria</option>
+            <option value="Productos de Mascotas">Prooductos de Mascotas</option>
+            <option value="Remodelacion">Remoldelacion</option>
+            <option value="Ropa-Mujer">Ropa-Mujer</option>
+            <option value="Ropa-Hombre">Ropa-Hombre</option>
+            <option value="Ropa-niños">Ropa-niños</option>
+            <option value="Salud y Belleza">Salud y Belleza</option>
+            <option value="Venta-Garage">Venta-Garage</option>
+            <option value="Varios">Varios</option>
+          </select>
+                    <input type="search" id="busqueda" name="busqueda" required placeholder="¿Que artículo buscas?">
                     <input type="submit" id="enviar" name="enviar" value="Buscar"><br><br>
                 </form>
             </a>
