@@ -11,15 +11,10 @@
   <meta name="date" content="2023-02-20">
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
   <link rel="stylesheet" href="ofertas_horizontal2a.css" />
   <link rel="stylesheet" href="modal_horizontal2.css" />
   <title>Chalalas.com</title>
-  <link rel="stylesheet" href="template/cabeceramenu1b.css" />
-=======
-  <title>Chalalas.com</title>
-  <link rel="stylesheet" href="template/cabeceramenu1.css" />
->>>>>>> f93989a04e1a2fe057f85176890244ea10b6f6f1
+  <link rel="stylesheet" href="template/cabeceramenu1c.css" />
 
   <script src="a2dd6045c4.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="letraCfondonegro.png">
@@ -37,20 +32,14 @@
 
       <a>
         <form action="" method="GET">
-<<<<<<< HEAD
           <select name="estado" id="estado">
             <option value="">Estado</option>
-=======
-          <input type="search" id="busqueda" name="busqueda" required placeholder="¿Que artículo buscas?">
-          <select name="estado">
             <option value="">Todos</option>
->>>>>>> f93989a04e1a2fe057f85176890244ea10b6f6f1
             <option value="Nuevo">Nuevo</option>
             <option value="Seminuevo">Seminuevo</option>
             <option value="Usado">Usado</option>
           </select>
 
-<<<<<<< HEAD
           <select name="categoria" id="categoria">
             <option value="">Categorías</option>
             <option value="Antiguedades">Antiguedades</option>
@@ -81,15 +70,6 @@
 
           <input type="search" id="busqueda" name="busqueda" required placeholder="Buscador">
 
-=======
-          <select name="categoria">
-            <option value="">Todas las categorías</option>
-            <option value="Electronica">Electronica</option>
-            <option value="Herramientas">Herramientas</option>
-            <option value="Ropa">Ropa</option>
-
-          </select>
->>>>>>> f93989a04e1a2fe057f85176890244ea10b6f6f1
           <input type="submit" id="enviar" name="enviar" value="Buscar"><br><br>
         </form>
       </a>
@@ -99,17 +79,11 @@
         <!--hamburguesa-->
       </label>
       <nav class="menu">
-<<<<<<< HEAD
-        <a class="comentarios" href="ver_comentarios.php">Comentarios</a>
-        <a class="ofertas" href="ofertas.php">Ofertas<i class="fa-regular fa-image"></i></a>
-        <a class="lonuevo" href="">Lo nuevo<i class="fa-solid fa-person-through-window"></i></a>
-        <a class="registrate" href="Formulario_Insertar_Usuarios3.php">Registrate</a>
-=======
         <a href="ver_comentarios.php">Comentarios</a>
         <a href="ofertas.php">Ofertas<i class="fa-regular fa-image"></i></a>
         <a href="">Lo nuevo<i class="fa-solid fa-person-through-window"></i></a>
         <a href="Formulario_Insertar_Usuarios3.php">Registrate</a>
->>>>>>> f93989a04e1a2fe057f85176890244ea10b6f6f1
+
         <a href="login.php">iniciar sesión</a>
         <label for="check" class="esconder-menu">
           &#215
@@ -118,19 +92,12 @@
       </nav>
     </header>
   </article>
-<<<<<<< HEAD
   <br /><br /><br /><br />
   <?php
   include 'config.php';
 
- ///////////// //BUSCADOR COMPLETO//////////////////////
-=======
-  <br /><br /><br />
-  <?php
-  include 'config.php';
-
   //BUSCADOR COMPLETO
->>>>>>> f93989a04e1a2fe057f85176890244ea10b6f6f1
+
   if (isset($_GET['enviar'])) {
     $busqueda = $_GET['busqueda'];
     
@@ -151,18 +118,11 @@
  
      if ($search->num_rows > 0) {
          while ($row = $search->fetch_array()) {
-<<<<<<< HEAD
           echo "<div class='producto'>"; // Contenedor individual de cada producto
              echo "<div class='titulo_h'>" . $row['nombre'] . "</div>";
              echo "<img class='imagen' src='img/" . $row['imagen'] . "' alt='Imagen del producto' onclick='openModal(this)'/>";
              echo "<div class='descripcion_h'>" . $row['descripcion'] . "</div>";
              echo "<div class='precio_h'>$" . $row['precio'] . " pesos MX</div>";
-=======
-             echo "<div class='titulo'>" . $row['nombre'] . "</div>";
-             echo "<img class='imagen' src='img/" . $row['imagen'] . "'/>";
-             echo "<div class='descripcion'>" . $row['descripcion'] . "</div>";
-             echo "<div class='precio'>$" . $row['precio'] . " pesos MX</div>";
->>>>>>> f93989a04e1a2fe057f85176890244ea10b6f6f1
              echo "<div class='estado'>Estado: " . ucfirst($row['estado']) . "</div>"; // Mostrar estado
              echo "<div class='categoria'>Categoría: " . ucfirst($row['categoria']) . "</div>"; // Mostrar categoría
              
@@ -172,25 +132,15 @@
                  while ($data = $user_data->fetch_array()) {
                      echo "<div class='vendedor'>Vendedor: " . $data['USUARIOS'] . "</div>";
                      echo "<div class='ubicacion'>Ubicación: " . $data['UBICACION'] . "</div>";
-<<<<<<< HEAD
-                      $TEL = $data['TELEFONO'];
-=======
->>>>>>> f93989a04e1a2fe057f85176890244ea10b6f6f1
-                 }
+                     $TEL = $data['TELEFONO'];
+                    }
              }
  ?>
 
-<<<<<<< HEAD
   <a aria-label="Chat en WhatsApp" href="https://wa.me/<?php echo $TEL ?>">
     <img alt="Chat en WhatsApp" src="WhatsAppButtonGreenSmall.png" width="120px" />
   </a>
-=======
-  <a aria-label="Chat en WhatsApp" href="https://wa.me/<?php echo $TELEFONO; ?>">
-    <img alt="Chat en WhatsApp" src="WhatsAppButtonGreenSmall.png" width="120px" />
-  </a>
-  <br>
-  <hr width="300" color="green" align="left"><br>
->>>>>>> f93989a04e1a2fe057f85176890244ea10b6f6f1
+
 
   <?php
          }
@@ -200,7 +150,7 @@
      }
     
  }
-<<<<<<< HEAD
+
 //////////////////////FIN DEL BUSCADOR/////////////////////
   ?>
   <!-- Modal para mostrar la imagen -->
@@ -210,7 +160,3 @@
   </div>
 
   <script src="modal.js"></script>
-=======
-
-  ?>
->>>>>>> f93989a04e1a2fe057f85176890244ea10b6f6f1
