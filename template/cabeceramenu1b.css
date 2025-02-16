@@ -1,0 +1,501 @@
+/*Vacio*/
+@media(min-width: 2001px) and (max-width: 5000px) {
+  * {
+    background: #fff;
+    display: none;
+  }
+}
+
+/*RESPONSIVE para Desktop*/
+@media(min-width: 999px) and (max-width: 2000px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background: #bb8e25;/* background: #c1df56;*/
+  }
+
+  #position {
+    /*FIJAR EL HEADER*/
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+  }
+
+  header {
+    /*Cabecera*/
+    height: 40px;
+    background: #236440;
+    padding: 0 0px;
+    color: #fff;
+    display: flex;
+    /*orden, uno a lado de otro*/
+    justify-content: last baseline;
+    /*separacion de palabras*/
+    align-items: center;
+    /*centra en horizontal*/
+  }
+
+  .chalalas4 {
+    /*muestra logo chalalas4*/
+    height: 38px;
+    width: 89px;
+    display: grid;
+    margin-left: 1px;
+    margin-right: 0px;
+  }
+
+  #estado {
+    width: 87px;
+    /*ancho de search*/
+    font-size: 14px;
+    background-color: rgb(240, 236, 236);
+    padding: 6px 0px;
+    margin-top: 5px;
+    margin-left: 3px;
+    margin-right: 0px;
+  }
+
+  #categoria {
+    width: 87px;
+    /*ancho de search*/
+    font-size: 14px;
+    background-color: rgb(240, 236, 236);
+    padding: 6px 0px;
+    margin-top: 5px;
+    margin-left: 3px;
+    margin-right: 0px;
+  }
+
+  #busqueda {
+    width: 130px;
+    /*ancho de search*/
+    font-size: 22px;
+    background-color: white;
+    padding: 4px 0px;
+    margin-top: 19px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .comentarios {
+    display: none;
+  }
+
+  #enviar {
+    background: #f89443;
+    font-size: 18px;
+    padding: 7px 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    /*quita subrrayado*/
+    padding: 0 10px;
+    transition: 0.4s;
+  }
+
+  .esconder-menu {
+    font-size: 45px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+  }
+
+  .mostrar-menu {
+    order: 1;
+  }
+
+  .menu a:hover,
+  .esconder-menu:hover {
+    color: #f89443;
+  }
+  #check, .mostrar-menu {
+    display: none;
+  }
+
+
+  /*Formato de resultados*/
+  .titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: red;
+    margin-top: -20px;
+  }
+  img.imagen {
+    width: 180px;
+    height: 270px;
+  }
+  .descripcion {
+    width: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: blue;
+  }
+  .precio {
+    color: #000;
+  }
+  .vendedor {
+    color: #236440;
+  }
+  .ubicacion {
+    color: #c4600e;
+  }
+/*fin de resultados*/
+}
+
+/*RESPONSIVE para tablet vertical y motog8 horizontal*/
+@media(min-width: 699px) and (max-width: 1000px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background: #9291ef;
+  }
+
+  #position {
+    /*FIJAR EL HEADER*/
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+  }
+
+  header {
+    /*Cabecera*/
+    height: 40px;
+    background: #236440;
+    padding: 0 0px;
+    color: #fff;
+    display: flex;
+    /*orden, uno a lado de otro*/
+    justify-content: start;
+    /*separacion de palabras*/
+    align-items: center;
+    /*centra en horizontal*/
+  }
+
+  .chalalas4 {
+    /*muestra logo chalalas4*/
+    height: 38px;
+    width: 89px;
+    display: grid;
+    margin-left: 1px;
+    margin-right: 0px;
+  }
+  #estado {
+    width: 87px;
+    /*ancho de search*/
+    font-size: 14px;
+    background-color: rgb(240, 236, 236);
+    padding: 6px 0px;
+    margin-top: 5px;
+    margin-left: 3px;
+    margin-right: 0px;
+  }
+  #categoria {
+    width: 87px;
+    /*ancho de search*/
+    font-size: 14px;
+    background-color: rgb(240, 236, 236);
+    padding: 6px 0px;
+    margin-top: 5px;
+    margin-left: 3px;
+    margin-right: 0px;
+  }
+
+  #busqueda {
+    width: 125px;
+    /*ancho de search*/
+    font-size: 22px;
+    background-color: white;
+    padding: 4px 0px;
+    margin-top: 19px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  #enviar {
+    background: #f89443;
+    font-size: 18px;
+    padding: 7px 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .menu .comentarios {
+    display: none;
+  }
+
+  .menu .lonuevo {
+    display: none;
+  }
+  .menu .ofertas {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: -10px;
+  }
+  .menu .registrate {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: -10px;
+  }
+
+
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    /*quita subrrayado*/
+    padding: 0 10px;
+    transition: 0.4s;
+  }
+
+  .mostrar-menu,
+  .esconder-menu {
+    font-size: 45px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+  }
+
+  .mostrar-menu {
+    order: 1;
+  }
+
+  .menu a:hover,
+  .mostrar-menu,
+  .esconder-menu:hover {
+    color: #f89443;
+  }
+
+  #check {
+    display: none;
+  }
+
+  /*Formato de resultados*/
+  .titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: red;
+    margin-top: -20px;
+  }
+
+  img.imagen {
+    width: 180px;
+    height: 270px;
+  }
+
+  .descripcion {
+    width: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: blue;
+  }
+
+  .precio {
+    color: #000;
+  }
+
+  .vendedor {
+    color: #236440;
+  }
+
+  .ubicacion {
+    color: #c4600e;
+  }
+
+}
+
+
+/*pantalla de moto g8 vertical*/
+@media(min-width: 387px) and (max-width: 700px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background: #8dc28d;
+  }
+
+  #position {
+    /*FIJAR EL HEADER*/
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+  }
+
+  header {
+    /*Cabecera*/
+    height: 40px;
+    background: #236440;
+    padding: 0 0px;
+    color: #fff;
+    display: flex;
+    /*orden, uno a lado de otro*/
+    /*justify-content: space-between;*/
+    /*separacion de palabras*/
+    align-items: center;
+    /*centra en horizontal*/
+  }
+
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    /*quita subrrayado*/
+    padding: 0 10px;
+    transition: 0.4s;
+  }
+
+  .mostrar-menu,
+  .esconder-menu {
+    font-size: 45px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+  }
+
+  .mostrar-menu {
+    order: 1;
+  }
+
+  .menu a:hover,
+  .mostrar-menu,
+  .esconder-menu:hover {
+    color: #f89443;
+  }
+
+  #check {
+    display: none;
+  }
+
+  /*Formato de resultados*/
+  .titulo {
+    margin-top: -10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: red;
+  }
+
+  img.imagen {
+    width: 180px;
+    height: 270px;
+  }
+
+  .descripcion {
+    width: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: blue;
+  }
+
+  .precio {
+    color: #000;
+  }
+
+  .vendedor {
+    color: #236440;
+  }
+
+  .ubicacion {
+    color: #c4600e;
+  }
+
+  /**********************************/
+  .mostrar-menu,
+  .esconder-menu {
+    font-size: 73px;
+    display: block;
+    /*display: block;*/
+    margin-top: 0px;
+    margin-left: 16px;
+    margin-right: 0px;
+  }
+
+  .menu {
+    position: fixed;
+    width: 20%;
+    height: 53vh;
+    background: #236440;
+    /*left: 0; solo era para ver como estaba quedando*/
+    right: -100%;
+    /*este estaba comenrado*/
+    top: 0;
+    text-align: left;
+    padding: 85px 0px;
+    z-index: 100;
+    transition: 0.8s;
+  }
+
+  .menu a {
+    display: block;
+    padding: 17px;
+    /*separacion de menu*/
+
+  }
+
+  .esconder-menu {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+
+  #check:checked~.menu {
+    right: 0;
+    /*le decimos aparece*/
+  }
+
+  .chalalas4 {
+    /*muestra logo chalalas4*/
+    height: 38px;
+    width: 89px;
+    /* border: 2px solid #236440;*/
+    display: grid;
+    margin-left: 1px;
+    margin-right: 0px;
+  }
+
+  #categoria {
+    width: 87px;
+    /*ancho de search*/
+    font-size: 14px;
+    background-color: rgb(240, 236, 236);
+    padding: 6px 0px;
+    margin-top: 5px;
+    margin-left: 3px;
+    margin-right: 0px;
+  }
+
+  #busqueda {
+    width: 130px;
+    /*ancho de search*/
+    font-size: 22px;
+    background-color: white;
+    padding: 4px 0px;
+    margin-top: 19px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  #enviar {
+    background: #f89443;
+    font-size: 18px;
+    padding: 7px 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+
+  #estado {
+    display: none;
+  }
+
+}

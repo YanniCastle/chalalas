@@ -1,0 +1,192 @@
+/*Vacio*/
+@media(min-width: 2001px) and (max-width: 5000px) {
+  * {
+    background: #fff;
+    display: none;
+  }
+}
+
+/*RESPONSIVE para Desktop*/
+@media(min-width: 999px) and (max-width: 2000px) {
+  #positioncat {
+    /*FIJAR EL HEADER*/
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 30px;
+  }
+  header {
+    /*Cabecera*/
+    height: 30px;
+    background: #236440;
+    padding: 0 0px;
+    color: #fff;
+    display: flex;
+    /*orden, uno a lado de otro*/
+    justify-content: last baseline;
+    /*separacion de palabras*/
+    align-items: center;
+    /*centra en horizontal*/
+  }
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    /*quita subrrayado*/
+    padding: 0 10px;
+    transition: 0.4s;
+  }
+  .esconder-menu {
+    font-size: 45px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+  }
+  .mostrar-menu {
+    order: 1;
+  }
+  .menu a:hover,
+  .esconder-menu:hover {
+    color: #f89443;
+  }
+}
+
+/*RESPONSIVE para tablet vertical y motog8 horizontal*/
+@media(min-width: 699px) and (max-width: 1000px) {
+  #positioncat {
+    display: none;
+    /*FIJAR EL HEADER*/
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 30px;
+  }
+  header {
+    /*Cabecera*/
+    height: 40px;
+    background: #236440;
+    padding: 0 0px;
+    color: #fff;
+    display: flex;
+    /*orden, uno a lado de otro*/
+    justify-content: start;
+    /*separacion de palabras*/
+    align-items: center;
+    /*centra en horizontal*/
+  }
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    /*quita subrrayado*/
+    padding: 0 10px;
+    transition: 0.4s;
+  }
+  .mostrar-menu,
+  .esconder-menu {
+    font-size: 45px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+  }
+  .mostrar-menu {
+    order: 1;
+  }
+  .menu a:hover,
+  .mostrar-menu,
+  .esconder-menu:hover {
+    color: #f89443;
+  }
+}
+
+
+/*pantalla de moto g8 vertical*/
+@media(min-width: 387px) and (max-width: 700px) {
+
+  #positioncat {
+    display: none;
+    /*FIJAR EL HEADER*/
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 30px;
+  }
+
+  header {
+    /*Cabecera*/
+    height: 40px;
+    background:#236440;;/*background: #236440;*/
+    padding: 0 0px;
+    color: #fff;
+    display: flex;
+    /*orden, uno a lado de otro*/
+    /*justify-content: space-between;*/
+    /*separacion de palabras*/
+    align-items: center;
+    /*centra en horizontal*/
+  }
+
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    /*quita subrrayado*/
+    padding: 0 10px;
+    transition: 0.4s;
+  }
+
+  .mostrar-menu,
+  .esconder-menu {
+    font-size: 45px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+  }
+
+  .mostrar-menu {
+    order: 1;
+  }
+
+  .menu a:hover,
+  .mostrar-menu,
+  .esconder-menu:hover {
+    color: #f89443;
+  }
+
+  .mostrar-menu,
+  .esconder-menu {
+    font-size: 73px;
+    display: block;
+    /*display: block;*/
+    margin-top: 0px;
+    margin-left: 16px;
+    margin-right: 0px;
+  }
+
+  .menu {
+    position: fixed;
+    width: 20%;
+    height: 53vh;
+    background: #236440;
+    /*left: 0; solo era para ver como estaba quedando*/
+    right: -100%;
+    /*este estaba comentado*/
+    top: 0;
+    text-align: left;
+    padding: 85px 0px;
+    z-index: 100;
+    transition: 0.8s;
+  }
+  .menu a {
+    display: block;
+    padding: 17px;
+    /*separacion de menu*/
+
+  }
+  .esconder-menu {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+  #check:checked~.menu {
+    right: 0;
+    /*le decimos aparece*/
+  }
+}
