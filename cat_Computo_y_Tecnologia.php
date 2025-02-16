@@ -43,10 +43,10 @@ if ($sentenciaSQL6->num_rows > 0) {
     echo "<div class='precio_h'>$" . htmlspecialchars($row['precio']) . "</div>";
 
     //Categoria 
-    echo "<div class='categoria'>categoria:" . htmlspecialchars($row['categoria']) . "</div>";
+    //echo "<div class='categoria'>categoria:" . htmlspecialchars($row['categoria']) . "</div>";
 
     //Estado 
-    echo "<div class='estado'>estado:" . htmlspecialchars($row['estado']) . "</div>";
+    echo "<div class='estado'>" . htmlspecialchars($row['estado']) . "</div>";
 
     // Información del vendedor
     $ID_USER = $row['ID_USER'];
