@@ -122,16 +122,16 @@
              echo "<div class='titulo_h'>" . $row['nombre'] . "</div>";
              echo "<img class='imagen' src='img/" . $row['imagen'] . "' alt='Imagen del producto' onclick='openModal(this)'/>";
              echo "<div class='descripcion_h'>" . $row['descripcion'] . "</div>";
-             echo "<div class='precio_h'>$" . $row['precio'] . " pesos MX</div>";
-             echo "<div class='estado'>Estado: " . ucfirst($row['estado']) . "</div>"; // Mostrar estado
-             echo "<div class='categoria'>Categoría: " . ucfirst($row['categoria']) . "</div>"; // Mostrar categoría
+             echo "<div class='precio_h'>$" . $row['precio'] . "</div>";
+             echo "<div class='estado'>" . ucfirst($row['estado']) . "</div>"; // Mostrar estado
+             //echo "<div class='categoria'>Categoría: " . ucfirst($row['categoria']) . "</div>"; // Mostrar categoría
              
              $ID_USER = $row['ID_USER'];
              if ($ID_USER) {
                  $user_data = $con->query("SELECT * FROM usuarios_pass2 WHERE ID = '$ID_USER'");
                  while ($data = $user_data->fetch_array()) {
-                     echo "<div class='vendedor'>Vendedor: " . $data['USUARIOS'] . "</div>";
-                     echo "<div class='ubicacion'>Ubicación: " . $data['UBICACION'] . "</div>";
+                     echo "<div class='vendedor'>vende: " . $data['USUARIOS'] . "</div>";
+                     echo "<div class='ubicacion'>zona: " . $data['UBICACION'] . "</div>";
                      $TEL = $data['TELEFONO'];
                     }
              }
