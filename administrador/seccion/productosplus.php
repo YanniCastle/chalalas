@@ -247,11 +247,32 @@ $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
     Categoria
   </button>
   <div class="dropdown-menu" aria-labelledby="txtCategoria">
-    <a class="dropdown-item" href="#" data-value="Sin especificar">Sin especificar</a>
-    <a class="dropdown-item" href="#" data-value="Electronica">Electronica</a>
-    <a class="dropdown-item" href="#" data-value="Ropa">Ropa</a>
-    <a class="dropdown-item" href="#" data-value="Herramientas">Herramientas</a>
-  </div>
+            <a class="dropdown-item" href="#" data-value="Sin especificar">Sin especificar</a>
+            <a class="dropdown-item" href="#" data-value="Antiguedades">Antiguedades</a>
+            <a class="dropdown-item" href="#" data-value="Articulos de coleccion">Articulos de coleccion</a>
+            <a class="dropdown-item" href="#" data-value="Arte y Manualidades">Arte y Manualidades</a>
+            <a class="dropdown-item" href="#" data-value="Articulos deportivos">Articulos deportivos</a>
+            <a class="dropdown-item" href="#" data-value="Autopartes-Motopartes">Autopartes-Motopartes</a>
+            <a class="dropdown-item" href="#" data-value="Computo y Tecnologia">Conputo y Tecnologia</a>
+            <a class="dropdown-item" href="#" data-value="Electronica">Electronica</a>
+            <a class="dropdown-item" href="#" data-value="Equipaje y Viaje">Equipaje y VIaje</a>
+            <a class="dropdown-item" href="#" data-value="Hogar">Hogar</a>
+            <a class="dropdown-item" href="#" data-value="Herramientas">Herramientas</a>
+            <a class="dropdown-item" href="#" data-value="Instrumentos Musicales">Instrumentos Musicales</a>
+            <a class="dropdown-item" href="#" data-value="Joyas y Relojes">Joyas y Relojes</a>
+            <a class="dropdown-item" href="#" data-value="Juguetes y Juegos">Juguetes y Juegos</a>
+            <a class="dropdown-item" href="#" data-value="Libros, Peliculas y Musica">Libros, Peliculas y Musica</a>
+            <a class="dropdown-item" href="#" data-value="Muebles">Muebles</a>
+            <a class="dropdown-item" href="#" data-value="Jardineria">Jardineria</a>
+            <a class="dropdown-item" href="#" data-value="Productos de Mascotas">Productos de Mascotas</a>
+            <a class="dropdown-item" href="#" data-value="Remodelacion">Remodelacion</a>
+            <a class="dropdown-item" href="#" data-value="Ropa-Mujer">Ropa-Mujer</a>
+            <a class="dropdown-item" href="#" data-value="Ropa-Hombre">Ropa-Hombre</a>
+            <a class="dropdown-item" href="#" data-value="Ropa-niños">Ropa-niños</a>
+            <a class="dropdown-item" href="#" data-value="Salud y Belleza">Salud y Belleza</a>
+            <a class="dropdown-item" href="#" data-value="Venta-Garage">Venta-Garage</a>
+            <a class="dropdown-item" href="#" data-value="Varios">Varios</a>
+          </div>
 </div>
 <!-- Input oculto para enviar el valor -->
 <input type="hidden" id="hiddenCategoria" name="txtCategoria" value="Sin especificar">

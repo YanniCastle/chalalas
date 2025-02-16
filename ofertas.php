@@ -1,4 +1,3 @@
-
 <?php include("template/cabeceramenu.php"); ?>
 
 <link rel="stylesheet" href="ofertas.css" />
@@ -31,6 +30,12 @@ if ($sentenciaSQL->num_rows > 0) {
 
     // Precio
     echo "<div class='precio'>$" . htmlspecialchars($row['precio']) . " pesos MX</div>";
+
+     //Categoria 
+     echo "<div class='categoria'>categoria:" . htmlspecialchars($row['categoria']) . "</div>";
+    
+     //Estado 
+     echo "<div class='estado'>estado:" . htmlspecialchars($row['estado']) . "</div>";
 
     // Información del vendedor
     $ID_USER = $row['ID_USER'];
@@ -70,26 +75,26 @@ else {
 ?>
 <!-- Modal para mostrar la imagen -->
 <div id="imageModal" class="modal" onclick="closeModal()">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modalImage">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
 </div>
 
 <!-- JavaScript al final del body -->
 <script>
-  // Función para abrir el modal con la imagen seleccionada
-  function openModal(image) {
+// Función para abrir el modal con la imagen seleccionada
+function openModal(image) {
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
     modalImage.src = image.src; // Usa la misma fuente de la imagen clickeada
-    
-    modal.style.display = 'block'; // Muestra el modal
-  }
 
-  // Función para cerrar el modal
-  function closeModal() {
+    modal.style.display = 'block'; // Muestra el modal
+}
+
+// Función para cerrar el modal
+function closeModal() {
     const modal = document.getElementById('imageModal');
     modal.style.display = 'none'; // Oculta el modal
-  }
+}
 </script>
 
 <!-- Enlace al archivo JavaScript 
