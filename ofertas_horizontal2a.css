@@ -29,10 +29,16 @@
 }
 
 /* Espaciado entre título, descripción, precio */
-.producto .titulo_h,
-.producto .descripcion_h,
+.producto .titulo_h {
+  color: rgb(236, 70, 5);
+  margin: 2px 0;
+}
+.producto .descripcion_h {
+  color: rgb(161, 27, 150);
+  margin: 2px 0;
+}
 .producto .precio_h {
-  color: rgb(234, 14, 216);
+  color: rgb(15, 15, 15);
   margin: 2px 0;
 }
 .tcategorias {
