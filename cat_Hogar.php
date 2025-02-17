@@ -46,7 +46,7 @@ if ($sentenciaSQL5->num_rows > 0) {
     echo "<div class='categoria'>categoria:" . htmlspecialchars($row['categoria']) . "</div>";
 
     //Estado 
-    echo "<div class='estado'>estado:" . htmlspecialchars($row['estado']) . "</div>";
+    //echo "<div class='estado'>" . htmlspecialchars($row['estado']) . "</div>";
 
     // Información del vendedor
     $ID_USER = $row['ID_USER'];

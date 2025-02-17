@@ -9,7 +9,7 @@ if ($con->connect_errno) {
 include 'config.php';
 include 'conexion.php';
 //Mostrar todos los registros en tabla en General
-$sentenciaSQL = mysqli_query($con, "SELECT * FROM libros");
+$sentenciaSQL = mysqli_query($con, "SELECT * FROM libros ORDER BY Fecha DESC LIMIT 10");
 
 //Muestra solo productos usados
 //$Nuevo = "Usado";
@@ -35,10 +35,10 @@ if ($sentenciaSQL->num_rows > 0) {
     echo "<div class='precio_h'>$" . htmlspecialchars($row['precio']) . "</div>";
 
     //Categoria 
-    echo "<div class='categoria'>categoria:" . htmlspecialchars($row['categoria']) . "</div>";
+    //echo "<div class='categoria'>categoria:" . htmlspecialchars($row['categoria']) . "</div>";
 
     //Estado 
-    echo "<div class='estado'>estado:" . htmlspecialchars($row['estado']) . "</div>";
+    echo "<div class='estado'>" . htmlspecialchars($row['estado']) . "</div>";
 
     // Información del vendedor
     $ID_USER = $row['ID_USER'];
