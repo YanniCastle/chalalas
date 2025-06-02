@@ -189,16 +189,19 @@
     margin-left: 1px;
     margin-right: 0px;
   }
-  #estado {
-    width: 87px;
+  /*#estado {*/
+   /* width: 87px;*/
     /*ancho de search*/
-    font-size: 14px;
-    background-color: rgb(240, 236, 236);
-    padding: 6px 0px;
-    margin-top: 5px;
-    margin-left: 3px;
-    margin-right: 0px;
+    /*font-size: 14px;*/
+   /* background-color: rgb(240, 236, 236);*/
+   /*padding: 6px 0px;*/
+   /* margin-left: 3px;*/
+   /* margin-right: 0px;*/
+  /*}*/
+   #estado {
+   display: none;
   }
+
   #categoria {
     width: 87px;
     /*ancho de search*/
