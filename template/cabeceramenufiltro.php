@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="ofertas_horizontal2a.css" />
   <link rel="stylesheet" href="modal_horizontal2.css" />
   <title>Chalalas.com</title>
-  <link rel="stylesheet" href="template/cabeceramenu1b.css" />
+  <link rel="stylesheet" href="template/cabeceramenu1d.css" />
 
   <script src="a2dd6045c4.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="letraCfondonegro.png">
