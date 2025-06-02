@@ -1,4 +1,4 @@
-/*Vacio*/
+*Vacio*/
 @media(min-width: 2001px) and (max-width: 5000px) {
   * {
     background: #fff;
@@ -13,7 +13,7 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
-    background: #c1df56/* background: #c1df56;*/
+    background: #bb8e25;/* background: #c1df56;*/
   }
 
   #position {
