@@ -13,5 +13,6 @@ if (!isset($_GET['enviar'])) {
 }
 ?>
 
-<?php include("template/piemenu.php");?>
+<?php include("template/piemenu.php");
+       include("chatbot2.php");?>
 <?php //include("pie.html"); ?>
