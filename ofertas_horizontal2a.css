@@ -4,7 +4,7 @@
   flex-wrap: wrap; /* Permitir que los elementos bajen a la siguiente fila si no caben */
   gap: 10px; /* Espacio entre productos */
   justify-content: flex-start; /* Alinear los elementos al inicio */
-  padding: 10px;
+  padding: 5px;
 }
 
 /* Cada producto en formato horizontal */
@@ -12,11 +12,11 @@
   display: flex; /* Hace que el contenido del producto también sea horizontal */
   flex-direction: column; /* Si quieres que los elementos de cada producto se alineen verticalmente */
   align-items: center; /* Centrar contenido horizontalmente */
-  border: 4px solid #1dd920;
+  border: 3px solid #1dd920;
   background-color: #fff;
   border-radius: 8px;
   padding: 10px;
-  max-width: 120px; /* Ancho máximo para cada producto */
+  max-width: 150px; /* Ancho máximo para cada producto */
   text-align: center; /* Centra el texto dentro del producto */
 }
 
